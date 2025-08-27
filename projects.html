@@ -3,84 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About</title>
+  <title>STS Portfolio - Projects</title>
+  <link rel="icon" type="image/x-icon" href="/bilder/logo_emerald.png">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-      @theme {
-        --color-mGreen: #34b011;
-        --color-mGreen-xd: #83b011;
-      }
-    </style>
 </head>
-<body class="bg-black">
-  <header class="bg-mGreen px-4 pt-4 sticky top-0">
-    <div class="flex items-center">
-      <img src="bilder/logoS.png" alt="Logo" class="w-15 h-15 inline-block">
-      <text class="text-4xl text-black pl-4 font-bold">
-        Sarah Theresa Schreiner
-      </text>
+<body class="bg-neutral-950 text-gray-400">
+  <header class="sticky top-0 bg-neutral-950/80 backdrop-blur border-b border-neutral-800">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+    <div class="flex items-center gap-3">
+      <img src="bilder/logo_emerald.png" alt="Logo" class="w-10 h-10">
+      <span class="text-xl font-bold text-emerald-400">Sarah Theresa Schreiner</span>
     </div>
-    <nav class="mt-2">
-      <ul class="flex space-x-4 justify-end pb-3">
-        <li><a href="index.html" class="text-white hover:bg-mGreen-xd hover:border-b-5 hover:border-white pb-2 p-2">Home</a></li>
-        <li><a href="about.html" class="text-white hover:bg-mGreen-xd hover:border-b-5 hover:border-white pb-2 p-2">About</a></li>
-        <li><a href="skills.html" class="text-white hover:bg-mGreen-xd hover:border-b-5 hover:border-white pb-2 p-2">Skills</a></li>
-        <li><a href="projects.html" class="text-white bg-mGreen-xd border-b-5 border-white pb-2 p-2">Projects</a></li>
-        <li><a href="contact.html" class="text-white pb-2 p-2 hover:bg-mGreen-xd hover:border-b-5 hover:border-white">Contact</a></li>
+    <nav>
+      <ul class="flex gap-6 text-gray-300">
+        <li><a href="index.html" class="hover:text-emerald-400 transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-emerald-400 transition">About</a></li>
+        <li><a href="skills.html" class="hover:text-emerald-400 transition">Skills</a></li>
+        <li><a href="projects.html" class="text-emerald-400 font-semibold">Projects</a></li>
+        <li><a href="contact.html" class="hover:text-emerald-400 transition">Contact</a></li>
       </ul>
     </nav>
-  </header>
-  <main class="bg-black text-white p-4">
-  
-    
-   <!--This is a placeholder for the project cards. You can duplicate this block for each project you want to showcase.newest will be on top -->
+  </div>
+</header>
+  <main class="p-4">
+  <section class="max-w-5xl mx-auto py-20">
+    <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
 
-    <a href="projects/example.html" class="block">
-      <div class="bg-gray-700 p-4 rounded-lg my-2 hover:bg-gray-600 hover:m-1 transition-all duration-300">
-        <h3 class="font-semibold">Project name</h3>
-        <p class="italic text-xs">finished on 20/07/2025</p>
-        <div class="flex justify-between h-min-content">
-          <div class="pr-4">
-            <p class="my-3">This would be a short descreption. Lorem ipsum Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-            <span class="text-mGreen italic block">click to see details</span>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Driver Laptime Comparison Tool -->
+      <div class="bg-neutral-900 rounded-2xl overflow-hidden hover:shadow-emerald-400/30 transition flex flex-col">
+        <img src="bilder/laptime_comparison_tool/plotexample.png" alt="Laptime Comparison Tool" class="w-full h-40 object-cover">
+        <div class="p-6 flex-1 flex flex-col text-center">
+          <h3 class="text-xl font-bold mb-2">Laptime and Telemetry Comparison Tool</h3>
+          <p class="text-gray-400 text-sm italic">Comparing two laptimes and plotting the telemetry</p>
+          <p class="text-gray-500 text-xs mt-1">Completed: 27/08/2025</p>
+          <div class="mt-4 flex justify-center gap-6">
+            <a href="projects/laptime_comparison_tool.html" class="text-sm text-emerald-400 hover:underline">Click to view details</a>
+            <a href="https://github.com/sarahtheresaschreiner/laptime_comparison_tool" target="_blank" class="text-sm text-emerald-400 hover:underline">View on GitHub</a>
           </div>
-          <div class="flex-shrink-0">
-            <img src="bilder/platzhalter.jpg" alt="example" class="w-40 h-60 object-cover">
+          <div class="mt-3 flex flex-wrap justify-center gap-2">
+            <span class="px-2 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded">Python</span>
+            <span class="px-2 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded">Pandas</span>
+            <span class="px-2 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded">FastF1 API</span>
           </div>
-        </div>
-        <div class="mt-3 flex">
-          <div class="rounded-xl bg-mGreen/70 px-2 mx-1">AI and ML</div>
-          <div class="rounded-xl bg-mGreen/70 px-2 mx-1">Django</div>
-          <div class="rounded-xl bg-mGreen/70 px-2 mx-1">Databases</div>
         </div>
       </div>
-    </a>
-
-    <a href="projects/example.html" class="block">
-      <div class="bg-gray-700 p-4 rounded-lg my-4 hover:bg-gray-600 hover:m-1 transition-all duration-300">
-        <h3 class="font-semibold">Project name</h3>
-        <p class="italic text-xs">finished on 20/07/2025</p>
-        <div class="flex justify-between h-min-content">
-          <div class="pr-4">
-            <p class="my-3">This would be a short descreption. Lorem ipsum Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-            <span class="text-mGreen italic block">click to see details</span>
+      <!-- Project Card -->
+<!--       <div class="bg-neutral-900 rounded-2xl overflow-hidden hover:shadow-emerald-400/30 transition flex flex-col">
+        <img src="bilder/platzhalter.jpg" alt="Formula 1 Data Analysis" class="w-full h-40 object-cover">
+        <div class="p-6 flex-1 flex flex-col text-center">
+          <h3 class="text-xl font-bold mb-2">Formula 1 Data Analysis</h3>
+          <p class="text-gray-400 text-sm italic">Lap time prediction using ML models</p>
+          <p class="text-gray-500 text-xs mt-1">Completed: 20/07/2025</p>
+          <div class="mt-4 flex justify-center gap-6">
+            <a href="projects/example1.html" class="text-sm text-emerald-400 hover:underline">Click to view details</a>
+            <a href="https://github.com/sarahtheresaschreiner/" target="_blank" class="text-sm text-emerald-400 hover:underline">View on GitHub</a>
           </div>
-          <div class="flex-shrink-0">
-            <img src="bilder/platzhalter.jpg" alt="example" class="w-40 h-60 object-cover">
+          <div class="mt-3 flex flex-wrap justify-center gap-2">
+            <span class="px-2 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded">Python</span>
+            <span class="px-2 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded">Pandas</span>
+            <span class="px-2 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded">F1 Data</span>
           </div>
-        </div>
-        <div class="mt-3 flex">
-          <div class="rounded-xl bg-mGreen/70 px-2 mx-1">AI and ML</div>
-          <div class="rounded-xl bg-mGreen/70 px-2 mx-1">Django</div>
-          <div class="rounded-xl bg-mGreen/70 px-2 mx-1">Databases</div>
-        </div>
+        </div> -->
       </div>
-    </a>
-
+    </div>
+  </section>
   </main>
-  <footer class="bg-black px-4 py-2 text-center text-white">
-    <hr>
+  <footer class="bg-neutral-950 text-gray-400 px-6 py-8 mt-12">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
     <p>&copy; 2025 Sarah Theresa Schreiner</p>
+      <div class="flex gap-6">
+        <a href="https://github.com/sarahtheresaschreiner/" target="_blank" class="hover:text-emerald-400 transition">
+          <img src="bilder/logos/github_logo.png" alt="GitHub" class="w-6 h-6">
+        </a>
+        <!-- linkedin -->
+        <a href="https://www.linkedin.com/in/sarah-theresa-schreiner-a43111381/" target="_blank" class="hover:text-emerald-400 transition">
+          <img src="bilder/logos/linkedin_logo.png" alt="LinkedIn" class="w-6 h-6">
+        </a>
+        <!-- <a href="https://www.instagram.com/pontiglory/" target="_blank" class="hover:text-emerald-400 transition">
+          <img src="bilder/logos/instagram_logo.png" alt="Instagram" class="w-6 h-6">
+        </a>
+        <a href="https://www.youtube.com/@Sarah-l2y1q" target="_blank" class="hover:text-emerald-400 transition">
+          <img src="bilder/logos/youtube_logo.png" alt="YouTube" class="w-6 h-6">
+        </a> -->
+      </div>
+    </div>
   </footer>
 </body>
 </html>

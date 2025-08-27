@@ -3,70 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact</title>
+  <title>STS Portfolio - Contact</title>
+  <link rel="icon" type="image/x-icon" href="/bilder/logo_emerald.png">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-      @theme {
-        --color-mGreen: #34b011;
-        --color-mGreen-xd: #83b011;
-      }
-    </style>
 </head>
-<body class="bg-black">
-  <header class="bg-mGreen px-4 pt-4 sticky top-0">
-    <div class="flex items-center">
-      <img src="bilder/logoS.png" alt="Logo" class="w-15 h-15 inline-block">
-      <text class="text-4xl text-black pl-4 font-bold">
-        Sarah Theresa Schreiner
-      </text>
+<body class="bg-neutral-950 text-gray-400">
+  <header class="sticky top-0 bg-neutral-950/80 backdrop-blur border-b border-neutral-800">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+    <div class="flex items-center gap-3">
+      <img src="bilder/logo_emerald.png" alt="Logo" class="w-10 h-10">
+      <span class="text-xl font-bold text-emerald-400">Sarah Theresa Schreiner</span>
     </div>
-    <nav class="mt-2">
-      <ul class="flex space-x-4 justify-end pb-3">
-        <li><a href="index.html" class="text-white hover:bg-mGreen-xd hover:border-b-5 hover:border-white pb-2 p-2">Home</a></li>
-        <li><a href="about.html" class="text-white hover:bg-mGreen-xd hover:border-b-5 hover:border-white pb-2 p-2">About</a></li>
-        <li><a href="skills.html" class="text-white hover:bg-mGreen-xd hover:border-b-5 hover:border-white pb-2 p-2">Skills</a></li>
-        <li><a href="projects.html" class="text-white hover:bg-mGreen-xd hover:border-b-5 hover:border-white pb-2 p-2">Projects</a></li>
-        <li><a href="contact.html" class="text-white pb-2 p-2  bg-mGreen-xd border-b-5 border-white">Contact</a></li>
+    <nav>
+      <ul class="flex gap-6 text-gray-300">
+        <li><a href="index.html" class="hover:text-emerald-400 transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-emerald-400 transition">About</a></li>
+        <li><a href="skills.html" class="hover:text-emerald-400 transition">Skills</a></li>
+        <li><a href="projects.html" class="hover:text-emerald-400 transition">Projects</a></li>
+        <li><a href="contact.html" class="text-emerald-400 font-semibold">Contact</a></li>
       </ul>
     </nav>
-  </header>
-  <main class="p-4 bg-black text-white">
-    <p>
-      <b>Sarah Theresa Schreiner</b><br>
-      <!--mail address-->
-      <br>
-      Instagram: <a href="https://www.instagram.com/pontiglory/" class="text-mGreen">@pontiglory</a><br>
-      Reddit: <a href="https://www.reddit.com/user/Sarah_sts" class="text-mGreen">/u/Sarah_sts</a><br>
-      YouTube: <a href="https://www.youtube.com/@Sarah-l2y1q" class="text-mGreen">@Sarah-l2y1q</a><br>
-      GitHub: <a href="https://github.com/sarahtheresaschreiner/" class="text-mGreen">sarahtheresaschreiner</a><br>
+  </div>
+</header>
+<main class="max-w-4xl mx-auto py-16 px-6">
+  <section class="mb-12">
+    <h2 class="text-3xl font-bold text-emerald-400 mb-4 text-center">Contact Me</h2>
+    <p class="text-gray-300 text-center mb-6">
+      I'd love to hear from you! You can connect with me directly via Email <br> or visit my LinkedIn and send a message over there.
     </p>
-    <br>
-    <br>
-    <br>
-    <!-- <h3 class="text-2xl">Contact Me</h3>
-    <p class="text-sm text-gray-400">Feel free to reach out via the form below. I will get back to you as soon as possible.</p>
-    <br>
-    <form action="mailto:mail@mail.com" method="POST" enctype="text/plain" class="max-w-md mx-auto bg-black border border-mGreen rounded-lg p-6 flex flex-col gap-4">
-      <label class="flex flex-col text-white">
-      Name
-      <input type="text" name="name" required class="mt-1 p-2 rounded bg-gray-900 border border-mGreen focus:outline-none focus:ring-2 focus:ring-mGreen" />
+
+    <div class="bg-neutral-900 p-6 rounded-2xl max-w-lg mx-auto flex flex-col gap-1 mb-8">
+      <h3 class="text-2xl font-semibold text-emerald-400 mb-2">Ways to Reach Me</h3>
+      <p class="text-gray-300">Email: <a href="mailto:portfolio@sarah-schreiner.de" class="text-emerald-400 hover:underline">portfolio@sarah-schreiner.de</a></p>
+      <p class="text-gray-300">LinkedIn: <a href="https://www.linkedin.com/in/sarah-theresa-schreiner-a43111381/" target="_blank" class="text-emerald-400 hover:underline">Sarah Theresa Schreiner</a></p>
+      <hr class="border-gray-700 my-2">
+      <h3 class="text-xl font-semibold text-emerald-400 mb-2">Or Visit my GitHub</h3>
+      <p class="text-gray-300">GitHub: <a href="https://github.com/sarahtheresaschreiner/" target="_blank" class="text-emerald-400 hover:underline">sarahtheresaschreiner</a></p>
+      <!-- <p class="text-gray-300">Instagram: <a href="https://www.instagram.com/pontiglory/" target="_blank" class="text-emerald-400 hover:underline">@pontiglory</a></p>
+      <p class="text-gray-300">YouTube: <a href="https://www.youtube.com/@Sarah-l2y1q" target="_blank" class="text-emerald-400 hover:underline">@Sarah-l2y1q</a></p> -->
+    </div>
+
+    
+    <!-- <form action="mailto:portfolio@sarah-schreiner.de" method="POST" enctype="text/plain" class="bg-neutral-900 p-6 rounded-2xl max-w-lg mx-auto flex flex-col gap-4">
+      <h3 class="text-2xl font-semibold text-emerald-400 mb-2">Sent a Message!</h3>
+      <label class="flex flex-col text-gray-300">
+        Name
+        <input type="text" name="name" required class="mt-1 p-2 rounded bg-gray-800 border border-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-400" />
       </label>
-      <label class="flex flex-col text-white">
-      Email Address
-      <input type="email" name="email" required class="mt-1 p-2 rounded bg-gray-900 border border-mGreen focus:outline-none focus:ring-2 focus:ring-mGreen" />
+      <label class="flex flex-col text-gray-300">
+        Email
+        <input type="email" name="email" required class="mt-1 p-2 rounded bg-gray-800 border border-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-400" />
       </label>
-      <label class="flex flex-col text-white">
-      Message
-      <textarea name="message" rows="5" required class="mt-1 p-2 rounded bg-gray-900 border border-mGreen focus:outline-none focus:ring-2 focus:ring-mGreen"></textarea>
+      <label class="flex flex-col text-gray-300">
+        Message
+        <textarea name="message" rows="5" required class="mt-1 p-2 rounded bg-gray-800 border border-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-400"></textarea>
       </label>
-      <button type="submit" class="bg-mGreen text-black font-bold py-2 px-4 rounded hover:bg-mGreen/75 transition-colors">
-      Send
-      </button>
+      <button type="submit" class="bg-emerald-400 text-black font-bold py-2 px-4 rounded hover:bg-emerald-400/80 transition-colors">Send</button>
     </form> -->
-  </main>
-  <footer class="bg-black px-4 py-2 text-center text-white" >
-    <hr>
+  </section>
+</main>
+
+  <footer class="bg-neutral-950 text-gray-400 px-6 py-8 mt-12">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
     <p>&copy; 2025 Sarah Theresa Schreiner</p>
+      <div class="flex gap-6">
+        <a href="https://github.com/sarahtheresaschreiner/" target="_blank" class="hover:text-emerald-400 transition">
+          <img src="bilder/logos/github_logo.png" alt="GitHub" class="w-6 h-6">
+        </a>
+        <!-- linkedin -->
+        <a href="https://www.linkedin.com/in/sarah-theresa-schreiner-a43111381/" target="_blank" class="hover:text-emerald-400 transition">
+          <img src="bilder/logos/linkedin_logo.png" alt="LinkedIn" class="w-6 h-6">
+        </a>
+        <!-- <a href="https://www.instagram.com/pontiglory/" target="_blank" class="hover:text-emerald-400 transition">
+          <img src="bilder/logos/instagram_logo.png" alt="Instagram" class="w-6 h-6">
+        </a>
+        <a href="https://www.youtube.com/@Sarah-l2y1q" target="_blank" class="hover:text-emerald-400 transition">
+          <img src="bilder/logos/youtube_logo.png" alt="YouTube" class="w-6 h-6">
+        </a> -->
+      </div>
+    </div>
   </footer>
 </body>
 </html>

@@ -3,39 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Index</title>
+  <title>STS Portfolio - Home</title>
+  <link rel="icon" type="image/x-icon" href="/bilder/logo_emerald.png">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <style type="text/tailwindcss">
-    @theme {
-      --color-mGreen: #34b011;
-      --color-mGreen-xd: #83b011;
-    }
-  </style>
 </head>
-<body  class="bg-black">
-  <header class="bg-mGreen px-4 pt-4 sticky top-0">
-    <div class="flex items-center">
-      <img src="bilder/logoS.png" alt="Logo" class="w-15 h-15 inline-block">
-      <text class="text-4xl text-black pl-4 font-bold">
-        Sarah Theresa Schreiner
-      </text>
+<body  class="bg-neutral-950 text-gray-400">
+  <header class="sticky top-0 bg-neutral-950/80 backdrop-blur border-b border-neutral-800">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+    <div class="flex items-center gap-3">
+      <img src="bilder/logo_emerald.png" alt="Logo" class="w-10 h-10">
+      <span class="text-xl font-bold text-emerald-400">Sarah Theresa Schreiner</span>
     </div>
-    <nav class="mt-2">
-      <ul class="flex space-x-4 justify-end pb-3">
-        <li><a href="index.html" class="text-white bg-mGreen-xd border-b-5 border-white pb-2 p-2">Home</a></li>
-        <li><a href="about.html" class="text-white hover:bg-mGreen-xd hover:border-b-5 hover:border-white pb-2 p-2">About</a></li>
-        <li><a href="skills.html" class="text-white hover:bg-mGreen-xd hover:border-b-5 hover:border-white pb-2 p-2">Skills</a></li>
-        <li><a href="projects.html" class="text-white hover:bg-mGreen-xd hover:border-b-5 hover:border-white pb-2 p-2">Projects</a></li>
-        <li><a href="contact.html" class="text-white pb-2 p-2 hover:bg-mGreen-xd hover:border-b-5 hover:border-white">Contact</a></li>
+    <nav>
+      <ul class="flex gap-6 text-gray-300">
+        <li><a href="index.html" class="text-emerald-400 font-semibold">Home</a></li>
+        <li><a href="about.html" class="hover:text-emerald-400 transition">About</a></li>
+        <li><a href="skills.html" class="hover:text-emerald-400 transition">Skills</a></li>
+        <li><a href="projects.html" class="hover:text-emerald-400 transition">Projects</a></li>
+        <li><a href="contact.html" class="hover:text-emerald-400 transition">Contact</a></li>
       </ul>
     </nav>
-  </header>
-  <main class="text-white p-4">
-    (will be filled in later)  
-  </main>
-  <footer class="bg-black px-4 py-2 text-center text-white">
-    <hr>
-    <p>&copy; 2025 Sarah Theresa Schreiner</p>
-  </footer>
+  </div>
+</header>
+
+<main class="text-center py-32">
+  <h1 class="text-5xl font-bold mb-4">
+    Hi, I’m <span class="text-emerald-400">Sarah</span>
+  </h1>
+  <p class="text-gray-400 max-w-2xl mx-auto">
+    Data Science & Engineering | Passion for Motorsport Analytics | Django Developing
+  </p>
+  <a href="projects.html" 
+     class="inline-block mt-6 px-6 py-3 rounded-xl bg-emerald-400 text-black font-semibold hover:bg-emerald-300 transition">
+    View my Work
+  </a>
+</main>
+<footer class="bg-neutral-950 text-gray-400 px-6 py-8 mt-12">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+  <p>&copy; 2025 Sarah Theresa Schreiner</p>
+    <div class="flex gap-6">
+        <a href="https://github.com/sarahtheresaschreiner/" target="_blank" class="hover:text-emerald-400 transition">
+          <img src="bilder/logos/github_logo.png" alt="GitHub" class="w-6 h-6">
+        </a>
+        <!-- linkedin -->
+        <a href="https://www.linkedin.com/in/sarah-theresa-schreiner-a43111381/" target="_blank" class="hover:text-emerald-400 transition">
+          <img src="bilder/logos/linkedin_logo.png" alt="LinkedIn" class="w-6 h-6">
+        </a>
+        <!-- <a href="https://www.instagram.com/pontiglory/" target="_blank" class="hover:text-emerald-400 transition">
+          <img src="bilder/logos/instagram_logo.png" alt="Instagram" class="w-6 h-6">
+        </a>
+        <a href="https://www.youtube.com/@Sarah-l2y1q" target="_blank" class="hover:text-emerald-400 transition">
+          <img src="bilder/logos/youtube_logo.png" alt="YouTube" class="w-6 h-6">
+        </a> -->
+      </div>
+  </div>
+</footer>
 </body>
 </html>
