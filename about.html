@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,16 +6,23 @@
   <title>STS Portfolio - About</title>
   <link rel="icon" type="image/x-icon" href="/bilder/logo_emerald.png">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+  </script>
 </head>
 <body class="bg-neutral-950 text-gray-400">
   <!-- Header -->
-  <header class="sticky top-0 bg-neutral-950/80 backdrop-blur border-b border-neutral-800">
+  <header class="sticky top-0 bg-neutral-950/80 backdrop-blur border-b border-neutral-800 z-50">
     <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
       <div class="flex items-center gap-3">
         <img src="bilder/logo_emerald.png" alt="Logo" class="w-10 h-10">
-        <span class="text-xl font-bold text-emerald-400">Sarah Theresa Schreiner</span>
+        <span class="text-lg sm:text-xl font-bold text-emerald-400">Sarah Theresa Schreiner</span>
       </div>
-      <nav>
+      
+      <!-- Desktop Nav -->
+      <nav class="hidden md:block">
         <ul class="flex gap-6 text-gray-300">
           <li><a href="index.html" class="hover:text-emerald-400 transition">Home</a></li>
           <li><a href="about.html" class="text-emerald-400 font-semibold">About</a></li>
@@ -24,21 +31,37 @@
           <li><a href="contact.html" class="hover:text-emerald-400 transition">Contact</a></li>
         </ul>
       </nav>
+
+      <!-- Mobile Button -->
+      <button onclick="toggleMenu()" class="md:hidden text-gray-300 hover:text-emerald-400 focus:outline-none">
+        ☰
+      </button>
     </div>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="hidden md:hidden bg-neutral-900 border-t border-neutral-800">
+      <ul class="flex flex-col items-center gap-4 py-4 text-gray-300">
+        <li><a href="index.html" class="hover:text-emerald-400 transition">Home</a></li>
+        <li><a href="about.html" class="text-emerald-400 font-semibold">About</a></li>
+        <li><a href="skills.html" class="hover:text-emerald-400 transition">Skills</a></li>
+        <li><a href="projects.html" class="hover:text-emerald-400 transition">Projects</a></li>
+        <li><a href="contact.html" class="hover:text-emerald-400 transition">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- Main Content -->
-  <main class="max-w-6xl mx-auto px-6 py-20">
-    <h1 class="text-4xl font-bold text-center mb-12 text-emerald-400">About Me</h1>
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+    <h1 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-emerald-400">About Me</h1>
     
-    <div class="grid grid-cols-1 md:grid-cols-7 gap-12 items-center">
+    <div class="grid grid-cols-1 md:grid-cols-7 gap-10 sm:gap-12 items-center">
       <!-- Profilbild -->
-      <div class="flex justify-center items-start md:col-span-2">
-        <img src="bilder/profilbild.jfif" alt="Sarah" class="w-auto h-80 rounded-2xl object-cover shadow-lg">
+      <div class="flex justify-center md:col-span-2">
+        <img src="bilder/profilbild.jfif" alt="Sarah" class="w-48 sm:w-60 md:w-auto h-64 sm:h-80 rounded-2xl object-cover shadow-lg">
       </div>
 
       <!-- Text -->
-      <div class="md:col-span-5">
+      <div class="md:col-span-5 text-sm sm:text-base leading-relaxed">
         <p class="mb-4">
           Hi, I’m <span class="text-emerald-400 font-semibold">Sarah Theresa Schreiner</span> – 
           passionate about <span class="text-gray-200">Data Science & Data Engineering</span> with a strong focus 
@@ -47,8 +70,8 @@
         <p class="mb-4">
           I try to combine <span class="text-gray-200">data-driven insights</span> with the passion for 
           <span class="text-gray-200">performance, speed, technology and data</span>. 
-          I also enjoy building applications with <span class="text-gray-200">Django</span> to make live easier 
-          and therefor enjoy automating workflows that make data more accessible and useful.
+          I also enjoy building applications with <span class="text-gray-200">Django</span> to make life easier 
+          and therefore enjoy automating workflows that make data more accessible and useful.
         </p>
         <p class="mb-4">
           Beyond data, I’m fascinated by <span class="text-gray-200">motorsport culture</span>, 
@@ -59,49 +82,34 @@
       </div>
     </div>
 
-    <!-- Lebenslauf Section -->
-    <section class="mt-20">
-      <h2 class="text-3xl font-bold text-center mb-10 text-emerald-400">Curriculum Vitae</h2>
+    <!-- CV Section -->
+    <section class="mt-16 sm:mt-20">
+      <h2 class="text-2xl sm:text-3xl font-bold text-center mb-10 text-emerald-400">Curriculum Vitae</h2>
       <div class="flex flex-col gap-8">
-<!--         <div class="p-8 bg-neutral-900/70 rounded-2xl shadow-lg">
-          <h3 class="text-xl font-semibold text-gray-200 mb-3">Education</h3>
-          <ul class=" text-gray-300">
-            <li>M.Sc. Data Science – Technical University Munich (2022–2024)</li>
-            <li>B.Sc. Computer Science – University of Augsburg (2018–2022)</li>
-          </ul>
-        </div> -->
-        <div class="p-8 bg-neutral-900/70 rounded-2xl shadow-lg">
-          <h3 class="text-xl font-semibold text-gray-200 mb-3">School</h3>
-          <ul class="text-gray-300">
+        <div class="p-6 sm:p-8 bg-neutral-900/70 rounded-2xl shadow-lg">
+          <h3 class="text-lg sm:text-xl font-semibold text-gray-200 mb-3">School</h3>
+          <ul class="text-gray-300 text-sm sm:text-base">
             <li>Berufliches Gymnasium, Focus Subject: Computer Science (since 2024)</li>
           </ul>
         </div>
-
-        <!-- <div class="p-8 bg-neutral-900/70 rounded-2xl shadow-lg">
-          <h3 class="text-xl font-semibold text-gray-200 mb-3">Experience</h3>
-          <ul class="text-gray-300">
-            <li>Data Scientist Intern – BMW Motorsport (2023)</li>
-            <li>Research Assistant – University of Augsburg (2021–2022)</li>
-          </ul>
-        </div> -->
       </div>
     </section>
 
-    <!-- Werte/Interessen -->
-    <section class="mt-20">
-      <h2 class="text-3xl font-bold text-center mb-10 text-emerald-400">What Drives Me</h2>
-      <div class="grid md:grid-cols-3 gap-8 text-center">
-        <div class="p-8 bg-neutral-900/60 backdrop-blur rounded-2xl shadow-lg hover:scale-105 hover:bg-neutral-800 transition transform">
-          <h3 class="text-xl font-semibold mb-3 text-gray-200">Innovation</h3>
-          <p class="text-gray-400">Developing new ideas to achieve better outcomes in Data Science and in life.</p>
+    <!-- Values Section -->
+    <section class="mt-16 sm:mt-20">
+      <h2 class="text-2xl sm:text-3xl font-bold text-center mb-10 text-emerald-400">What Drives Me</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 text-center">
+        <div class="p-6 sm:p-8 bg-neutral-900/60 backdrop-blur rounded-2xl shadow-lg hover:scale-105 hover:bg-neutral-800 transition transform">
+          <h3 class="text-lg sm:text-xl font-semibold mb-3 text-gray-200">Innovation</h3>
+          <p class="text-gray-400 text-sm sm:text-base">Developing new ideas to achieve better outcomes in Data Science and in life.</p>
         </div>
-        <div class="p-8 bg-neutral-900/60 backdrop-blur rounded-2xl shadow-lg hover:scale-105 hover:bg-neutral-800 transition transform">
-          <h3 class="text-xl font-semibold mb-3 text-gray-200">Precision</h3>
-          <p class="text-gray-400">Striving for accuracy and clarity in every analysis, model, and project to get the best possible outcome.</p>
+        <div class="p-6 sm:p-8 bg-neutral-900/60 backdrop-blur rounded-2xl shadow-lg hover:scale-105 hover:bg-neutral-800 transition transform">
+          <h3 class="text-lg sm:text-xl font-semibold mb-3 text-gray-200">Precision</h3>
+          <p class="text-gray-400 text-sm sm:text-base">Striving for accuracy and clarity in every analysis, model, and project to get the best possible outcome.</p>
         </div>
-        <div class="p-8 bg-neutral-900/60 backdrop-blur rounded-2xl shadow-lg hover:scale-105 hover:bg-neutral-800 transition transform">
-          <h3 class="text-xl font-semibold mb-3 text-gray-200">Passion</h3>
-          <p class="text-gray-400">A lifelong enthusiasm for motorsport, technology, and constant progress.</p>
+        <div class="p-6 sm:p-8 bg-neutral-900/60 backdrop-blur rounded-2xl shadow-lg hover:scale-105 hover:bg-neutral-800 transition transform">
+          <h3 class="text-lg sm:text-xl font-semibold mb-3 text-gray-200">Passion</h3>
+          <p class="text-gray-400 text-sm sm:text-base">A lifelong enthusiasm for motorsport, technology, and constant progress.</p>
         </div>
       </div>
     </section>
@@ -109,22 +117,15 @@
 
   <!-- Footer -->
   <footer class="bg-neutral-950 text-gray-400 px-6 py-8 mt-12">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
       <p>&copy; 2025 Sarah Theresa Schreiner</p>
       <div class="flex gap-6">
         <a href="https://github.com/sarahtheresaschreiner/" target="_blank" class="hover:text-emerald-400 transition">
           <img src="bilder/logos/github_logo.png" alt="GitHub" class="w-6 h-6">
         </a>
-        <!-- linkedin -->
         <a href="https://www.linkedin.com/in/sarah-theresa-schreiner-a43111381/" target="_blank" class="hover:text-emerald-400 transition">
           <img src="bilder/logos/linkedin_logo.png" alt="LinkedIn" class="w-6 h-6">
         </a>
-        <!-- <a href="https://www.instagram.com/pontiglory/" target="_blank" class="hover:text-emerald-400 transition">
-          <img src="bilder/logos/instagram_logo.png" alt="Instagram" class="w-6 h-6">
-        </a>
-        <a href="https://www.youtube.com/@Sarah-l2y1q" target="_blank" class="hover:text-emerald-400 transition">
-          <img src="bilder/logos/youtube_logo.png" alt="YouTube" class="w-6 h-6">
-        </a> -->
       </div>
     </div>
   </footer>

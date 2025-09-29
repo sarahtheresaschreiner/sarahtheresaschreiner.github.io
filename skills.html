@@ -6,16 +6,41 @@
   <title>STS Portfolio - Skills</title>
   <link rel="icon" type="image/x-icon" href="/bilder/logo_emerald.png">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+  </script>
 </head>
 <body class="bg-neutral-950 text-gray-400">
-  <header class="sticky top-0 bg-neutral-950/80 backdrop-blur border-b border-neutral-800">
-  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
-    <div class="flex items-center gap-3">
-      <img src="bilder/logo_emerald.png" alt="Logo" class="w-10 h-10">
-      <span class="text-xl font-bold text-emerald-400">Sarah Theresa Schreiner</span>
+  <!-- Header -->
+  <header class="sticky top-0 bg-neutral-950/80 backdrop-blur border-b border-neutral-800 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+      <div class="flex items-center gap-3">
+        <img src="bilder/logo_emerald.png" alt="Logo" class="w-10 h-10">
+        <span class="text-lg sm:text-xl font-bold text-emerald-400">Sarah Theresa Schreiner</span>
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:block">
+        <ul class="flex gap-6 text-gray-300">
+          <li><a href="index.html" class="hover:text-emerald-400 transition">Home</a></li>
+          <li><a href="about.html" class="hover:text-emerald-400 transition">About</a></li>
+          <li><a href="skills.html" class="text-emerald-400 font-semibold">Skills</a></li>
+          <li><a href="projects.html" class="hover:text-emerald-400 transition">Projects</a></li>
+          <li><a href="contact.html" class="hover:text-emerald-400 transition">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Button -->
+      <button onclick="toggleMenu()" class="md:hidden text-gray-300 hover:text-emerald-400 focus:outline-none">
+        ☰
+      </button>
     </div>
-    <nav>
-      <ul class="flex gap-6 text-gray-300">
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="hidden md:hidden bg-neutral-900 border-t border-neutral-800">
+      <ul class="flex flex-col items-center gap-4 py-4 text-gray-300">
         <li><a href="index.html" class="hover:text-emerald-400 transition">Home</a></li>
         <li><a href="about.html" class="hover:text-emerald-400 transition">About</a></li>
         <li><a href="skills.html" class="text-emerald-400 font-semibold">Skills</a></li>
@@ -23,46 +48,41 @@
         <li><a href="contact.html" class="hover:text-emerald-400 transition">Contact</a></li>
       </ul>
     </nav>
-  </div>
-</header>
+  </header>
 
+  <!-- Main -->
   <main class="p-4">
-    <section class="max-w-5xl mx-auto py-20">
-      <h2 class="text-3xl font-bold text-center mb-10">Skills</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-neutral-900 p-6 rounded-xl hover:shadow-emerald-400/20 transition">
+    <section class="max-w-4xl mx-auto py-16 sm:py-20">
+      <h2 class="text-2xl sm:text-3xl font-bold text-center mb-10 text-emerald-400">Skills</h2>
+      
+      <div class="grid md:grid-cols-3 gap-6 justify-items-center">
+        <div class="bg-neutral-900 p-6 rounded-xl hover:shadow-emerald-400/20 transition w-full max-w-xs text-center">
           <h3 class="text-xl font-semibold text-emerald-400">Python</h3>
           <p class="text-gray-400 text-sm mt-2">Pandas, APIs, Plotting</p>
         </div>
-        <div class="bg-neutral-900 p-6 rounded-xl hover:shadow-emerald-400/20 transition">
+        <div class="bg-neutral-900 p-6 rounded-xl hover:shadow-emerald-400/20 transition w-full max-w-xs text-center">
           <h3 class="text-xl font-semibold text-emerald-400">Django</h3>
           <p class="text-gray-400 text-sm mt-2">Web Development</p>
         </div>
-        <div class="bg-neutral-900 p-6 rounded-xl hover:shadow-emerald-400/20 transition">
+        <div class="bg-neutral-900 p-6 rounded-xl hover:shadow-emerald-400/20 transition w-full max-w-xs text-center">
           <h3 class="text-xl font-semibold text-emerald-400">Websites</h3>
           <p class="text-gray-400 text-sm mt-2">HTML, CSS, Tailwind</p>
         </div>
       </div>
     </section>
   </main>
+
+  <!-- Footer -->
   <footer class="bg-neutral-950 text-gray-400 px-6 py-8 mt-12">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-    <p>&copy; 2025 Sarah Theresa Schreiner</p>
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+      <p>&copy; 2025 Sarah Theresa Schreiner</p>
       <div class="flex gap-6">
         <a href="https://github.com/sarahtheresaschreiner/" target="_blank" class="hover:text-emerald-400 transition">
           <img src="bilder/logos/github_logo.png" alt="GitHub" class="w-6 h-6">
         </a>
-        <!-- linkedin -->
-        <a href="https://www.linkedin.com/in/sarah-theresa-schreiner-a43111381/
-        " target="_blank" class="hover:text-emerald-400 transition">
+        <a href="https://www.linkedin.com/in/sarah-theresa-schreiner-a43111381/" target="_blank" class="hover:text-emerald-400 transition">
           <img src="bilder/logos/linkedin_logo.png" alt="LinkedIn" class="w-6 h-6">
         </a>
-        <!-- <a href="https://www.instagram.com/pontiglory/" target="_blank" class="hover:text-emerald-400 transition">
-          <img src="bilder/logos/instagram_logo.png" alt="Instagram" class="w-6 h-6">
-        </a>
-        <a href="https://www.youtube.com/@Sarah-l2y1q" target="_blank" class="hover:text-emerald-400 transition">
-          <img src="bilder/logos/youtube_logo.png" alt="YouTube" class="w-6 h-6">
-        </a> -->
       </div>
     </div>
   </footer>

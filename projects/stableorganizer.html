@@ -3,65 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formula 1 Data Analysis</title>
+  <title>Stableorganizer</title>
+  <link rel="icon" type="image/x-icon" href="/bilder/logo_emerald.png">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="bg-neutral-950 text-white font-sans">
-  <header class="sticky top-0 bg-neutral-950/80 backdrop-blur border-b border-neutral-800">
-    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
-      <a href="../index.html" class="text-emerald-400 font-bold text-xl">&larr; Back</a>
-      <h1 class="text-emerald-400 font-bold text-xl">Project Details</h1>
+
+  <!-- Header -->
+  <header class="sticky top-0 bg-neutral-950/80 backdrop-blur border-b border-neutral-800 z-50">
+    <div class="max-w-4xl mx-auto flex justify-between items-center px-6 py-4">
+      <a href="../index.html" class="text-emerald-400 font-bold text-lg sm:text-xl">&larr; Back</a>
+      <h1 class="text-emerald-400 font-bold text-lg sm:text-xl">Project Details</h1>
     </div>
   </header>
 
-  <main class="max-w-4xl mx-auto py-16 px-6">
-    <h2 class="text-4xl font-bold mb-4 text-emerald-400">Stableorganizer</h2>
-    <p class="text-gray-400 italic mb-2">Started: August 2025</p>
-    <p class="text-gray-300 mb-6">
+  <!-- Main Content -->
+  <main class="max-w-xl mx-auto py-12 px-4 sm:px-6">
+    <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-emerald-400 text-center">Stableorganizer</h2>
+    <p class="text-gray-400 italic mb-4 text-center">Started: August 2025</p>
+    <p class="text-gray-300 mb-6 text-center">
       This Django-Tool is designed to help horse owners and stable managers efficiently manage their stables. It offers features such as horse profiles, health records, feeding schedules, and appointment tracking, all in one user-friendly platform. Till now it is only available in German.
     </p>
 
-    <img src="../bilder/stableorganizer/startpage.png" alt="Formula 1 Data Visualization" class="rounded-xl shadow-lg mb-6">
+    <img src="../bilder/stableorganizer/startpage.png" alt="Stableorganizer Screenshot" class="w-full h-auto rounded-xl shadow-lg mb-6">
 
-    <h3 class="text-2xl font-semibold mb-3">Technologies Used</h3>
-    <ul class="flex flex-wrap gap-2 mb-6">
+    <h3 class="text-2xl font-semibold mb-3 text-center sm:text-left">Technologies Used</h3>
+    <ul class="flex flex-wrap gap-2 mb-6 justify-center sm:justify-start">
       <li class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded">Django</li>
       <li class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded">Python</li>
       <li class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded">HTML</li>
       <li class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded">Tailwind CSS</li>
     </ul>
 
-    <h3 class="text-2xl font-semibold mb-3">Key Features</h3>
-    <ul class="list-disc pl-6 text-gray-300 space-y-2">
+    <h3 class="text-2xl font-semibold mb-3 text-center sm:text-left">Key Features</h3>
+    <ul class="list-disc pl-6 text-gray-300 space-y-2 mb-6">
       <li>Organising stable life</li>
       <li>Connect with others from your stable</li>
-      <li>Share your horse with others and have all necessary Information in one place</li>
+      <li>Share your horse with others and have all necessary information in one place</li>
     </ul>
 
-    <div class="mt-10">
-      Till now it is still work in progress. <br>But you
-      <a href="https://github.com/sarahtheresaschreiner/" target="_blank" class=" italic text-emerald-400 rounded-xl font-semibold hover:underline">can check out my other projects on GitHub!</a>
-    </div>
+    <p class="text-gray-300 mb-6 text-center sm:text-left">
+      Till now it is still work in progress. <br>
+      But you <a href="https://github.com/sarahtheresaschreiner/" target="_blank" class="italic text-emerald-400 font-semibold hover:underline">can check out my other projects on GitHub!</a>
+    </p>
   </main>
+
+  <!-- Footer -->
   <footer class="bg-neutral-950 text-gray-400 px-6 py-8 mt-12">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-  <p>&copy; 2025 Sarah Theresa Schreiner</p>
-    <div class="flex gap-6">
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+      <p>&copy; 2025 Sarah Theresa Schreiner</p>
+      <div class="flex gap-6 justify-center md:justify-start">
         <a href="https://github.com/sarahtheresaschreiner/" target="_blank" class="hover:text-emerald-400 transition">
           <img src="../bilder/logos/github_logo.png" alt="GitHub" class="w-6 h-6">
         </a>
-        <!-- linkedin -->
         <a href="https://www.linkedin.com/in/sarah-theresa-schreiner-a43111381/" target="_blank" class="hover:text-emerald-400 transition">
           <img src="../bilder/logos/linkedin_logo.png" alt="LinkedIn" class="w-6 h-6">
         </a>
-        <!-- <a href="https://www.instagram.com/pontiglory/" target="_blank" class="hover:text-emerald-400 transition">
-          <img src="bilder/logos/instagram_logo.png" alt="Instagram" class="w-6 h-6">
-        </a>
-        <a href="https://www.youtube.com/@Sarah-l2y1q" target="_blank" class="hover:text-emerald-400 transition">
-          <img src="bilder/logos/youtube_logo.png" alt="YouTube" class="w-6 h-6">
-        </a> -->
       </div>
-  </div>
+    </div>
   </footer>
 
 </body>

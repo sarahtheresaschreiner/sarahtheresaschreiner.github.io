@@ -6,16 +6,42 @@
   <title>STS Portfolio - Home</title>
   <link rel="icon" type="image/x-icon" href="/bilder/logo_emerald.png">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script>
+    // kleines Script für mobile Navigation
+    function toggleMenu() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+  </script>
 </head>
-<body  class="bg-neutral-950 text-gray-400">
-  <header class="sticky top-0 bg-neutral-950/80 backdrop-blur border-b border-neutral-800">
-  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
-    <div class="flex items-center gap-3">
-      <img src="bilder/logo_emerald.png" alt="Logo" class="w-10 h-10">
-      <span class="text-xl font-bold text-emerald-400">Sarah Theresa Schreiner</span>
+<body class="bg-neutral-950 text-gray-400">
+  <!-- Header -->
+  <header class="sticky top-0 bg-neutral-950/80 backdrop-blur border-b border-neutral-800 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+      <div class="flex items-center gap-3">
+        <img src="bilder/logo_emerald.png" alt="Logo" class="w-10 h-10">
+        <span class="text-lg sm:text-xl font-bold text-emerald-400">Sarah Theresa Schreiner</span>
+      </div>
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:block">
+        <ul class="flex gap-6 text-gray-300">
+          <li><a href="index.html" class="text-emerald-400 font-semibold">Home</a></li>
+          <li><a href="about.html" class="hover:text-emerald-400 transition">About</a></li>
+          <li><a href="skills.html" class="hover:text-emerald-400 transition">Skills</a></li>
+          <li><a href="projects.html" class="hover:text-emerald-400 transition">Projects</a></li>
+          <li><a href="contact.html" class="hover:text-emerald-400 transition">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Button -->
+      <button onclick="toggleMenu()" class="md:hidden text-gray-300 hover:text-emerald-400 focus:outline-none">
+        ☰
+      </button>
     </div>
-    <nav>
-      <ul class="flex gap-6 text-gray-300">
+
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="hidden md:hidden bg-neutral-900 border-t border-neutral-800">
+      <ul class="flex flex-col items-center gap-4 py-4 text-gray-300">
         <li><a href="index.html" class="text-emerald-400 font-semibold">Home</a></li>
         <li><a href="about.html" class="hover:text-emerald-400 transition">About</a></li>
         <li><a href="skills.html" class="hover:text-emerald-400 transition">Skills</a></li>
@@ -23,40 +49,35 @@
         <li><a href="contact.html" class="hover:text-emerald-400 transition">Contact</a></li>
       </ul>
     </nav>
-  </div>
-</header>
+  </header>
 
-<main class="text-center py-32">
-  <h1 class="text-5xl font-bold mb-4">
-    Hi, I’m <span class="text-emerald-400">Sarah</span>
-  </h1>
-  <p class="text-gray-400 max-w-2xl mx-auto">
-    Data Science & Engineering | Passion for Motorsport Analytics | Django Developing
-  </p>
-  <a href="projects.html" 
-     class="inline-block mt-6 px-6 py-3 rounded-xl bg-emerald-400 text-black font-semibold hover:bg-emerald-300 transition">
-    View my Work
-  </a>
-</main>
-<footer class="bg-neutral-950 text-gray-400 px-6 py-8 mt-12">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-  <p>&copy; 2025 Sarah Theresa Schreiner</p>
-    <div class="flex gap-6">
+  <!-- Main -->
+  <main class="text-center py-20 sm:py-32 px-4">
+    <h1 class="text-3xl sm:text-5xl font-bold mb-4">
+      Hi, I’m <span class="text-emerald-400">Sarah</span>
+    </h1>
+    <p class="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base">
+      Data Science & Engineering | Passion for Motorsport Analytics | Django Developing
+    </p>
+    <a href="projects.html" 
+       class="inline-block mt-6 px-6 py-3 rounded-xl bg-emerald-400 text-black font-semibold hover:bg-emerald-300 transition">
+      View my Work
+    </a>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-neutral-950 text-gray-400 px-6 py-8 mt-12">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+      <p>&copy; 2025 Sarah Theresa Schreiner</p>
+      <div class="flex gap-6">
         <a href="https://github.com/sarahtheresaschreiner/" target="_blank" class="hover:text-emerald-400 transition">
           <img src="bilder/logos/github_logo.png" alt="GitHub" class="w-6 h-6">
         </a>
-        <!-- linkedin -->
         <a href="https://www.linkedin.com/in/sarah-theresa-schreiner-a43111381/" target="_blank" class="hover:text-emerald-400 transition">
           <img src="bilder/logos/linkedin_logo.png" alt="LinkedIn" class="w-6 h-6">
         </a>
-        <!-- <a href="https://www.instagram.com/pontiglory/" target="_blank" class="hover:text-emerald-400 transition">
-          <img src="bilder/logos/instagram_logo.png" alt="Instagram" class="w-6 h-6">
-        </a>
-        <a href="https://www.youtube.com/@Sarah-l2y1q" target="_blank" class="hover:text-emerald-400 transition">
-          <img src="bilder/logos/youtube_logo.png" alt="YouTube" class="w-6 h-6">
-        </a> -->
       </div>
-  </div>
-</footer>
+    </div>
+  </footer>
 </body>
 </html>
