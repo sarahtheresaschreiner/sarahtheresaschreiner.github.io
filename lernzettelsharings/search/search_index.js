@@ -1,0 +1,1 @@
+var __index = {"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"index.html","title":"Lernzettelsharing","text":"<p>Plattform zum teilen von Lernzetteln.</p>"}]}
