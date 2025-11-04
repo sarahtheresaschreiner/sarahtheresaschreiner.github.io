@@ -1,0 +1,62 @@
+# UML-Diagramme: Use Case & Struktogramme
+*01.11.2025*
+---
+Dieses Dokument behandelt zwei wichtige Arten von Diagrammen zur **Visualisierung von Systemen und Programmen**:  
+
+1. **Use Case Diagramme** – zeigen Interaktionen zwischen Akteuren und Systemfunktionen  
+2. **Struktogramme (Nassi-Shneiderman-Diagramme)** – zeigen die logische Struktur von Algorithmen  
+
+---
+
+## Use Case Diagramme
+- Ein **Use Case Diagramm** zeigt die **Interaktionen zwischen Benutzern (Akteuren) und einem System**  
+- Bestandteil der UML (Unified Modeling Language)  
+- Ziel: die **Funktionalität und Anforderungen eines Systems** übersichtlich darstellen  
+
+### Bestandteile
+- **Akteure (Actors):** Personen, Organisationen oder externe Systeme, die mit dem System interagieren  
+- **Use Cases:** Funktionale Anforderungen oder Aktionen des Systems  
+- **Beziehungen:**  
+  - *Assoziation:* Verbindung zwischen Akteur und Use Case  
+  - *Include:* Ein Use Case wird immer von einem anderen verwendet  
+  - *Extend:* Ein Use Case wird optional von einem anderen erweitert  
+
+### Beispiel
+bild fehlt
+
+- Akteur: „Benutzer“  
+- Use Cases: „Login“, „Daten anzeigen“, „Bericht erstellen“  
+- Beziehungen: „Login“ → *include* „Authentifizierung“  
+
+### Vorteile
+- Klare Übersicht über **Systemfunktionalität**  
+- Hilft bei der **Kommunikation zwischen Entwicklern und Stakeholdern**  
+- Unterstützt die **Anforderungsanalyse**  
+
+---
+
+## Struktogramme (Nassi-Shneiderman-Diagramme)
+- Ein **Struktogramm** ist eine grafische Darstellung von **Algorithmen**  
+- Zeigt **kontrollflussorientiert**, wie ein Programm aufgebaut ist  
+- Ziel: **logische Struktur eines Programms verständlich darstellen**  
+
+### Bestandteile
+- **Sequenz:** Schritte werden **untereinander** ausgeführt  
+- **Verzweigung (If-Else):** Entscheidungen durch **geteilt Kästen**  
+- **Schleifen:** Wiederholungen (For, While) als **Kästen mit Bedingung**  
+- **Unterprogramme/Funktionen:** Eingeklappte Kästen oder spezielle Symbole  
+
+### Beispiel
+bild fehlt
+
+- Ablauf:  
+  1. Eingabe einer Zahl  
+  2. Prüfen, ob Zahl > 0  
+     - Ja → „Positive Zahl“ ausgeben  
+     - Nein → „Nicht-positive Zahl“ ausgeben  
+  3. Ende  
+
+### Vorteile
+- **Klare Darstellung der Programmstruktur**  
+- Einfaches **Debugging und Verständnis** komplexer Algorithmen  
+- Grundlage für **Programmierlogik und Pseudocode**
