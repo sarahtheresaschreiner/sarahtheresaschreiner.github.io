@@ -1,3 +1,5 @@
 *.code-workspace
 Notizen/
 lernzettelsharing/
+old_portfolio/
+.venv/
