@@ -214,7 +214,7 @@
   
     
   
-  Welcome to MkDocs
+  Wissensverzeichnis
 
       </a>
     </li>
@@ -233,7 +233,7 @@
   
     
   
-  Markdown cheat sheet
+  Welcome to MkDocs
 
       </a>
     </li>
@@ -350,7 +350,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome to MkDocs
+    Wissensverzeichnis
   
 
     
@@ -377,7 +377,7 @@
   <span class="md-ellipsis">
     
   
-    Markdown cheat sheet
+    Welcome to MkDocs
   
 
     
@@ -582,6 +582,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -703,17 +707,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#04112025" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        04.11.2025
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#static-arrays" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -768,7 +761,7 @@
   <a href="#memory" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Memory:
+        Memory
       
     </span>
   </a>
@@ -798,10 +791,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#characteristics_1" class="md-nav__link">
+  <a href="#characteristics-dynamik-array" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Characteristics
+        Characteristics Dynamik Array
       
     </span>
   </a>
@@ -826,10 +819,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#static-arrays_1" class="md-nav__link">
+  <a href="#storing-static-arrays" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Static Arrays
+        Storing Static Arrays
       
     </span>
   </a>
@@ -909,6 +902,34 @@
     
   
     AVL Trees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Breadth-First Search (BFS)
   
 
     
@@ -1077,6 +1098,34 @@
     
   
     Counting Sort
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Depth-First Search
   
 
     
@@ -1725,17 +1774,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#04112025" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        04.11.2025
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#static-arrays" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1790,7 +1828,7 @@
   <a href="#memory" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Memory:
+        Memory
       
     </span>
   </a>
@@ -1820,10 +1858,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#characteristics_1" class="md-nav__link">
+  <a href="#characteristics-dynamik-array" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Characteristics
+        Characteristics Dynamik Array
       
     </span>
   </a>
@@ -1848,10 +1886,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#static-arrays_1" class="md-nav__link">
+  <a href="#storing-static-arrays" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Static Arrays
+        Storing Static Arrays
       
     </span>
   </a>
@@ -1925,8 +1963,9 @@
 
 
 <h1 id="arrays">Arrays</h1>
-<h2 id="04112025"><em>04.11.2025</em></h2>
-<p>An <strong>array</strong> is a data structure used to <strong>store multiple elements</strong> of the <strong>same data type</strong> in a single variable.<br />
+<hr />
+<p><em>04.11.2025</em>
+An <strong>array</strong> is a data structure used to <strong>store multiple elements</strong> of the <strong>same data type</strong> in a single variable.<br />
 Arrays allow <strong>indexed access</strong> to each element and provide an efficient way to organize and manipulate collections of data.<br />
 The size of a basic (static) array is <strong>fixed</strong> once it is created.</p>
 <hr />
@@ -1949,7 +1988,7 @@ print(arr[2])     # Output: 30
 <h2 id="dynamic-arrays">Dynamic Arrays</h2>
 <p>A <strong>Dynamic Array</strong> (e.g., <code>ArrayList</code> in Java or <code>list</code> in Python) automatically <strong>resizes</strong> when elements are added or removed.
 When the internal storage is full, a <strong>new larger array</strong> is created, and all elements are <strong>copied</strong> into it.</p>
-<h3 id="memory">Memory:</h3>
+<h3 id="memory">Memory</h3>
 <ul>
 <li>Internally store a <strong>reference to a static array</strong></li>
 <li>When capacity is exceeded:</li>
@@ -1972,22 +2011,22 @@ arr.add(20);
 arr.remove(0);
 System.out.println(arr);   // Output: [20]
 </code></pre>
-<h3 id="characteristics_1">Characteristics</h3>
+<h3 id="characteristics-dynamik-array">Characteristics Dynamik Array</h3>
 <ul>
 <li><strong>Resizable</strong> — grows automatically when more space is needed</li>
 <li>Slightly <strong>slower insertions</strong> when resizing occurs (requires copying)</li>
 <li>Internally uses a <strong>static array</strong> as its storage</li>
 </ul>
 <h2 id="memory-structure-aufbau-im-speicher">Memory Structure (Aufbau im Speicher)</h2>
-<h3 id="static-arrays_1">Static Arrays</h3>
+<h3 id="storing-static-arrays">Storing Static Arrays</h3>
 <ul>
 <li>Stored as a <strong>contiguous block</strong> of memory</li>
 <li>Each element’s address can be calculated as:</li>
 </ul>
-<pre><code>Address(i) = adress_of_first + i * size_of_element
+<pre><code class="language-python">Address(i) = adress_of_first + i * size_of_element
 </code></pre>
 <h3 id="visualization-ascii">Visualization (ASCII)</h3>
-<pre><code>Static Array (contiguous memory):
+<pre><code class="language-txt">Static Array (contiguous memory):
 [10][20][30][40][50]
  ↑   ↑   ↑   ↑   ↑
  |   |   |   |   |

@@ -214,7 +214,7 @@
   
     
   
-  Welcome to MkDocs
+  Wissensverzeichnis
 
       </a>
     </li>
@@ -233,7 +233,7 @@
   
     
   
-  Markdown cheat sheet
+  Welcome to MkDocs
 
       </a>
     </li>
@@ -350,7 +350,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome to MkDocs
+    Wissensverzeichnis
   
 
     
@@ -377,7 +377,7 @@
   <span class="md-ellipsis">
     
   
-    Markdown cheat sheet
+    Welcome to MkDocs
   
 
     
@@ -582,6 +582,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -679,6 +683,34 @@
     
   
     AVL Trees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Breadth-First Search (BFS)
   
 
     
@@ -847,6 +879,34 @@
     
   
     Counting Sort
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Depth-First Search
   
 
     
@@ -1177,17 +1237,6 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#28102025" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        28.10.2025
-      
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#operations" class="md-nav__link">
@@ -1681,17 +1730,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#28102025" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        28.10.2025
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#operations" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1837,14 +1875,13 @@
 
 
 <h1 id="linked-lists">Linked Lists</h1>
-<h2 id="28102025"><em>28.10.2025</em></h2>
+<hr />
+<p><em>28.10.2025</em>
+Linear Data Structure</p>
 <ul>
-<li>Linear Data Structure</li>
-<li>Consists of nodes<ul>
+<li>Consists of nodes</li>
 <li>Each node contains data and a reference to the next node</li>
 <li>Doubly Linked Lists also have a reference to the previous node</li>
-</ul>
-</li>
 <li>Each node is located at different memory locations, in contrast to arrays where elements are stored in contiguous memory locations.</li>
 <li>They are ideal for dynamic memory allocation</li>
 <li>Efficient for insertions and deletions</li>
@@ -1855,16 +1892,17 @@
 </ul>
 <h2 id="operations">Operations</h2>
 <h3 id="insertion">Insertion</h3>
-<pre><code>- At the beginning (head)
-- At the end (tail)
-- At a specific position
-</code></pre>
+<ul>
+<li>At the beginning (head)</li>
+<li>At the end (tail)</li>
+<li>At a specific position</li>
+</ul>
 <h4 id="example-insertion-at-the-beginning">Example: Insertion at the Beginning</h4>
-<pre><code class="language-python">def insert_at_beginning(new_data):
-    new_node = Node(new_data)               # Create the new node
-    new_node.next = head                    # Make next of new node the old head   
-    head = new_node                         # Move the head to point to the new node
-    return head
+<pre><code class="language-python">  def insert_at_beginning(new_data):
+      new_node = Node(new_data)               # Create the new node
+      new_node.next = head                    # Make next of new node the old head   
+      head = new_node                         # Move the head to point to the new node
+      return head
 </code></pre>
 <h4 id="example-insertion-at-the-end">Example: Insertion at the End</h4>
 <pre><code class="language-python">def insert_at_end(new_data):
@@ -1908,12 +1946,10 @@
 <ul>
 <li>Each node contains three fields: data, a reference to the next node, and a reference to the previous node</li>
 <li>Allows traversal in both directions (forward and backward)</li>
-<li>It could be useful to store the size of the list for quick access to the number of elements<ul>
+<li>It could be useful to store the size of the list for quick access to the number of elements</li>
 <li>This could be used to e.g. decide whether to traverse from head or tail when accessing an element by index</li>
 <li>Also for quick size retrieval without traversing the entire list</li>
 <li>However, it uses more memory due to the additional previous pointer in each node</li>
-</ul>
-</li>
 </ul>
 
 

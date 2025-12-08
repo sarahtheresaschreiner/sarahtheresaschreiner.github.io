@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://sarahtheresaschreiner.github.io/fzth/Data%20Science/data_structures_and_algorithms/dictionaries.html">
       
       
-        <link rel="prev" href="counting_sort.html">
+        <link rel="prev" href="dfs.html">
       
       
         <link rel="next" href="exponential_search.html">
@@ -214,7 +214,7 @@
   
     
   
-  Welcome to MkDocs
+  Wissensverzeichnis
 
       </a>
     </li>
@@ -233,7 +233,7 @@
   
     
   
-  Markdown cheat sheet
+  Welcome to MkDocs
 
       </a>
     </li>
@@ -350,7 +350,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome to MkDocs
+    Wissensverzeichnis
   
 
     
@@ -377,7 +377,7 @@
   <span class="md-ellipsis">
     
   
-    Markdown cheat sheet
+    Welcome to MkDocs
   
 
     
@@ -582,6 +582,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -679,6 +683,34 @@
     
   
     AVL Trees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Breadth-First Search (BFS)
   
 
     
@@ -864,6 +896,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="dfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Depth-First Search
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -925,17 +985,6 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#04112025" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        04.11.2025
-      
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#how-dictionaries-work" class="md-nav__link">
@@ -1575,17 +1624,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#04112025" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        04.11.2025
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#how-dictionaries-work" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1625,8 +1663,9 @@
 
 
 <h1 id="dictionaries">Dictionaries</h1>
-<h2 id="04112025"><em>04.11.2025</em></h2>
-<p>A <strong>Dictionary</strong> (also called a <em>map</em> or <em>associative array</em>) is a data structure that stores <strong>key–value pairs</strong>.<br />
+<hr />
+<p><em>04.11.2025</em>
+A <strong>Dictionary</strong> (also called a <em>map</em> or <em>associative array</em>) is a data structure that stores <strong>key–value pairs</strong>.<br />
 Each key in a dictionary is <strong>unique</strong>, and it is used to quickly access its associated value.<br />
 Internally, most dictionaries (like in Python or Java’s <code>HashMap</code>) are implemented using a <a href="hash_tables.html"><strong>hash table</strong></a>,<br />
 which provides <em>average-case constant time complexity O(1)</em> for lookups, insertions, and deletions.
@@ -1644,22 +1683,26 @@ using one of several <strong>collision handling</strong> techniques.</p>
 (e.g., chaining or open addressing).</p>
 <hr />
 <h2 id="example-python-dictionary">Example (Python Dictionary)</h2>
-<p>```python</p>
-<h1 id="creating-a-dictionary">Creating a dictionary</h1>
-<p>student = {
-    "name": "Alice",
-    "age": 22,
-    "major": "Computer Science"
-}</p>
-<h1 id="accessing-a-value-by-key">Accessing a value by key</h1>
-<p>print(student["name"])       # Output: Alice</p>
-<h1 id="adding-a-new-keyvalue-pair">Adding a new key–value pair</h1>
-<p>student["grade"] = "A"</p>
-<h1 id="deleting-an-entry">Deleting an entry</h1>
-<p>del student["age"]</p>
-<h1 id="iterating-through-all-keys-and-values">Iterating through all keys and values</h1>
-<p>for key, value in student.items():
-    print(key, "-&gt;", value)</p>
+<pre><code class="language-python"># Creating a dictionary
+student = {
+    &quot;name&quot;: &quot;Alice&quot;,
+    &quot;age&quot;: 22,
+    &quot;major&quot;: &quot;Computer Science&quot;
+}
+
+# Accessing a value by key
+print(student[&quot;name&quot;])       # Output: Alice
+
+# Adding a new key–value pair
+student[&quot;grade&quot;] = &quot;A&quot;
+
+# Deleting an entry
+del student[&quot;age&quot;]
+
+# Iterating through all keys and values
+for key, value in student.items():
+    print(key, &quot;-&gt;&quot;, value)
+</code></pre>
 
 
 

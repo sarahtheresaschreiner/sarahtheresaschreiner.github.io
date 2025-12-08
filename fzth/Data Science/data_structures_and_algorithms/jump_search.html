@@ -214,7 +214,7 @@
   
     
   
-  Welcome to MkDocs
+  Wissensverzeichnis
 
       </a>
     </li>
@@ -233,7 +233,7 @@
   
     
   
-  Markdown cheat sheet
+  Welcome to MkDocs
 
       </a>
     </li>
@@ -350,7 +350,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome to MkDocs
+    Wissensverzeichnis
   
 
     
@@ -377,7 +377,7 @@
   <span class="md-ellipsis">
     
   
-    Markdown cheat sheet
+    Welcome to MkDocs
   
 
     
@@ -582,6 +582,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -679,6 +683,34 @@
     
   
     AVL Trees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Breadth-First Search (BFS)
   
 
     
@@ -847,6 +879,34 @@
     
   
     Counting Sort
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Depth-First Search
   
 
     
@@ -1123,21 +1183,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#08112025" class="md-nav__link">
+  <a href="#algorithm" class="md-nav__link">
     <span class="md-ellipsis">
       
-        08.11.2025
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#algoritm" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Algoritm
+        Algorithm
       
     </span>
   </a>
@@ -1159,7 +1208,7 @@
   <a href="#code-example" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Code Example:
+        Code Example
       
     </span>
   </a>
@@ -1586,21 +1635,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#08112025" class="md-nav__link">
+  <a href="#algorithm" class="md-nav__link">
     <span class="md-ellipsis">
       
-        08.11.2025
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#algoritm" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Algoritm
+        Algorithm
       
     </span>
   </a>
@@ -1622,7 +1660,7 @@
   <a href="#code-example" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Code Example:
+        Code Example
       
     </span>
   </a>
@@ -1647,12 +1685,10 @@
 
 
 <h1 id="jump-search">Jump Search</h1>
-<h2 id="08112025"><em>08.11.2025</em></h2>
-<ul>
-<li>Searching Algorithm for sorted lists</li>
-<li>Allways jumps in fixed steps, to find a smaller interval where the value has to be in</li>
-</ul>
-<h2 id="algoritm">Algoritm</h2>
+<hr />
+<p><em>08.11.2025</em>
+Searching Algorithm for sorted lists. Allways jumps in fixed steps, to find a smaller interval where the value has to be in</p>
+<h2 id="algorithm">Algorithm</h2>
 <ol>
 <li>Iterate in steps (<code>i+=√n</code>)</li>
 <li>If the value is bigger than the searched, you found your interval (<code>I=]i-√n;i[</code>)</li>
@@ -1663,7 +1699,7 @@
 <li><strong>Space:</strong> O(1) - It's inplace</li>
 <li><strong>Time:</strong> O(√n)</li>
 </ul>
-<h2 id="code-example">Code Example:</h2>
+<h2 id="code-example">Code Example</h2>
 <pre><code class="language-python">def jump_search(n, arr):
     steps = int(math.sqrt(len(arr)))
     for i in range(steps, len(arr), steps):

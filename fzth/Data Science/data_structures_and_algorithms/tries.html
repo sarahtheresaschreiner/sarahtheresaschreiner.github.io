@@ -214,7 +214,7 @@
   
     
   
-  Welcome to MkDocs
+  Wissensverzeichnis
 
       </a>
     </li>
@@ -233,7 +233,7 @@
   
     
   
-  Markdown cheat sheet
+  Welcome to MkDocs
 
       </a>
     </li>
@@ -350,7 +350,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome to MkDocs
+    Wissensverzeichnis
   
 
     
@@ -377,7 +377,7 @@
   <span class="md-ellipsis">
     
   
-    Markdown cheat sheet
+    Welcome to MkDocs
   
 
     
@@ -582,6 +582,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -679,6 +683,34 @@
     
   
     AVL Trees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Breadth-First Search (BFS)
   
 
     
@@ -847,6 +879,34 @@
     
   
     Counting Sort
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Depth-First Search
   
 
     
@@ -1431,17 +1491,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#29102025" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        29.10.2025
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#architecture" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1664,17 +1713,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#29102025" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        29.10.2025
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#architecture" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1803,9 +1841,10 @@
 
 
 <h1 id="tries">Tries</h1>
-<h2 id="29102025"><em>29.10.2025</em></h2>
+<hr />
+<p><em>29.10.2025</em>
+Re<strong>trie</strong>val data structure (means <em>to fetch</em>), others say the name comes from the word <strong>tree</strong>.</p>
 <ul>
-<li>Re<strong>trie</strong>val data structure (means <em>to fetch</em>), others say the name comes from the word <strong>tree</strong>.</li>
 <li>Also known as prefix tree</li>
 <li>A tree-like data structure that stores a dynamic set of strings, where the keys are usually strings.</li>
 <li>Each node represents a single character of a string.</li>
@@ -1818,10 +1857,8 @@
 <p><img alt="Trie Architecture" src="images/trie_pointers.png" /></p>
 <h3 id="trie-node">Trie Node</h3>
 <ul>
-<li>Each node contains an array or a map of child nodes, where each child node corresponds to a character in the alphabet.<ul>
+<li>Each node contains an array or a map of child nodes, where each child node corresponds to a character in the alphabet.</li>
 <li>For example, in a trie for lowercase English letters, each node would have up to 26 children and therefore an array of size 26.</li>
-</ul>
-</li>
 <li>A boolean flag is often used to indicate whether a node represents the end of a valid string.</li>
 <li>The node does not store the character itself; instead, the position of the node in the trie determines the character it represents.</li>
 </ul>
@@ -1882,18 +1919,12 @@
 <ul>
 <li>Case 1: The string to be deleted is not present in the trie.</li>
 <li>Case 2: The string has no other words sharing its prefix.</li>
-<li>Case 3: The string is a prefix of another word.<ul>
+<li>Case 3: The string is a prefix of another word.</li>
 <li>set the <code>is_end_of_word</code> flag to <code>False</code>.</li>
-</ul>
-</li>
-<li>Case 4: The string shares a prefix with other words but is not a prefix itself.<ul>
+<li>Case 4: The string shares a prefix with other words but is not a prefix itself.</li>
 <li>Delete all nodes up to the point where the prefix is shared.</li>
-</ul>
-</li>
-<li>Case 5 : The string shares a letter with other words.<ul>
+<li>Case 5 : The string shares a letter with other words.</li>
 <li>Only delete nodes under the one that is shared.</li>
-</ul>
-</li>
 <li><strong>Time Complexity:</strong> O(m), where m is the length of the string being deleted.</li>
 <li><strong>Space Complexity:</strong> O(m), where m is the length of the string being deleted (for the stack).</li>
 </ul>

@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://sarahtheresaschreiner.github.io/fzth/Data%20Science/data_structures_and_algorithms/bucket_sort.html">
+        <link rel="canonical" href="https://sarahtheresaschreiner.github.io/fzth/Data%20Science/data_structures_and_algorithms/bfs.html">
       
       
-        <link rel="prev" href="bubble_sort.html">
+        <link rel="prev" href="avl_trees.html">
       
       
-        <link rel="next" href="counting_sort.html">
+        <link rel="next" href="big_o_notation.html">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Bucket Sort - FZTH</title>
+        <title>Breadth-First Search (BFS) - FZTH</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#bucket-sort" class="md-skip">
+        <a href="#breadth-first-search-bfs" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Bucket Sort
+              Breadth-First Search (BFS)
             
           </span>
         </div>
@@ -700,10 +700,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="bfs.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Breadth-First Search (BFS)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="bfs.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -719,6 +746,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complexity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -840,37 +920,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Bucket Sort
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="bucket_sort.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="bucket_sort.html" class="md-nav__link">
         
   
   
@@ -886,59 +939,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#algorithm" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Algorithm
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#complexity" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Complexity
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#code-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Code Example
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1657,10 +1657,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#code-example" class="md-nav__link">
+  <a href="#implementation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Code Example
+        Implementation
       
     </span>
   </a>
@@ -1684,34 +1684,43 @@
 
 
 
-<h1 id="bucket-sort">Bucket Sort</h1>
+<h1 id="breadth-first-search-bfs">Breadth-First Search (BFS)</h1>
 <hr />
-<p><em>01.11.2025</em>
-<em>Bucket Sort</em> is a sorting algorithm that sorts out-of-place. It puts the elements in buckets. (Each bucket is for a range of values) and than sort the buckets (with another sorting algorithm), before setting it back together.</p>
+<p><em>25.11.2025</em>
+Breadth-first search is an Algorithm for searching in graphs. It iterates over the graph and works similar to <a href="dfs.html">DFS</a>.</p>
 <h2 id="algorithm">Algorithm</h2>
-<ol>
-<li>Put in buckets. (e.g.: for an array with numbwers between 0-1 you would have 10 buckets with a range of 0.1 each)</li>
-<li>Sort each bucket</li>
-<li>Set the array back together</li>
-</ol>
+<ul>
+<li>Start value <code>v</code></li>
+<li>You have a list, where you store, which nodes you visit. <code>marked = [False] * Graph.size()</code></li>
+<li>
+<p>You also have a queue, that has the start value stored.</p>
+</li>
+<li>
+<p>v = queue.pop()</p>
+</li>
+<li>visit(v)</li>
+<li>mark(v)</li>
+<li>iterate through all neighbors and put them in the queue</li>
+<li>Repeat 1.-4. while there are still vertixes in the queue</li>
+</ul>
 <h2 id="complexity">Complexity</h2>
 <ul>
-<li><strong>Time Complexity:</strong> Depends on the <em>Sorting Algoritm</em> used</li>
-<li><strong>Space Complexity:</strong> 0(n+k) - Bucket sort requires additional space for the buckets. The total memory used depends on the number of elements (n) and the number of buckets (k)</li>
+<li>V is the Vertixes and E is Edges</li>
+<li><strong>Time:</strong> O(V+E)</li>
+<li><strong>Space:</strong> O(V)</li>
 </ul>
-<h2 id="code-example">Code Example</h2>
-<pre><code class="language-python">def bucket_sort(arr):           # for array with values 0-1
-    buckets = [[] for _ in range(10)]
-    for v in arr:
-        buckets[int(v * 10)].append(v)
-    for b in buckets:
-        insertion_sort(b)
-    pointer=0
-    for b in buckets:
-        for v in b:
-            arr[pointer]=v
-            pointer+=1
-    return arr
+<h2 id="implementation">Implementation</h2>
+<pre><code class="language-python">def bfs(G, v):
+    marked = [False] * G.size
+    queue = [v]
+    while len(queue) &gt; 0:
+        v = queue.pop(0)
+        if not marked[v]:
+            visit(v)
+            marked[v] = True
+            for w in G.neighbors(v)
+                if not marked[w]
+                    queue.append(w)
 </code></pre>
 
 

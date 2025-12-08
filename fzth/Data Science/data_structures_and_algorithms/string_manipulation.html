@@ -214,7 +214,7 @@
   
     
   
-  Welcome to MkDocs
+  Wissensverzeichnis
 
       </a>
     </li>
@@ -233,7 +233,7 @@
   
     
   
-  Markdown cheat sheet
+  Welcome to MkDocs
 
       </a>
     </li>
@@ -350,7 +350,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome to MkDocs
+    Wissensverzeichnis
   
 
     
@@ -377,7 +377,7 @@
   <span class="md-ellipsis">
     
   
-    Markdown cheat sheet
+    Welcome to MkDocs
   
 
     
@@ -582,6 +582,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -679,6 +683,34 @@
     
   
     AVL Trees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Breadth-First Search (BFS)
   
 
     
@@ -847,6 +879,34 @@
     
   
     Counting Sort
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Depth-First Search
   
 
     
@@ -1375,17 +1435,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#06112025" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        06.11.2025
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#reversing-a-string" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1741,17 +1790,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#06112025" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        06.11.2025
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#reversing-a-string" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1957,8 +1995,9 @@
 
 
 <h1 id="string-manipulation-algorithms">String Manipulation Algorithms</h1>
-<h2 id="06112025"><em>06.11.2025</em></h2>
-<p>Here is only covered for strictly-lowercase strings. If that is a problem for a specific case, be aware!</p>
+<hr />
+<p><em>06.11.2025</em>
+Here is only covered for strictly-lowercase strings. If that is a problem for a specific case, be aware!</p>
 <h2 id="reversing-a-string">Reversing a string</h2>
 <h3 id="using-backward-traversal-on-time-and-on-space">Using backward traversal – O(n) Time and O(n) Space</h3>
 <p>The idea is to start at the last character of the string and move backward, appending each character to a new string res. This new string res will contain the characters of the original string in reverse order.</p>
@@ -1971,7 +2010,7 @@
     return ''.join(res)
 </code></pre>
 <h3 id="using-two-pointers-on-time-and-o1-space">Using Two Pointers - O(n) Time and O(1) Space</h3>
-<p>The idea is to maintain two pointers: left and right, such that left points to the beginning of the string and right points to the end of the string. </p>
+<p>The idea is to maintain two pointers: left and right, such that left points to the beginning of the string and right points to the end of the string.</p>
 <p>While left pointer is less than the right pointer, swap the characters at these two positions. After each swap, increment the left pointer and decrement the right pointer to move towards the center of the string. This will swap all the characters in the first half with their corresponding character in the second half.</p>
 <pre><code class="language-python">def reverse_string(s):
     left = 0
@@ -1984,9 +2023,11 @@
     return ''.join(s)
 </code></pre>
 <h3 id="using-recursion-on-time-and-on-space">Using Recursion - O(n) Time and O(n) Space</h3>
-<p>The idea is to use recursion and define a recursive function that takes a string as input and reverses it. Inside the recursive function, 
-- Swap the first and last element. 
-- Recursively call the function with the remaining substring.</p>
+<p>The idea is to use recursion and define a recursive function that takes a string as input and reverses it. Inside the recursive function,</p>
+<ul>
+<li>Swap the first and last element.</li>
+<li>Recursively call the function with the remaining substring.</li>
+</ul>
 <pre><code class="language-python">def reverseStringRec(arr, l, r):
     if l &gt;= r:
         return
@@ -1999,7 +2040,7 @@ def reverseString(s):
     return ''.join(arr)  
 </code></pre>
 <h3 id="using-stack-on-time-and-on-space">Using Stack - O(n) Time and O(n) Space</h3>
-<p>The idea is to use stack for reversing a string. So, when we push all the characters of a string into the stack, the last character becomes the first one to pop. </p>
+<p>The idea is to use stack for reversing a string. So, when we push all the characters of a string into the stack, the last character becomes the first one to pop.</p>
 <pre><code class="language-python">def reverseString(s):
     stack = []
     for char in s:

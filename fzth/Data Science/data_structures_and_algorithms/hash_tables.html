@@ -214,7 +214,7 @@
   
     
   
-  Welcome to MkDocs
+  Wissensverzeichnis
 
       </a>
     </li>
@@ -233,7 +233,7 @@
   
     
   
-  Markdown cheat sheet
+  Welcome to MkDocs
 
       </a>
     </li>
@@ -350,7 +350,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome to MkDocs
+    Wissensverzeichnis
   
 
     
@@ -377,7 +377,7 @@
   <span class="md-ellipsis">
     
   
-    Markdown cheat sheet
+    Welcome to MkDocs
   
 
     
@@ -582,6 +582,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -679,6 +683,34 @@
     
   
     AVL Trees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Breadth-First Search (BFS)
   
 
     
@@ -867,6 +899,34 @@
   
   
     <li class="md-nav__item">
+      <a href="dfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Depth-First Search
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="dictionaries.html" class="md-nav__link">
         
   
@@ -1009,17 +1069,6 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#04112025" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        04.11.2025
-      
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#example-hash-functions" class="md-nav__link">
@@ -1614,17 +1663,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#04112025" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        04.11.2025
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#example-hash-functions" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1703,22 +1741,21 @@
 
 
 <h1 id="hash-tables">Hash Tables</h1>
-<h2 id="04112025">04.11.2025</h2>
-<p>A <em>Hash Table</em> is a data structure that implements an associative array, a structure that can map keys to values. It uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found. This allows <em>for average-case constant time complexity O(1)</em> for lookups, insertions, and deletions. However, in the <em>worst case</em> (e.g., many collisions), these operations <em>can degrade to O(n)</em>. Hash tables are widely used in various applications, including databases and caching mechanisms.
+<hr />
+<p>04.11.2025
+A <em>Hash Table</em> is a data structure that implements an associative array, a structure that can map keys to values. It uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found. This allows <em>for average-case constant time complexity O(1)</em> for lookups, insertions, and deletions. However, in the <em>worst case</em> (e.g., many collisions), these operations <em>can degrade to O(n)</em>. Hash tables are widely used in various applications, including databases and caching mechanisms.
 <em>Hash-Functions</em> decide in which slot the element belongs. If there is already an element, you have a <em>collision</em>, that has to be handled.</p>
 <h2 id="example-hash-functions">Example hash functions</h2>
 <ul>
 <li>using the position in the alphabet, if it is out of range, you can use mod:</li>
 </ul>
-<pre><code>-&gt; sarah -&gt; s - a = 18 -&gt; out of range for size 8
+<pre><code class="language-txt">-&gt; sarah -&gt; s - a = 18 -&gt; out of range for size 8
 -&gt; 18 mod 8 = 2
 -&gt; index 7
 </code></pre>
 <ul>
-<li>commen hash-functions:<ul>
+<li>commen hash-functions:</li>
 <li>djb2 hash: <img alt="djb2" src="images/djb2.png" /></li>
-</ul>
-</li>
 </ul>
 <h2 id="collision-handling">Collision handling</h2>
 <h3 id="chaining">Chaining</h3>
@@ -1727,7 +1764,7 @@
 <p>Put the element to the next free/empty "spot"</p>
 <h3 id="double-hashing">Double hashing</h3>
 <p>Similar to Linear probing, but you skip a declared number instead than allways 1</p>
-<pre><code>i = h(key) mod 8
+<pre><code class="language-txt">i = h(key) mod 8
 (i + c) mod 8
 (i + 2c) mod 8
 </code></pre>

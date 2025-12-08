@@ -14,7 +14,7 @@
         <link rel="prev" href="bucket_sort.html">
       
       
-        <link rel="next" href="dictionaries.html">
+        <link rel="next" href="dfs.html">
       
       
         
@@ -214,7 +214,7 @@
   
     
   
-  Welcome to MkDocs
+  Wissensverzeichnis
 
       </a>
     </li>
@@ -233,7 +233,7 @@
   
     
   
-  Markdown cheat sheet
+  Welcome to MkDocs
 
       </a>
     </li>
@@ -350,7 +350,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome to MkDocs
+    Wissensverzeichnis
   
 
     
@@ -377,7 +377,7 @@
   <span class="md-ellipsis">
     
   
-    Markdown cheat sheet
+    Welcome to MkDocs
   
 
     
@@ -582,6 +582,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -679,6 +683,34 @@
     
   
     AVL Trees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Breadth-First Search (BFS)
   
 
     
@@ -935,6 +967,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Depth-First Search
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1625,9 +1685,10 @@
 
 
 <h1 id="counting-sort">Counting Sort</h1>
-<p><em>30.10.2025</em></p>
+<hr />
+<p><em>30.10.2025</em>
+Counting Sort is a <strong>non-comparison-based sorting algorithm</strong>. It is particularly efficient when the range of input values is small compared to the number of elements to be sorted.</p>
 <ul>
-<li>Counting Sort is a <strong>non-comparison-based sorting algorithm</strong>. It is particularly efficient when the range of input values is small compared to the number of elements to be sorted.</li>
 <li>The basic idea behind Counting Sort is to count the frequency of each distinct element in the input array and use that information to place the elements in their correct sorted positions.</li>
 <li>It works well when the <strong>range of input elements is small and comparable to the size of the array</strong>. For example, for input [1, 4, 0, 2, 1, 1], the size of array is 6 and range of elements is from 0 to 4</li>
 <li>If range of <strong>input</strong> array is of order <strong>more than n Log n</strong> where n is size of the array, then we can <strong>better sort the array using a standard</strong> comparison based sorting algorithm like Merge Sort.</li>
@@ -1640,8 +1701,8 @@
 </ol>
 <h2 id="complexity">Complexity</h2>
 <ul>
-<li><strong>Time Complexity:</strong> </li>
-<li><strong>Space Complexity:</strong></li>
+<li><strong>Time Complexity:</strong> O(n+k)</li>
+<li><strong>Space Complexity:</strong> O(n+k)</li>
 </ul>
 <h2 id="code-example">Code Example</h2>
 <pre><code class="language-python">def quick_sort(arr):

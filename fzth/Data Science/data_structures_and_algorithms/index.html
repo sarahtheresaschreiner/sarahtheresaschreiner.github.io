@@ -214,7 +214,7 @@
   
     
   
-  Welcome to MkDocs
+  Wissensverzeichnis
 
       </a>
     </li>
@@ -233,7 +233,7 @@
   
     
   
-  Markdown cheat sheet
+  Welcome to MkDocs
 
       </a>
     </li>
@@ -350,7 +350,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome to MkDocs
+    Wissensverzeichnis
   
 
     
@@ -377,7 +377,7 @@
   <span class="md-ellipsis">
     
   
-    Markdown cheat sheet
+    Welcome to MkDocs
   
 
     
@@ -582,6 +582,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -679,6 +683,34 @@
     
   
     AVL Trees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Breadth-First Search (BFS)
   
 
     
@@ -847,6 +879,34 @@
     
   
     Counting Sort
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Depth-First Search
   
 
     
@@ -1728,8 +1788,8 @@
 
 
 <h1 id="data-structures-and-algorithms">Data Structures and Algorithms</h1>
-<p>This section covers fundamental data structures and algorithms that are essential for efficient programming and problem-solving. </p>
-<p><a href="#ressources">Ressources</a></p>
+<p>This section covers fundamental data structures and algorithms that are essential for efficient programming and problem-solving.
+<a href="#ressources">Ressources</a></p>
 <h2 id="big-o-notation">Big O Notation</h2>
 <p>Big O notation is used to describe the performance or complexity of an algorithm. It provides the <em>worst case</em> <strong>time or space requirements</strong> in terms of the input size. <a href="big_o_notation.html">More about Big O Notation</a></p>
 <h2 id="structures">Structures</h2>
@@ -1760,59 +1820,193 @@
 <p>A <em>Hash Table</em> is a data structure that implements an associative array, a structure that can map keys to values. It uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found. This allows <em>for average-case constant time complexity O(1)</em> for lookups, insertions, and deletions. However, in the <em>worst case</em> (e.g., many collisions), these operations <em>can degrade to O(n)</em>. Hash tables are widely used in various applications, including databases and caching mechanisms. <a href="hash_tables.html">More about Hash Tables</a></p>
 <h3 id="trees">Trees</h3>
 <p><em>Trees</em> are a linear data structure. It is a collection of nodes connected by edges. Each tree has a root node (has no parents/referenes), and every node can have zero or more child nodes. Nodes with no children are called leaf nodes. Trees are used to represent hierarchical data and support efficient searching, insertion, and deletion operations. There can only be one path between any two nodes in a tree.
-Kinds of trees:
-- <a href="binary_trees.html">Binary Trees</a>
-- <a href="avl_trees.html">AVL Trees</a>
-- <a href="heaps.html">Heaps</a>
-- <a href="tries.html">Tries</a></p>
+Kinds of trees:</p>
+<ul>
+<li><a href="binary_trees.html">Binary Trees</a></li>
+<li><a href="avl_trees.html">AVL Trees</a></li>
+<li><a href="heaps.html">Heaps</a></li>
+<li><a href="tries.html">Tries</a></li>
+</ul>
 <h4 id="trees-vs-graphs">Trees vs Graphs</h4>
 <p><em>Tree</em> is a restricted type of <em>Graph Data Structure</em>, just with <strong>some more rules</strong>. <em>Every tree will always be a graph</em> but not all graphs will be trees. Linked List, Trees, and Heaps all are special cases of Trees.
 <em>"In a tree there can't be more than one reference to the same object!"</em></p>
 <h3 id="graphs">Graphs</h3>
-<p><em>Graphs</em> are a non-linear data structure. It consists of a set of vertices (or nodes) and a set of edges that connect pairs of vertices. Graphs can be used to represent various real-world systems, such as social networks, transportation networks, and communication networks. Graphs can be classified into:
-- <strong>Directed Graphs (Digraphs):</strong> where edges have a direction, indicating a one-way relationship between vertices.
-- <strong>Undirected Graphs:</strong> where edges do not have a direction, indicating a two-way relationship between vertices.
-<a href="graphs.html">More about Graphs</a></p>
+<p><em>Graphs</em> are a non-linear data structure. It consists of a set of vertices (or nodes) and a set of edges that connect pairs of vertices. Graphs can be used to represent various real-world systems, such as social networks, transportation networks, and communication networks. Graphs can be classified into:</p>
+<ul>
+<li><strong>Directed Graphs (Digraphs):</strong> where edges have a direction, indicating a one-way relationship between vertices.</li>
+<li><strong>Undirected Graphs:</strong> where edges do not have a direction, indicating a two-way relationship between vertices.
+<a href="graphs.html">More about Graphs</a></li>
+</ul>
+<p>View also:</p>
+<ul>
+<li><a href="bfs.html">Breadth-First Search (BFS)</a></li>
+<li><a href="dfs.html">Depth-First Search (DFS)</a></li>
+<li><a href="dijkstra.md">Dijkstra</a></li>
+<li><a href="bellmann_ford.md">Bellmann-Ford</a></li>
+</ul>
 <h2 id="algorithms">Algorithms</h2>
 <h3 id="sorting-algorithms">Sorting Algorithms</h3>
-<p>Kinds of sorting algorithms:
-| Name                                | Time Complexity (Best) | Time Complexity (Average) | Time Complexity (Worst) | Space Complexity | Use Case                                                             |
-| ----------------------------------- | ---------------------- | ------------------------- | ----------------------- | ---------------- | -------------------------------------------------------------------- |
-| <a href="bubble_sort.html">Bubble Sort</a>       | O(n)                   | O(n²)                     | O(n²)                   | O(1)             | Simple to implement; educational purposes; nearly sorted small lists |
-| <a href="selection_sort.html">Selection Sort</a> | O(n²)                  | O(n²)                     | O(n²)                   | O(1)             | When memory is limited; minimal swaps; small datasets                |
-| <a href="insertion_sort.html">Insertion Sort</a> | O(n)                   | O(n²)                     | O(n²)                   | O(1)             | Efficient for small or nearly sorted datasets                        |
-| <a href="merge_sort.html">Merge Sort</a>         | O(n log n)             | O(n log n)                | O(n log n)              | O(n)             | Stable sort; large datasets; linked lists                            |
-| <a href="quick_sort.html">Quick Sort</a>         | O(n log n)             | O(n log n)                | O(n²)                   | O(log n)         | Fast in practice; widely used; good average-case performance         |
-| <a href="bucket_sort.html">Bucket Sort</a>       | O(n + k)               | O(n + k)                  | O(n²)                   | O(n + k)         | Input uniformly distributed over a known range                       |
-| <a href="counting_sort.html">Counting Sort</a>   | O(n + k)               | O(n + k)                  | O(n + k)                | O(k)             | Integers in a limited range; stable; fast non-comparison sort        |
-| <a href="radix_sort.html">Radix Sort</a>         | O(nk)                  | O(nk)                     | O(nk)                   | O(n + k)         | Sorting integers or strings with fixed digit/length; stable          |
-| <a href="heap_sort.html">Heap Sort</a>           | O(n log n)             | O(n log n)                | O(n log n)              | O(1)             | In-place sorting; large datasets; not stable                         |</p>
-<p><strong>Notes:</strong>
-* <code>n</code> = number of elements
-* <code>k</code> = range of input values (for Counting/Bucket/Radix)
-* <code>Heap Sort</code> is <strong>not stable</strong> but works in-place
-* <code>Radix Sort</code> depends on the number of digits (<code>k</code>) in the elements</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Time Complexity (Best)</th>
+<th>Time Complexity (Average)</th>
+<th>Time Complexity (Worst)</th>
+<th>Space Complexity</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="bubble_sort.html">Bubble Sort</a></td>
+<td>O(n)</td>
+<td>O(n²)</td>
+<td>O(n²)</td>
+<td>O(1)</td>
+<td>Simple to implement; educational purposes; nearly sorted small lists</td>
+</tr>
+<tr>
+<td><a href="selection_sort.html">Selection Sort</a></td>
+<td>O(n²)</td>
+<td>O(n²)</td>
+<td>O(n²)</td>
+<td>O(1)</td>
+<td>When memory is limited; minimal swaps; small datasets</td>
+</tr>
+<tr>
+<td><a href="insertion_sort.html">Insertion Sort</a></td>
+<td>O(n)</td>
+<td>O(n²)</td>
+<td>O(n²)</td>
+<td>O(1)</td>
+<td>Efficient for small or nearly sorted datasets</td>
+</tr>
+<tr>
+<td><a href="merge_sort.html">Merge Sort</a></td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+<td>O(n)</td>
+<td>Stable sort; large datasets; linked lists</td>
+</tr>
+<tr>
+<td><a href="quick_sort.html">Quick Sort</a></td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+<td>O(n²)</td>
+<td>O(log n)</td>
+<td>Fast in practice; widely used; good average-case performance</td>
+</tr>
+<tr>
+<td><a href="bucket_sort.html">Bucket Sort</a></td>
+<td>O(n + k)</td>
+<td>O(n + k)</td>
+<td>O(n²)</td>
+<td>O(n + k)</td>
+<td>Input uniformly distributed over a known range</td>
+</tr>
+<tr>
+<td><a href="counting_sort.html">Counting Sort</a></td>
+<td>O(n + k)</td>
+<td>O(n + k)</td>
+<td>O(n + k)</td>
+<td>O(k)</td>
+<td>Integers in a limited range; stable; fast non-comparison sort</td>
+</tr>
+<tr>
+<td><a href="radix_sort.html">Radix Sort</a></td>
+<td>O(nk)</td>
+<td>O(nk)</td>
+<td>O(nk)</td>
+<td>O(n + k)</td>
+<td>Sorting integers or strings with fixed digit/length; stable</td>
+</tr>
+<tr>
+<td><a href="heap_sort.html">Heap Sort</a></td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+<td>O(1)</td>
+<td>In-place sorting; large datasets; not stable</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes:</strong></p>
+<ul>
+<li><code>n</code> = number of elements</li>
+<li><code>k</code> = range of input values (for Counting/Bucket/Radix)</li>
+<li><code>Heap Sort</code> is <strong>not stable</strong> but works in-place</li>
+<li><code>Radix Sort</code> depends on the number of digits (<code>k</code>) in the elements</li>
+</ul>
 <h3 id="searching-algorithms">Searching Algorithms</h3>
-<p>description of searching algorithms.
-Kinds of searching algorithms:
-| Name                                        | Time Complexity (Best) | Time Complexity (Average) | Time Complexity (Worst) | Space Complexity                         | Use Case                                                                                |
-| ------------------------------------------- | ---------------------- | ------------------------- | ----------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------- |
-| <a href="linear_search.html">Linear Search</a>           | O(1)                   | O(n)                      | O(n)                    | O(1)                                     | Simple lists; unsorted arrays; small datasets                                           |
-| <a href="binary_search.html">Binary Search</a>           | O(1)                   | O(log n)                  | O(log n)                | O(1) (iterative) / O(log n) (recursive)  | Sorted arrays; fast lookups; large datasets                                             |
-| <a href="ternary_search.html">Ternary Search</a>         | O(1)                   | O(log₃ n)                 | O(log₃ n)               | O(1) (iterative) / O(log₃ n) (recursive) | Sorted arrays; unimodal functions; optimization problems                                |
-| <a href="jump_search.html">Jump Search</a>               | O(1)                   | O(√n)                     | O(√n)                   | O(1)                                     | Sorted arrays; when linear search is too slow; medium-sized datasets                    |
-| <a href="exponential_search.html">Exponential Search</a> | O(1)                   | O(log n)                  | O(log n)                | O(1)                                     | Sorted arrays; when the element is near the beginning; works well with unbounded arrays |</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Time Complexity (Best)</th>
+<th>Time Complexity (Average)</th>
+<th>Time Complexity (Worst)</th>
+<th>Space Complexity</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="linear_search.html">Linear Search</a></td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>Simple lists; unsorted arrays; small datasets</td>
+</tr>
+<tr>
+<td><a href="binary_search.html">Binary Search</a></td>
+<td>O(1)</td>
+<td>O(log n)</td>
+<td>O(log n)</td>
+<td>O(1) (iterative) / O(log n) (recursive)</td>
+<td>Sorted arrays; fast lookups; large datasets</td>
+</tr>
+<tr>
+<td><a href="ternary_search.html">Ternary Search</a></td>
+<td>O(1)</td>
+<td>O(log₃ n)</td>
+<td>O(log₃ n)</td>
+<td>O(1) (iterative) / O(log₃ n) (recursive)</td>
+<td>Sorted arrays; unimodal functions; optimization problems</td>
+</tr>
+<tr>
+<td><a href="jump_search.html">Jump Search</a></td>
+<td>O(1)</td>
+<td>O(√n)</td>
+<td>O(√n)</td>
+<td>O(1)</td>
+<td>Sorted arrays; when linear search is too slow; medium-sized datasets</td>
+</tr>
+<tr>
+<td><a href="exponential_search.html">Exponential Search</a></td>
+<td>O(1)</td>
+<td>O(log n)</td>
+<td>O(log n)</td>
+<td>O(1)</td>
+<td>Sorted arrays; when the element is near the beginning; works well with unbounded arrays</td>
+</tr>
+</tbody>
+</table>
 <h3 id="string-manipulation-algorithms">String Manipulation Algorithms</h3>
 <p><a href="string_manipulation.html">Examples and Details</a>
 description of string manipulation algorithms.
-Kinds of string manipulation algorithms:
-- Reversing a string
-- Reversing a word
-- Rotations
-- Removing duplicates
-- Anagrams
-- Palindroms
-- Most repeated character</p>
+Kinds of string manipulation algorithms:</p>
+<ul>
+<li>Reversing a string</li>
+<li>Reversing a word</li>
+<li>Rotations</li>
+<li>Removing duplicates</li>
+<li>Anagrams</li>
+<li>Palindroms</li>
+<li>Most repeated character</li>
+</ul>
 <h2 id="recursion">Recursion</h2>
 <p><a href="recursion.html">More about Recursion</a></p>
 <h2 id="ressources-ressources">Ressources {#ressources}</h2>

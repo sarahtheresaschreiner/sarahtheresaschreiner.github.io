@@ -214,7 +214,7 @@
   
     
   
-  Welcome to MkDocs
+  Wissensverzeichnis
 
       </a>
     </li>
@@ -233,7 +233,7 @@
   
     
   
-  Markdown cheat sheet
+  Welcome to MkDocs
 
       </a>
     </li>
@@ -350,7 +350,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome to MkDocs
+    Wissensverzeichnis
   
 
     
@@ -377,7 +377,7 @@
   <span class="md-ellipsis">
     
   
-    Markdown cheat sheet
+    Welcome to MkDocs
   
 
     
@@ -582,6 +582,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -699,6 +703,34 @@
   
   
     <li class="md-nav__item">
+      <a href="bfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Breadth-First Search (BFS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="big_o_notation.html" class="md-nav__link">
         
   
@@ -785,17 +817,6 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#01112025" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        01.11.2025
-      
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#algorithm" class="md-nav__link">
@@ -949,6 +970,34 @@
     
   
     Counting Sort
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Depth-First Search
   
 
     
@@ -1597,17 +1646,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#01112025" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        01.11.2025
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#algorithm" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1669,34 +1707,34 @@
 
 
 <h1 id="binary-search">Binary Search</h1>
-<h2 id="01112025"><em>01.11.2025</em></h2>
+<hr />
+<p><em>01.11.2025</em>
+A search algoritm, similar to <a href="binary_trees.html">binary tree</a></p>
 <ul>
 <li>The idea of <strong>Binary Search</strong> is to repeatedly divide the search interval in half  </li>
 <li>It only works on <strong>sorted arrays</strong>  </li>
 <li>Much faster than <strong>Linear Search</strong> for large datasets  </li>
 </ul>
 <h2 id="algorithm">Algorithm</h2>
-<p><img alt="Binary Search Visualization" src="./images/binary_search.png" />
-1. Set <code>low = 0</code> and <code>high = len(arr) - 1</code><br />
-2. While <code>low &lt;= high</code>:<br />
-   - Compute <code>mid = (low + high) // 2</code><br />
-   - If <code>arr[mid] == target</code>: return <code>mid</code><br />
-   - If <code>arr[mid] &lt; target</code>: search the right half → <code>low = mid + 1</code><br />
-   - If <code>arr[mid] &gt; target</code>: search the left half → <code>high = mid - 1</code><br />
-3. If the loop ends without finding the target → return <em>-1</em>  </p>
+<p><img alt="Binary Search Visualization" src="./images/binary_search.png" /></p>
+<ol>
+<li>Set <code>low = 0</code> and <code>high = len(arr) - 1</code>  </li>
+<li>While <code>low &lt;= high</code>:  </li>
+<li>Compute <code>mid = (low + high) // 2</code>  </li>
+<li>If <code>arr[mid] == target</code>: return <code>mid</code>  </li>
+<li>If <code>arr[mid] &lt; target</code>: search the right half → <code>low = mid + 1</code>  </li>
+<li>If <code>arr[mid] &gt; target</code>: search the left half → <code>high = mid - 1</code>  </li>
+<li>If the loop ends without finding the target → return <em>-1</em>  </li>
+</ol>
 <h2 id="complexity">Complexity</h2>
 <ul>
-<li><strong>Time Complexity:</strong><ul>
+<li><strong>Time Complexity:</strong></li>
 <li><em>Best case:</em> O(1) — target found at the first mid check  </li>
 <li><em>Worst case:</em> O(log n) — halving search space each step  </li>
 <li><em>Average case:</em> O(log n)</li>
-</ul>
-</li>
-<li><strong>Space Complexity:</strong><ul>
+<li><strong>Space Complexity:</strong></li>
 <li><em>Iterative version:</em> O(1)  </li>
 <li><em>Recursive version:</em> O(log n) — due to recursion stack  </li>
-</ul>
-</li>
 </ul>
 <h2 id="code-example-iterative">Code Example (Iterative)</h2>
 <pre><code class="language-python">def binary_search(arr, target):

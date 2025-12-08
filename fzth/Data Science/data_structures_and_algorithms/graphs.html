@@ -214,7 +214,7 @@
   
     
   
-  Welcome to MkDocs
+  Wissensverzeichnis
 
       </a>
     </li>
@@ -233,7 +233,7 @@
   
     
   
-  Markdown cheat sheet
+  Welcome to MkDocs
 
       </a>
     </li>
@@ -350,7 +350,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome to MkDocs
+    Wissensverzeichnis
   
 
     
@@ -377,7 +377,7 @@
   <span class="md-ellipsis">
     
   
-    Markdown cheat sheet
+    Welcome to MkDocs
   
 
     
@@ -582,6 +582,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -679,6 +683,34 @@
     
   
     AVL Trees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Breadth-First Search (BFS)
   
 
     
@@ -867,6 +899,34 @@
   
   
     <li class="md-nav__item">
+      <a href="dfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Depth-First Search
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="dictionaries.html" class="md-nav__link">
         
   
@@ -983,17 +1043,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#29102025" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        29.10.2025
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#definition" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1008,7 +1057,7 @@
   <a href="#weighted-vs-unweighted-graphs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Weighted vs Unweighted Graphs:
+        Weighted vs Unweighted Graphs
       
     </span>
   </a>
@@ -1063,33 +1112,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Traversal Algorithms">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#depth-first-search-dfs" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-shortest-path" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Depth-First Search (DFS)
+        Finding shortest path
       
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#breadth-first-search-bfs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Breadth-First Search (BFS)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1653,17 +1685,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#29102025" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        29.10.2025
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#definition" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1678,7 +1699,7 @@
   <a href="#weighted-vs-unweighted-graphs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Weighted vs Unweighted Graphs:
+        Weighted vs Unweighted Graphs
       
     </span>
   </a>
@@ -1733,33 +1754,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Traversal Algorithms">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#depth-first-search-dfs" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-shortest-path" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Depth-First Search (DFS)
+        Finding shortest path
       
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#breadth-first-search-bfs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Breadth-First Search (BFS)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1781,22 +1785,23 @@
 
 
 <h1 id="graphs">Graphs</h1>
-<h2 id="29102025"><em>29.10.2025</em></h2>
-<p><strong>Hypothesis:</strong> A graph is <em>only for storing the relation</em> between things. its vertices are only for representing the things and arent the object itself. It is a separate thing.
+<hr />
+<p><em>29.10.2025</em>
+<strong>Hypothesis:</strong> A graph is <em>only for storing the relation</em> between things. its vertices are only for representing the things and arent the object itself. It is a separate thing.
 <img alt="Graph Image" src="images/graph.png" /></p>
 <h2 id="definition">Definition</h2>
-<p>A <em>graph</em> is a non-linear data structure that consists of a set of vertices (or nodes) and a set of edges that connect pairs of vertices. Graphs are used to represent relationships between objects and can model various real-world systems, such as social networks, transportation networks, and communication networks. Graphs can be classified into:
-- <strong>Directed Graphs (Digraphs):</strong> where edges have a direction, indicating a one-way relationship between vertices.
-    - Like following someone on Twitter. If A follows B, it does not imply that B follows A.
-- <strong>Undirected Graphs:</strong> where edges do not have a direction, indicating a two-way relationship between vertices.
-    - Like being friends on facebook.</p>
-<h2 id="weighted-vs-unweighted-graphs">Weighted vs Unweighted Graphs:</h2>
+<p>A <em>graph</em> is a non-linear data structure that consists of a set of vertices (or nodes) and a set of edges that connect pairs of vertices. Graphs are used to represent relationships between objects and can model various real-world systems, such as social networks, transportation networks, and communication networks. Graphs can be classified into:</p>
 <ul>
-<li><strong>Weighted Graphs:</strong> where edges have <em>weights</em> or costs associated with them, representing the <em>strength/cost/time</em> etc. of the relationship.<ul>
+<li><strong>Directed Graphs (Digraphs):</strong> where edges have a direction, indicating a one-way relationship between vertices.</li>
+<li>Like following someone on Twitter. If A follows B, it does not imply that B follows A.</li>
+<li><strong>Undirected Graphs:</strong> where edges do not have a direction, indicating a two-way relationship between vertices.</li>
+<li>Like being friends on facebook.</li>
+</ul>
+<h2 id="weighted-vs-unweighted-graphs">Weighted vs Unweighted Graphs</h2>
+<ul>
+<li><strong>Weighted Graphs:</strong> where edges have <em>weights</em> or costs associated with them, representing the <em>strength/cost/time</em> etc. of the relationship.</li>
 <li>For example, in a transportation network, the weight could represent the distance or travel time between two locations.
 <img alt="Weighted vs Unweighted Graphs" src="images/weighted_graphs.png" /></li>
-</ul>
-</li>
 <li><strong>Unweighted Graphs:</strong> where edges do not have any weights; all edges are considered equal.</li>
 </ul>
 <h2 id="how-to-store-the-relationsadjacency">How to Store the Relations/Adjacency</h2>
@@ -1806,9 +1811,9 @@
 <li>A 2D array of size V x V where V is the number of vertices in the graph.</li>
 <li>Every Vertex has a row and a column.</li>
 <li>If there is an edge from vertex i to vertex j, then the cell at row i and column j is marked with a 1 (or the weight of the edge in weighted graphs); otherwise, it is marked with a 0.</li>
-<li><strong>Space Complexity:</strong> O(V^2), which can be inefficient for sparse graphs.
-<img alt="Adjacency Matrix Example" src="images/adjacency_matrix.png" /></li>
+<li><strong>Space Complexity:</strong> O(V^2), which can be inefficient for sparse graphs.</li>
 </ul>
+<p><img alt="Adjacency Matrix Example" src="images/adjacency_matrix.png" /></p>
 <pre><code class="language-python"># Example of an adjacency matrix for a directed graph
 adjacency_matrix = [
    # A  B  C  D
@@ -1819,13 +1824,11 @@ adjacency_matrix = [
 ]
 </code></pre>
 <ul>
-<li>In this example:<ul>
+<li>In this example:</li>
 <li>A has an edge to B</li>
 <li>B has edges to C and D</li>
 <li>C has an edge to D</li>
 <li>D has no edges</li>
-</ul>
-</li>
 </ul>
 <h3 id="adjacency-list">Adjacency List</h3>
 <ul>
@@ -1836,8 +1839,14 @@ adjacency_matrix = [
 </ul>
 <h2 id="traversal-algorithms">Traversal Algorithms</h2>
 <p>Graph traversal algorithms are used to visit all the vertices and edges in a graph. The two most common traversal algorithms are Depth-First Search (DFS) and Breadth-First Search (BFS).</p>
-<h3 id="depth-first-search-dfs">Depth-First Search (DFS)</h3>
-<h3 id="breadth-first-search-bfs">Breadth-First Search (BFS)</h3>
+<p><a href="dfs.html">Depth-First Search (DFS)</a>
+<a href="bfs.html">Breadth-First Search (BFS)</a></p>
+<h2 id="finding-shortest-path">Finding shortest path</h2>
+<ul>
+<li><a href="dijkstra.md">Dijkstra</a></li>
+<li><a href="bellman_ford.md">Bellman-Ford</a></li>
+</ul>
+<p>If you want a path that visits all vertices, it's called <strong>Hamiltonian path</strong> (or <strong>circle</strong> if it has the same start and end). Finding the shortest hamiltionian path/circle is a NP-Hard/NP-Complete problem. The problem for the shortes circle is called <strong>Travelling Salesman Problem</strong> (TSP).</p>
 
 
 

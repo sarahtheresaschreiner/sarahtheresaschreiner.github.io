@@ -214,7 +214,7 @@
   
     
   
-  Welcome to MkDocs
+  Wissensverzeichnis
 
       </a>
     </li>
@@ -233,7 +233,7 @@
   
     
   
-  Markdown cheat sheet
+  Welcome to MkDocs
 
       </a>
     </li>
@@ -350,7 +350,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome to MkDocs
+    Wissensverzeichnis
   
 
     
@@ -377,7 +377,7 @@
   <span class="md-ellipsis">
     
   
-    Markdown cheat sheet
+    Welcome to MkDocs
   
 
     
@@ -582,6 +582,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -679,6 +683,34 @@
     
   
     AVL Trees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Breadth-First Search (BFS)
   
 
     
@@ -847,6 +879,34 @@
     
   
     Counting Sort
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Depth-First Search
   
 
     
@@ -1347,17 +1407,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#04112025" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        04.11.2025
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#stacks" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1398,10 +1447,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example_1" class="md-nav__link">
+  <a href="#example-queue" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example
+        Example Queue
       
     </span>
   </a>
@@ -1620,17 +1669,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#04112025" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        04.11.2025
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#stacks" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1671,10 +1709,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example_1" class="md-nav__link">
+  <a href="#example-queue" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example
+        Example Queue
       
     </span>
   </a>
@@ -1715,10 +1753,9 @@
 
 
 <h1 id="stacks-and-queues">Stacks and Queues</h1>
-<h2 id="04112025">04.11.2025</h2>
-<ul>
-<li>Stacks and Queues are Data Structures that have pointers to elements and can only access these.</li>
-</ul>
+<hr />
+<p><em>04.11.2025</em>
+Stacks and Queues are Data Structures that have pointers to elements and can only access these.</p>
 <h2 id="stacks">Stacks</h2>
 <p><img alt="stacks" src="images/stacks.png" />
 Stacks are a linear data structure that follows the Last In First Out (LIFO) principle, where the last element added is the first one to be removed. Common operations include push (add an element) and pop (remove the top element). You can picture it like a stack of pancakes, where you can only access the first one. That means that if you want the third element you have to first remove de items above.
@@ -1743,7 +1780,7 @@ def remove():
 <h2 id="queues">Queues</h2>
 <p><img alt="queues" src="images/queues.png" />
 Stacks are a linear data structure that follows the First In First Out (FIFO) principle, where the first element added is the first one to be removed. Common operations include enqueue (add an element to the back) and dequeue (remove the front element). You can picture it like a line of people waiting, where the first person in line is the first to be served.</p>
-<h3 id="example_1">Example</h3>
+<h3 id="example-queue">Example Queue</h3>
 <p>The class <code>queues</code> is initiated with a <code>first = 0</code>, <code>next = 0</code> and an array in a given size</p>
 <pre><code class="language-python">def enqueue(element):
     if next+1 == first:
@@ -1761,9 +1798,6 @@ def dequeue():
 </code></pre>
 <h2 id="deques">Deques</h2>
 <p>(Double-Ended Queues) are a more versatile version of queues that allow adding and removing elements from both ends. This makes them suitable for scenarios where you need to efficiently manage elements at both the front and back of the collection.</p>
-<p><strong>Stacks</strong> are a linear data structure that follows the Last In First Out (LIFO) principle, where the last element added is the first one to be removed. Common operations include push (add an element) and pop (remove the top element). You can picture it like a stack of pancakes, where you can only access the first one.
-<strong>Queues</strong> 
-<strong>Deques</strong> (Double-Ended Queues) are a more versatile version of queues that allow adding and removing elements from both ends. This makes them suitable for scenarios where you need to efficiently manage elements at both the front and back of the collection.</p>
 
 
 

@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://sarahtheresaschreiner.github.io/fzth/Data%20Science/data_structures_and_algorithms/bucket_sort.html">
+        <link rel="canonical" href="https://sarahtheresaschreiner.github.io/fzth/Data%20Science/data_structures_and_algorithms/dfs.html">
       
       
-        <link rel="prev" href="bubble_sort.html">
+        <link rel="prev" href="counting_sort.html">
       
       
-        <link rel="next" href="counting_sort.html">
+        <link rel="next" href="dictionaries.html">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Bucket Sort - FZTH</title>
+        <title>Depth-First Search - FZTH</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#bucket-sort" class="md-skip">
+        <a href="#depth-first-search" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Bucket Sort
+              Depth-First Search
             
           </span>
         </div>
@@ -840,6 +840,62 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="bucket_sort.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bucket Sort
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="counting_sort.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Counting Sort
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -859,7 +915,7 @@
   <span class="md-ellipsis">
     
   
-    Bucket Sort
+    Depth-First Search
   
 
     
@@ -870,14 +926,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="bucket_sort.html" class="md-nav__link md-nav__link--active">
+      <a href="dfs.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    Bucket Sort
+    Depth-First Search
   
 
     
@@ -925,10 +981,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#code-example" class="md-nav__link">
+  <a href="#implementation-recursive" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Code Example
+        Implementation Recursive
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-with-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation with Stack
       
     </span>
   </a>
@@ -939,62 +1006,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="counting_sort.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Counting Sort
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="dfs.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Depth-First Search
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -1657,10 +1668,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#code-example" class="md-nav__link">
+  <a href="#implementation-recursive" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Code Example
+        Implementation Recursive
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-with-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation with Stack
       
     </span>
   </a>
@@ -1684,34 +1706,64 @@
 
 
 
-<h1 id="bucket-sort">Bucket Sort</h1>
+<h1 id="depth-first-search">Depth-First Search</h1>
 <hr />
-<p><em>01.11.2025</em>
-<em>Bucket Sort</em> is a sorting algorithm that sorts out-of-place. It puts the elements in buckets. (Each bucket is for a range of values) and than sort the buckets (with another sorting algorithm), before setting it back together.</p>
+<p><em>25.11.2025</em>
+Depth-First Search is an Algorithm for searching in graphs. It iterates over the graph and works similar to <a href="bfs.html">BFS</a>.</p>
 <h2 id="algorithm">Algorithm</h2>
-<ol>
-<li>Put in buckets. (e.g.: for an array with numbwers between 0-1 you would have 10 buckets with a range of 0.1 each)</li>
-<li>Sort each bucket</li>
-<li>Set the array back together</li>
-</ol>
+<ul>
+<li>It can be implemented either <a href="recursion.html">recursive</a> or with a <a href="stacks_and_queues.html">stack</a> similar as <em>BFS</em>.</li>
+<li>Recursive:</li>
+<li>Start value <code>v</code></li>
+<li>
+<p>You have a list, where you store, which nodes you visit. <code>marked = [False] * Graph.size()</code></p>
+</li>
+<li>
+<p>visit(v)</p>
+</li>
+<li>mark(v)</li>
+<li>iterate through all neighbors:</li>
+<li>call recursion on each of them</li>
+<li>Stack:</li>
+<li>
+<p>Additionaly to the start value and the marked-list, we have a <strong>stack</strong>. It has stored the start value <code>v</code>.</p>
+</li>
+<li>
+<p>v = stack.pop</p>
+</li>
+<li>visit(v)</li>
+<li>mark(v)</li>
+<li>Iterate through all neighbors and put them on the stack</li>
+<li>Repeat 1.-4. while there are still vertixes in the stack</li>
+<li>There is also the option to do it <code>post order</code>. That means to make the visit call at the end, when you declared the vertix as a dead end. The other way (that I covered) is called <code>pre order</code>.</li>
+</ul>
 <h2 id="complexity">Complexity</h2>
 <ul>
-<li><strong>Time Complexity:</strong> Depends on the <em>Sorting Algoritm</em> used</li>
-<li><strong>Space Complexity:</strong> 0(n+k) - Bucket sort requires additional space for the buckets. The total memory used depends on the number of elements (n) and the number of buckets (k)</li>
+<li>V is the Vertices and E is Edges</li>
+<li><strong>Time:</strong> O(V+E)</li>
+<li><strong>Space:</strong> O(V)</li>
 </ul>
-<h2 id="code-example">Code Example</h2>
-<pre><code class="language-python">def bucket_sort(arr):           # for array with values 0-1
-    buckets = [[] for _ in range(10)]
-    for v in arr:
-        buckets[int(v * 10)].append(v)
-    for b in buckets:
-        insertion_sort(b)
-    pointer=0
-    for b in buckets:
-        for v in b:
-            arr[pointer]=v
-            pointer+=1
-    return arr
+<h2 id="implementation-recursive">Implementation Recursive</h2>
+<pre><code class="language-python">marked = [False] * G.size
+def dfs(G,v):
+    visit(v)
+    marked[v] = True
+    for w in G.neighbors(v):
+        if not marked[w]:
+            dfs(G, w)
+</code></pre>
+<h2 id="implementation-with-stack">Implementation with Stack</h2>
+<pre><code class="language-python">def bfs(G, v):
+    marked = [False] * G.size
+    stack = [v]
+    while len(queue) &gt; 0:
+        v = stack.pop(len(stack)-1)       # pop last
+        if not marked[v]:
+            visit(v)
+            marked[v] = True
+            for w in G.neighbors(v)
+                if not marked[w]
+                    stack.append(w)
 </code></pre>
 
 

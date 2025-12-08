@@ -214,7 +214,7 @@
   
     
   
-  Welcome to MkDocs
+  Wissensverzeichnis
 
       </a>
     </li>
@@ -233,7 +233,7 @@
   
     
   
-  Markdown cheat sheet
+  Welcome to MkDocs
 
       </a>
     </li>
@@ -350,7 +350,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome to MkDocs
+    Wissensverzeichnis
   
 
     
@@ -377,7 +377,7 @@
   <span class="md-ellipsis">
     
   
-    Markdown cheat sheet
+    Welcome to MkDocs
   
 
     
@@ -582,6 +582,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -679,6 +683,34 @@
     
   
     AVL Trees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Breadth-First Search (BFS)
   
 
     
@@ -847,6 +879,34 @@
     
   
     Counting Sort
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Depth-First Search
   
 
     
@@ -1149,17 +1209,6 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#01112025" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        01.11.2025
-      
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#algorithm" class="md-nav__link">
@@ -1586,17 +1635,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#01112025" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        01.11.2025
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#algorithm" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1647,32 +1685,31 @@
 
 
 <h1 id="linear-search">Linear Search</h1>
-<h2 id="01112025"><em>01.11.2025</em></h2>
+<hr />
+<p><em>01.11.2025</em>
+The idea of <strong>Linear Search</strong> is to go through each element of the list one by one.</p>
 <ul>
-<li>The idea of <strong>Linear Search</strong> is to go through each element of the list one by one  </li>
 <li>It is the simplest searching algorithm  </li>
 <li>Works on both <strong>sorted</strong> and <strong>unsorted</strong> arrays  </li>
 </ul>
 <h2 id="algorithm">Algorithm</h2>
-<p><img alt="Linear Search Visualization" src="./images/linear_search.png" />
-1. Start from the first element of the array<br />
-2. Compare the current element with the target value<br />
-3. If they are equal → return the current index (target found)<br />
-4. If not, move to the next element<br />
-5. Repeat steps 2–4 until the end of the array<br />
-6. If the end is reached and no match is found → return <em>-1</em> (target not found)  </p>
+<p><img alt="Linear Search Visualization" src="./images/linear_search.png" /></p>
+<ol>
+<li>Start from the first element of the array  </li>
+<li>Compare the current element with the target value  </li>
+<li>If they are equal → return the current index (target found)  </li>
+<li>If not, move to the next element  </li>
+<li>Repeat steps 2–4 until the end of the array  </li>
+<li>If the end is reached and no match is found → return <em>-1</em> (target not found)  </li>
+</ol>
 <h2 id="complexity">Complexity</h2>
 <ul>
-<li><strong>Time Complexity:</strong><ul>
+<li><strong>Time Complexity:</strong></li>
 <li><em>Best case:</em> O(1) — target is the first element  </li>
 <li><em>Worst case:</em> O(n) — target is the last or not in the array  </li>
 <li><em>Average case:</em> O(n/2) ≈ O(n)</li>
-</ul>
-</li>
-<li><strong>Space Complexity:</strong><ul>
+<li><strong>Space Complexity:</strong></li>
 <li>O(1) — only a few extra variables are used  </li>
-</ul>
-</li>
 </ul>
 <h2 id="code-example">Code Example</h2>
 <pre><code class="language-python">def linear_search(arr, target):

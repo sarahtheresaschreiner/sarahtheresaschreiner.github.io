@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://sarahtheresaschreiner.github.io/fzth/Data%20Science/data_structures_and_algorithms/big_o_notation.html">
       
       
-        <link rel="prev" href="avl_trees.html">
+        <link rel="prev" href="bfs.html">
       
       
         <link rel="next" href="binary_search.html">
@@ -214,7 +214,7 @@
   
     
   
-  Welcome to MkDocs
+  Wissensverzeichnis
 
       </a>
     </li>
@@ -233,7 +233,7 @@
   
     
   
-  Markdown cheat sheet
+  Welcome to MkDocs
 
       </a>
     </li>
@@ -350,7 +350,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome to MkDocs
+    Wissensverzeichnis
   
 
     
@@ -377,7 +377,7 @@
   <span class="md-ellipsis">
     
   
-    Markdown cheat sheet
+    Welcome to MkDocs
   
 
     
@@ -582,6 +582,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -696,6 +700,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="bfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Breadth-First Search (BFS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -757,17 +789,6 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#28102025" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        28.10.2025
-      
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#common-big-o-notations" class="md-nav__link">
@@ -1010,6 +1031,34 @@
     
   
     Counting Sort
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dfs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Depth-First Search
   
 
     
@@ -1658,17 +1707,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#28102025" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        28.10.2025
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#common-big-o-notations" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1791,8 +1829,9 @@
 
 
 <h1 id="big-o-notation">Big O Notation</h1>
-<h2 id="28102025"><em>28.10.2025</em></h2>
-<p>Big O notation is used to describe the performance or complexity of an algorithm. It provides the <em>worst case</em> <strong>time or space requirements</strong> in terms of the input size. You can devide Big O in <strong>Time Complexity</strong> and <strong>Space Complexity</strong>.</p>
+<hr />
+<p><em>28.10.2025</em>
+Big O notation is used to describe the performance or complexity of an algorithm. It provides the <em>worst case</em> <strong>time or space requirements</strong> in terms of the input size. You can devide Big O in <strong>Time Complexity</strong> and <strong>Space Complexity</strong>.</p>
 <h2 id="common-big-o-notations">Common Big O Notations</h2>
 <table>
 <thead>
@@ -1837,11 +1876,13 @@
 </ul>
 <h2 id="calculating-big-o-notation">Calculating Big O Notation</h2>
 <p>When calculating Big O notation, focus on the part of the algorithm that grows the fastest as the input size increases.
-Some general rules to follow:
-1. <strong>Ignore Constants</strong>: O(2n) and O(3n) are simplified to O(n).
-2. <strong>Drop Non-Dominant Terms</strong>: In O(n^2 + n), the n^2 term dominates as n grows large, so it simplifies to O(n^2).
-3. <strong>Nested Loops</strong>: Multiply the complexities of nested loops. For example, a loop inside another loop each running n times results in O(n^2).
-4. <strong>Sequential Operations</strong>: Add the complexities of sequential operations. For example, O(n) + O(n) simplifies to O(n).</p>
+Some general rules to follow:</p>
+<ol>
+<li><strong>Ignore Constants</strong>: O(2n) and O(3n) are simplified to O(n).</li>
+<li><strong>Drop Non-Dominant Terms</strong>: In O(n^2 + n), the n^2 term dominates as n grows large, so it simplifies to O(n^2).</li>
+<li><strong>Nested Loops</strong>: Multiply the complexities of nested loops. For example, a loop inside another loop each running n times results in O(n^2).</li>
+<li><strong>Sequential Operations</strong>: Add the complexities of sequential operations. For example, O(n) + O(n) simplifies to O(n).</li>
+</ol>
 <h2 id="examples">Examples</h2>
 <h3 id="example-1-constant-time-o1">Example 1: Constant Time - O(1)</h3>
 <pre><code class="language-python">def say_hello(arr):
