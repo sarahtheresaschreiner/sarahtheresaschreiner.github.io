@@ -624,6 +624,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AVL Trees
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="avl_trees.html" class="md-nav__link md-nav__link--active">
         
   
@@ -640,6 +658,125 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#changed-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changed Methods
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        add()
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="add()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        remove()
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helping-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        helping methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="helping methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#updating-the-tree-after-structure-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updating the tree after structure changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balancenoderoot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        balance(node=root)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1558,6 +1695,114 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#changed-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changed Methods
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        add()
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="add()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        remove()
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helping-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        helping methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="helping methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#updating-the-tree-after-structure-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updating the tree after structure changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balancenoderoot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        balance(node=root)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1575,6 +1820,154 @@
 
 <h1 id="avl-trees">AVL Trees</h1>
 <hr />
+<p><em>11.12.2025</em> - AVL Trees are special type of binary tree, they aim for optimal time complexity and solve the worst case problem of a binary tree, that can and up looking nearly like a linked list. AVL solves this problem by garanting a possibly best <strong>height balance</strong>, with only the deepast level being incomplete. What sounds like an easy solution brings a list of complicated methods for the tree.</p>
+<p>The height balance is defined: <code>height(node.right) - height(node.left) = -1,0,+1</code>
+Following: <code>h = 2*log(n)</code>
+To know what your height is, each node stores it's height.</p>
+<h2 id="changed-methods">Changed Methods</h2>
+<p>AVL-Trees methods are the same as of a binary tree, only the ones that change something on the structure are slightly changed. They just work normal, just like e.g. BST, but after performing, you have to check wheater the Tree is balanced and update the height of each node. For AVL-Trees the following methods are changed compared to a simple binary tree:</p>
+<ul>
+<li>set(): if you get an array and should create a tree with it</li>
+<li>remove(): remove a node from the tree</li>
+<li>add(): add a node to the tree</li>
+</ul>
+<p>Therefor we encounter a new tool: Rotation
+<img alt="Rotation" src="rotation.png" /></p>
+<ul>
+<li>how, what etc.</li>
+</ul>
+<h2 id="add">add()</h2>
+<h3 id="algorithm">Algorithm</h3>
+<ul>
+<li>perform normal add method</li>
+<li>walk up the tree and update the height of each ancestor</li>
+<li>rebalance if needed</li>
+</ul>
+<h3 id="implementation">Implementation</h3>
+<pre><code class="language-python">def add(node):
+    def add(id, node=root):
+    if node.id = id
+        return False
+    if node.id &lt; id:
+        if node.right == null:
+            nNode = new Node(id, node)
+            node.right = nNode
+            update(nNode)
+            return True
+        return add(id, node.right)
+    if node.left == null:
+        nNode = new Node(id, node)
+        node.left = nNode
+        update(nNode)
+        return True
+    return add(id, node.left)
+</code></pre>
+<h2 id="remove">remove()</h2>
+<pre><code class="language-python">def remove(id, node=get(id)):
+    if node == null:
+        return False
+    if node.is_leaf:
+        balance(node)
+        node.remove                                 # goes to the parent and removes the pointer to the node
+        return True
+    if node.left != null:
+        swap(node, predecessor(node))
+        return remove(id, node)
+</code></pre>
+<h2 id="helping-methods">helping methods</h2>
+<h3 id="updating-the-tree-after-structure-changes">Updating the tree after structure changes</h3>
+<ul>
+<li>update height</li>
+<li>check if it's balanced</li>
+<li>if the bouncefaktor (<code>bf=l.height-r.height</code>) is not -1, 0, 1 it isn't</li>
+<li>if not: rebalance and update height</li>
+</ul>
+<pre><code class="language-python">def balance(node, node_before=null):
+    if node.bf &gt; 1 or node.bf &lt; -1:             # unbalanced
+        rebalance(node_before)
+    if node.parent == null:                     # is root
+        return
+    node.parent.set_height(node.height+1)       # go to next
+    balance(node.parent, node)
+
+def rebalance(node):                            # node is the one under/before the one out of balance
+    c_bf =  node.bf()
+    p_bf = node.parent.bf()
+    if c_bf &lt; 0 and p_bf &lt; 0:
+        left_rotate(node)
+        return
+    if c_bf &gt; 0 and p_bf &gt; 0:
+        right_rotate(node)
+        return
+    if c_bf &gt; 0 and p_bf &lt; 0:
+        node = node.left
+        right_rotate(node)
+        left_rotate(node)
+    if c_bf &lt; 0 and p_bf &gt; 0:
+        node = node.left
+        right_rotate(node)
+        left_rotate(node)
+</code></pre>
+<h3 id="balancenoderoot">balance(node=root)</h3>
+<p>Left rotation:</p>
+<ul>
+<li>parent becomes left_child</li>
+<li>left child becomes right_child of parent</li>
+</ul>
+<p>Right rotation:</p>
+<ul>
+<li>parent becomes right child</li>
+<li>right child becomes left_child of parent</li>
+</ul>
+<pre><code class="language-python">def left_rotate(node):
+    l_child = node.left
+    p_parent = node.parent.parent
+    parent = node.parent
+    node.left = parent
+    parent.right = l_child
+    parent.parent = node
+    node.parent = p_parent
+    if l_child != null:
+        l_child.parent = parent
+    if p_parent != null:
+        if p_parent.left == parent:
+            p_parent.left = node
+        else:
+            p_parent.right = node    
+    if parent.left.height &gt; parent.right.height:        # update height parent
+        parent.height = parent.left.height + 1
+    else:
+        parent.height = parent.right.height + 1
+    if node.left.height &gt; node.right.height:        # update height rotated node
+        node.height = node.left.height + 1
+    else:
+        node.height = node.right.height + 1
+
+def right_rotate(node):
+    r_child = node.right
+    parent = node.parent
+    p_parent parent.parent
+    node.parent = p_parent              # new parent of node
+    if p_parent != null:
+        if p_parent.left == parent:
+            p_parent.left = node
+        else:
+            p_parent.right = node 
+    node.right = parent                 # former parent
+    parent.parent = node 
+    parent.left = right_child           # former right child
+    if l_child != null:
+        l_child.parent = parent
+    if parent.left.height &gt; parent.right.height:        # update height parent
+        parent.height = parent.left.height + 1
+    else:
+        parent.height = parent.right.height + 1
+    if node.left.height &gt; node.right.height:        # update height rotated node
+        node.height = node.left.height + 1
+    else:
+        node.height = node.right.height + 1
+
+</code></pre>
 
 
 
