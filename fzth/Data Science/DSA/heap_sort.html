@@ -988,6 +988,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Heap Sort
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="heap_sort.html" class="md-nav__link md-nav__link--active">
         
   
@@ -1004,6 +1022,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Time Complexity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#space-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Space Complexity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-implementation-in-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Implementation in Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1558,6 +1639,58 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Time Complexity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#space-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Space Complexity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-implementation-in-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Implementation in Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1574,7 +1707,62 @@
 
 
 <h1 id="heap-sort">Heap Sort</h1>
-<hr />
+<p><em>30.12.2025</em>
+<img alt="Heap Sort Visualization" src="./images/heapsort.png" />
+Heap sort is an efficient comparison-based sorting algorithm that uses a binary heap data structure. It works by first organizing the array into a heap (usually a max-heap), where the largest element is always at the root. The largest element is then repeatedly removed from the heap and placed at the end of the array, resulting in a sorted list.</p>
+<h2 id="algorithm">Algorithm</h2>
+<ol>
+<li>Build a max-heap from the input array.</li>
+<li>The largest element is now at the root of the heap.</li>
+<li>Swap the root element with the last element of the heap.</li>
+<li>Reduce the size of the heap by one (excluding the last, now sorted, element).</li>
+<li>Heapify the root element to restore the max-heap property.</li>
+<li>Repeat steps 2–5 until the heap size is reduced to one.</li>
+</ol>
+<h2 id="time-complexity">Time Complexity</h2>
+<ul>
+<li>Best Case: O(n log n) – Building the heap takes O(n) time and each extraction takes O(log n).</li>
+<li>Average Case: O(n log n)</li>
+<li>Worst Case: O(n log n)</li>
+</ul>
+<h2 id="space-complexity">Space Complexity</h2>
+<ul>
+<li>O(1) – Heap sort is an in-place sorting algorithm and does not require additional memory beyond a constant amount.</li>
+</ul>
+<h2 id="example-implementation-in-python">Example Implementation in Python</h2>
+<pre><code class="language-python">def heap_sort(arr):
+    n = len(arr)
+
+    # Build a max heap
+    for i in range(n // 2 - 1, -1, -1):
+        heapify(arr, n, i)
+
+    # Extract elements one by one
+    for i in range(n - 1, 0, -1):
+        arr[i], arr[0] = arr[0], arr[i]   # Swap
+        heapify(arr, i, 0)
+
+    return arr
+
+
+def heapify(arr, n, i):
+    largest = i
+    left = 2 * i + 1
+    right = 2 * i + 2
+
+    # Check if left child exists and is greater than root
+    if left &lt; n and arr[left] &gt; arr[largest]:
+        largest = left
+
+    # Check if right child exists and is greater than largest so far
+    if right &lt; n and arr[right] &gt; arr[largest]:
+        largest = right
+
+    # Change root if needed
+    if largest != i:
+        arr[i], arr[largest] = arr[largest], arr[i]
+        heapify(arr, n, largest)
+</code></pre>
 
 
 

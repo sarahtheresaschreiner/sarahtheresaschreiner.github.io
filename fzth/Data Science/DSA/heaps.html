@@ -1105,6 +1105,100 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-does-it-work-implementation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How does it work // Implementation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How does it work // Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#heap-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heap Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Array Representation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insertion-heapify-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Insertion (Heapify-Up)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removal-extract-max-heapify-down" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removal (Extract Max – Heapify-Down)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heapify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heapify
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-a-heap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building a Heap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relation-to-heap-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relation to Heap Sort
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1679,6 +1773,100 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-does-it-work-implementation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How does it work // Implementation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How does it work // Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#heap-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heap Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Array Representation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insertion-heapify-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Insertion (Heapify-Up)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removal-extract-max-heapify-down" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removal (Extract Max – Heapify-Down)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heapify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heapify
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-a-heap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building a Heap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relation-to-heap-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relation to Heap Sort
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1712,6 +1900,115 @@ Eventhough it is based on the idea of a <a href="binary_trees.html">binary tree<
 <p>Heaps are used for priority queue sort, thats ideal for allways getting the max or min value.</p>
 <h2 id="how-does-it-work-implementation">How does it work // implementation</h2>
 <h3 id="_1"></h3>
+<h2 id="how-does-it-work-implementation_1">How does it work // Implementation</h2>
+<h3 id="heap-types">Heap Types</h3>
+<p>There are two main types of heaps:</p>
+<ul>
+<li><strong>Max-Heap</strong>: Each parent node has a key greater than or equal to its children. The maximum value is always stored at the root.</li>
+<li><strong>Min-Heap</strong>: Each parent node has a key smaller than or equal to its children. The minimum value is always stored at the root.</li>
+</ul>
+<p>Heap sort uses a <strong>max-heap</strong>, which is why the following examples focus on it.</p>
+<hr />
+<h3 id="array-representation">Array Representation</h3>
+<p>A heap is stored as an array because it is a <strong>complete binary tree</strong>.</p>
+<p>For an element at index <code>i</code> (0-based indexing):</p>
+<ul>
+<li>Parent index: <code>(i - 1) // 2</code></li>
+<li>Left child index: <code>2 * i + 1</code></li>
+<li>Right child index: <code>2 * i + 2</code></li>
+</ul>
+<pre><code class="language-python"># Index calculations in a heap array
+parent = (i - 1) // 2
+left_child = 2 * i + 1
+right_child = 2 * i + 2
+</code></pre>
+<p>This representation allows heap operations to be performed efficiently and is essential for heap sort.</p>
+<hr />
+<h3 id="insertion-heapify-up">Insertion (Heapify-Up)</h3>
+<p>When inserting a new element, it is first added at the end of the array.
+Then it is repeatedly swapped with its parent until the heap property is restored.</p>
+<pre><code class="language-python">def heap_insert(heap, value):
+    heap.append(value)
+    i = len(heap) - 1
+
+    # Heapify-up
+    while i &gt; 0:
+        parent = (i - 1) // 2
+        if heap[i] &gt; heap[parent]:           # max-heap
+            heap[i], heap[parent] = heap[parent], heap[i]
+            i = parent
+        else:
+            break
+</code></pre>
+<p>This operation takes <strong>O(log n)</strong> time.</p>
+<hr />
+<h3 id="removal-extract-max-heapify-down">Removal (Extract Max – Heapify-Down)</h3>
+<p>Removing an element always removes the root (the maximum value in a max-heap).
+The last element is moved to the root and pushed down until the heap property is restored.</p>
+<pre><code class="language-python">def extract_max(heap):
+    if len(heap) == 0:
+        return None
+
+    max_value = heap[0]
+    heap[0] = heap[-1]
+    heap.pop()
+
+    heapify_down(heap, 0)
+    return max_value
+</code></pre>
+<pre><code class="language-python">def heapify_down(heap, i):
+    n = len(heap)
+
+    while True:
+        largest = i
+        left = 2 * i + 1
+        right = 2 * i + 2
+
+        if left &lt; n and heap[left] &gt; heap[largest]:
+            largest = left
+
+        if right &lt; n and heap[right] &gt; heap[largest]:
+            largest = right
+
+        if largest != i:
+            heap[i], heap[largest] = heap[largest], heap[i]
+            i = largest
+        else:
+            break
+</code></pre>
+<p>This operation also runs in <strong>O(log n)</strong> time.</p>
+<hr />
+<h3 id="heapify">Heapify</h3>
+<p>Heapify is the process of restoring the heap property when it is violated.
+It is used after removal, insertion, and during heap construction.</p>
+<pre><code class="language-python">def heapify(arr, n, i):
+    largest = i
+    left = 2 * i + 1
+    right = 2 * i + 2
+
+    if left &lt; n and arr[left] &gt; arr[largest]:
+        largest = left
+
+    if right &lt; n and arr[right] &gt; arr[largest]:
+        largest = right
+
+    if largest != i:
+        arr[i], arr[largest] = arr[largest], arr[i]
+        heapify(arr, n, largest)
+</code></pre>
+<hr />
+<h3 id="building-a-heap">Building a Heap</h3>
+<p>Before heap sort can begin, the array must be transformed into a max-heap.</p>
+<pre><code class="language-python">def build_max_heap(arr):
+    n = len(arr)
+    for i in range(n // 2 - 1, -1, -1):
+        heapify(arr, n, i)
+</code></pre>
+<p>Building a heap takes <strong>O(n)</strong> time.</p>
+<hr />
+<h3 id="relation-to-heap-sort">Relation to Heap Sort</h3>
+<p>Heap sort is built directly on these heap operations.
+First, the array is converted into a max-heap. Then the root element is repeatedly swapped with the last element of the heap and removed. After each removal, the heap is restored using heapify. This process continues until the array is sorted.</p>
 
 
 
