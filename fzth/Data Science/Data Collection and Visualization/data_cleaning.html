@@ -660,6 +660,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Cleaning
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="data_cleaning.html" class="md-nav__link md-nav__link--active">
         
   
@@ -676,6 +694,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#handling-missing-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Handling missing values
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scaling-and-normalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scaling and Normalization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsing-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parsing Dates
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -866,6 +936,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#handling-missing-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Handling missing values
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scaling-and-normalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scaling and Normalization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsing-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parsing Dates
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -883,6 +994,53 @@
 
 <h1 id="data-cleaning">Data Cleaning</h1>
 <p>Source: <a href="https://www.kaggle.com/learn/data-cleaning">Kaggle</a></p>
+<h2 id="handling-missing-values">Handling missing values</h2>
+<ol>
+<li>How many missing values are there: <code>missing_values_count = df.isnull().sum()</code><ul>
+<li>maybe look at the total percentage for the hole df</li>
+</ul>
+</li>
+<li>Why does it miss<ul>
+<li>Is this value missing because it wasn't recorded or because it doesn't exist?</li>
+<li>if it wasnt recorded you can try to guess it - <strong>"Imputation"</strong></li>
+</ul>
+</li>
+<li>Drop missing values<ul>
+<li><code>dropna()</code> to drop all rows with a missing value</li>
+<li><code>dropna(axis=1)</code> to drop all coloumns with a missing value</li>
+<li>Look at how many are left compared to before dropping</li>
+</ul>
+</li>
+<li>Fill in missing data<ul>
+<li><code>fillna(0)</code> to replace every NaN with a '0'</li>
+<li><code>.fillna(method='bfill', axis=0).fillna(0)</code> to replace all NaN's with the value underneath it. The remaining NaN's become '0'</li>
+</ul>
+</li>
+</ol>
+<h2 id="scaling-and-normalization">Scaling and Normalization</h2>
+<ul>
+<li>in <strong>scaling</strong>, you're changing the range of your data, while</li>
+<li>
+<p>in <strong>normalization,</strong> you're changing the shape of the distribution of your data.</p>
+</li>
+<li>
+<p>Minmax-scaling: <code>scaled_data = minmax_scaling(original_data, columns=[0])</code>, with <code>min = 0</code> and <code>max = 1</code></p>
+</li>
+<li>Boxcox-Normalizing (Normal Distribution/Bell Curve): <code>normalized_data = stats.boxcox(original_data)</code></li>
+<li><code>from scipy import stats</code></li>
+</ul>
+<h2 id="parsing-dates">Parsing Dates</h2>
+<p><code>import datetime</code></p>
+<ol>
+<li>check if the columns <em>dtype</em> is actually <strong>datetime</strong> not object</li>
+<li>Convert to datetime:<ul>
+<li><code>landslides['date_parsed'] = pd.to_datetime(landslides['date'], format="%m/%d/%y")</code></li>
+<li>format is current format, before parsing</li>
+<li>let pd guess the format (e.g. if you have different formats): <code>landslides['date_parsed'] = pd.to_datetime(landslides['Date'], infer_datetime_format=True)</code></li>
+</ul>
+</li>
+<li>Get the data: <code>day_of_month_landslides = landslides['date_parsed'].dt.day</code></li>
+</ol>
 
 
 
