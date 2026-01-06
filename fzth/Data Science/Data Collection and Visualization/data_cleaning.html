@@ -14,7 +14,7 @@
         <link rel="prev" href="index.html">
       
       
-        <link rel="next" href="pandas.html">
+        <link rel="next" href="data_visualization_seaborn.html">
       
       
         
@@ -590,6 +590,8 @@
       
         
       
+        
+      
     
     
     
@@ -743,10 +745,105 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#character-encodings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Character encodings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Character encodings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-other-encoding-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using other encoding methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problems-when-reading-in-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problems, when reading in files
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inconsistent-data-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inconsistent Data Entry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inconsistent Data Entry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fuzzywuzzy-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fuzzywuzzy package
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="data_visualization_seaborn.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data visualization seaborn
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -975,6 +1072,73 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#character-encodings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Character encodings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Character encodings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-other-encoding-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using other encoding methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problems-when-reading-in-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problems, when reading in files
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inconsistent-data-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inconsistent Data Entry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inconsistent Data Entry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fuzzywuzzy-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fuzzywuzzy package
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1041,6 +1205,43 @@
 </li>
 <li>Get the data: <code>day_of_month_landslides = landslides['date_parsed'].dt.day</code></li>
 </ol>
+<h2 id="character-encodings">Character encodings</h2>
+<ul>
+<li>Mainly UTF-8</li>
+<li><code>import charset_normalizer</code></li>
+<li><code>after = before.encode("utf-8", errors="replace")</code></li>
+<li><code>type(after) == bytes</code></li>
+<li>printet it looks like this: <code>b'This is the euro symbol: \xe2\x82\xac'</code> (ASCII encoding)</li>
+<li><code>after.decode("utf-8")</code></li>
+</ul>
+<h3 id="using-other-encoding-methods">Using other encoding methods</h3>
+<ul>
+<li>python is allways utf-8. That means that if you encode with e.g. ASCII, python will try but cant't work out all characters. It can replace these values with the unknown character you see, when you decode.</li>
+</ul>
+<h3 id="problems-when-reading-in-files">Problems, when reading in files</h3>
+<ul>
+<li><code>UnicodeDecodeError</code>: that means the file isn't in utf-8</li>
+<li>Guessing what is the right character encoding</li>
+</ul>
+<pre><code class="language-python">with open(&quot;../input/kickstarter-projects/ks-projects-201801.csv&quot;, 'rb') as rawdata:
+    result = charset_normalizer.detect(rawdata.read(10000))
+</code></pre>
+<ul>
+<li>returns: <code>{'encoding': 'utf_8','confidence': 0.99,'language': 'English'}</code></li>
+<li>if you the guess is wrong, you can try to guess on another part of the text</li>
+<li><code>pd.read_csv("../input/fatal-police-shootings-in-the-us/PoliceKillingsUS.csv", encoding='Windows-1252')</code></li>
+<li>Saving a file in utf-8 encoding<code>police_killings.to_csv("my_file.csv")</code></li>
+</ul>
+<h2 id="inconsistent-data-entry">Inconsistent Data Entry</h2>
+<ul>
+<li>Everything to lowercase: <code>professors['Country'].str.lower()</code></li>
+<li>Removing leading and trailing whitespaces: <code>professors['Country'].str.strip()</code></li>
+</ul>
+<h3 id="fuzzywuzzy-package">fuzzywuzzy package</h3>
+<ul>
+<li>A package for finding similar data entrys, with only a small change.</li>
+<li>Useful for finding strings with e.g. a spelling mistake or without a space</li>
+</ul>
 
 
 
