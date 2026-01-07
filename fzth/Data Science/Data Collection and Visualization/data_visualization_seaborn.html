@@ -25,7 +25,7 @@
     
     
       
-        <title>Data visualization seaborn - FZTH</title>
+        <title>Data Visualitzation (With matplotlib and Seaborn) - FZTH</title>
       
     
     
@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#data-visualitzation-with-matplotlib-and-seaborn" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -108,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Data visualization seaborn
+              Data Visualitzation (With matplotlib and Seaborn)
             
           </span>
         </div>
@@ -682,6 +687,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Visualitzation (With matplotlib and Seaborn)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="data_visualization_seaborn.html" class="md-nav__link md-nav__link--active">
         
@@ -690,7 +715,7 @@
   <span class="md-ellipsis">
     
   
-    Data visualization seaborn
+    Data Visualitzation (With matplotlib and Seaborn)
   
 
     
@@ -699,6 +724,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kinds-of-plots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kinds of Plots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#styling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Styling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-plot-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which plot to use
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -886,6 +963,49 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kinds-of-plots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kinds of Plots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#styling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Styling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-plot-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which plot to use
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -902,9 +1022,57 @@
 
 
 
-  <h1>Data visualization seaborn</h1>
-
-
+<h1 id="data-visualitzation-with-matplotlib-and-seaborn">Data Visualitzation (With matplotlib and Seaborn)</h1>
+<p>Recommended Setup</p>
+<pre><code class="language-python">import pandas as pd
+pd.plotting.register_matplotlib_converters()
+import matplotlib.pyplot as plt
+%matplotlib inline
+import seaborn as sns
+print(&quot;Setup Complete&quot;)
+</code></pre>
+<h2 id="kinds-of-plots">Kinds of Plots</h2>
+<p><img alt="Overview of plots" src="images/plot_overview.png" /></p>
+<ul>
+<li>Lineplot: <code>sns.lineplot(data=df, label='Despacito')</code> or <code>df[col]</code></li>
+<li>Barchart: <code>sns.barplot(x=flight_data.index, y=flight_data['NK'])</code></li>
+<li>Heatmap: <code>sns.heatmap(data=flight_data, annot=True)</code> -&gt; (<code>annot=True</code> to see the values)</li>
+<li>Scatter plot: <code>sns.scatterplot(x=df.x, y=df.y, hue=df.z)</code> -&gt; hue is optional to color based on that value</li>
+<li>Regression line: <code>sns.regplot(x=df.x, y=df.y)</code></li>
+<li>Regression lines for all hue options: <code>sns.lmplot(x="a", y="b", hue="c", data=df)</code></li>
+<li>categorical scatter plot: <code>sns.swarmplot(x=df.a, y=df.b)</code></li>
+<li>Histogram (amount): <code>sns.histplot(df['col'])</code></li>
+<li>with hue (color coded): <code>sns.histplot(data=df, x='col1', hue='col2')</code></li>
+<li>Density (kernel density estimate (KDE)): <code>sns.kdeplot(data=df['col'], shade=True)</code></li>
+<li>with hue (color coded): <code>sns.kdeplot(data=df, x='col1', hue='col2')</code></li>
+<li>2D KDE: <code>sns.jointplot(x=df['col'], y=df['col2'], kind="kde")</code></li>
+</ul>
+<h2 id="styling">Styling</h2>
+<ul>
+<li>Width and Height: <code>plt.figure(figsize=(14,6))</code></li>
+<li>Title: <code>plt.title("Daily Global Streams of Popular Songs in 2017-2018")</code></li>
+<li>X-Label: <code>plt.xlabel('Date')</code></li>
+<li>Y-Label: <code>plt.ylabel("Arrial delay (in minutes)")</code></li>
+<li>Seaborn styling:</li>
+<li>Themes: <code>sns.set_style('dark')</code><ul>
+<li>"darkgrid", "whitegrid", "dark", "white" (default), "ticks"</li>
+</ul>
+</li>
+</ul>
+<h2 id="which-plot-to-use">Which plot to use</h2>
+<ul>
+<li><strong>Trends:</strong> Lineplot</li>
+<li><strong>Relationship:</strong></li>
+<li>Comparing Quantities: Barplot</li>
+<li>Find paatterns in numbers: Heatmap</li>
+<li>Relation between two continuous variables: Scatterplot</li>
+<li>See linear relationship: Regression line (regplot or lmplot (for two colors))</li>
+<li>Relationship between continuous and categorical variable: Categorical scatter</li>
+<li><strong>Distribution:</strong></li>
+<li>Single numerical: Histogram</li>
+<li>single numerical estimated smooth distribution: KDE</li>
+<li>corresponding KDE plots for each individual variable: 2D KDE</li>
+</ul>
 
 
 
