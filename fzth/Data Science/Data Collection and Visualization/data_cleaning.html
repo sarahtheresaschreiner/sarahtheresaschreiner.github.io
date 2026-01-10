@@ -592,6 +592,8 @@
       
         
       
+        
+      
     
     
     
@@ -932,6 +934,40 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Encoding Categorical Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Techniques
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Techniques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#label-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Label encoding
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -958,6 +994,34 @@
     
   
     Data Visualitzation (With matplotlib and Seaborn)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="encoding_categorical_variables.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Encoding Categorical Variables
   
 
     
@@ -1381,6 +1445,40 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Encoding Categorical Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Techniques
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Techniques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#label-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Label encoding
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1476,6 +1574,7 @@
 <li><code>pd.read_csv("../input/fatal-police-shootings-in-the-us/PoliceKillingsUS.csv", encoding='Windows-1252')</code></li>
 <li>Saving a file in utf-8 encoding<code>police_killings.to_csv("my_file.csv")</code></li>
 </ul>
+<hr />
 <h2 id="inconsistent-data-entry">Inconsistent Data Entry</h2>
 <ul>
 <li>Everything to lowercase: <code>professors['Country'].str.lower()</code></li>
@@ -1505,6 +1604,7 @@ df.drop_duplicates(keep=False)     # removes all
 <li><code>df[df.duplicated()]</code> check</li>
 <li><code>df.drop_duplicates(...)</code></li>
 </ol>
+<hr />
 <h2 id="outliers">Outliers</h2>
 <ul>
 <li>An outlier is a data point that is <strong>significantly different</strong> from the rest</li>
@@ -1553,8 +1653,22 @@ df[abs(z_scores) &gt; 3]
 <li>Detect (IQR or Z-score)</li>
 <li>Decide: remove, cap, or keep</li>
 </ol>
+<hr />
 <h2 id="encoding-categorical-variables">Encoding Categorical Variables</h2>
 <p><a href="https://www.geeksforgeeks.org/machine-learning/categorical-data-encoding-techniques-in-machine-learning/">https://www.geeksforgeeks.org/machine-learning/categorical-data-encoding-techniques-in-machine-learning/</a></p>
+<p>For ML you need numeric input most of the time. Thatway we have to encode categorical input (e.g. 'blue', 'red'). There are two types of categorical data:</p>
+<ol>
+<li>Nominal Data: categories without any inherent order or ranking</li>
+<li>simple labels, e.g. color</li>
+<li>Encoding options: One-Hot Encoding, Label Encoding</li>
+<li>Ordinal Data: defined order or ranking, that is important</li>
+<li>e.g. 'Low', 'Medium', 'High'</li>
+<li>Encoding: Ordinal Encoding</li>
+</ol>
+<h3 id="techniques">Techniques</h3>
+<p><img alt="Techniques" src="https://media.geeksforgeeks.org/wp-content/uploads/20250917111632850456/categorical_data_encoding_techniques.webp" /></p>
+<h4 id="label-encoding">Label encoding</h4>
+<hr />
 
 
 
