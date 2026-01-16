@@ -14,7 +14,7 @@
         <link rel="prev" href="index.html">
       
       
-        <link rel="next" href="data_visualization_seaborn.html">
+        <link rel="next" href="data_integration.html">
       
       
         
@@ -594,6 +594,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -730,6 +734,17 @@
     <span class="md-ellipsis">
       
         Scaling and Normalization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correlations-between-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Correlations between columns
       
     </span>
   </a>
@@ -986,6 +1001,34 @@
   
   
     <li class="md-nav__item">
+      <a href="data_integration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="data_visualization_seaborn.html" class="md-nav__link">
         
   
@@ -1022,6 +1065,34 @@
     
   
     Encoding Categorical Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="feature_scaling.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feature Scaling
   
 
     
@@ -1241,6 +1312,17 @@
     <span class="md-ellipsis">
       
         Scaling and Normalization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correlations-between-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Correlations between columns
       
     </span>
   </a>
@@ -1534,6 +1616,27 @@
 </li>
 <li>Boxcox-Normalizing (Normal Distribution/Bell Curve): <code>normalized_data = stats.boxcox(original_data)</code></li>
 <li><code>from scipy import stats</code></li>
+</ul>
+<h2 id="correlations-between-columns">Correlations between columns</h2>
+<ul>
+<li>Measures relationship between numeric columns</li>
+<li>df.corr()</li>
+</ul>
+<p><strong>Values range from -1 to 1:</strong></p>
+<ul>
+<li>1 → perfect positive correlation</li>
+<li>-1 → perfect negative correlation</li>
+<li>0 → no linear correlation</li>
+</ul>
+<p>Visualize correlations:</p>
+<pre><code class="language-python">import seaborn as sns
+sns.heatmap(df.corr(), annot=True, cmap='coolwarm')
+</code></pre>
+<p><strong>Helps identify:</strong></p>
+<ul>
+<li>Features that move together</li>
+<li>Redundant variables</li>
+<li>Predictive relationships</li>
 </ul>
 <h2 id="parsing-dates">Parsing Dates</h2>
 <p><code>import datetime</code></p>
