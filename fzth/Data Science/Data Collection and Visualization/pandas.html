@@ -14,7 +14,7 @@
         <link rel="prev" href="feature_scaling.html">
       
       
-        <link rel="next" href="../Notes/index.html">
+        <link rel="next" href="../Machine%20Learning/index.html">
       
       
         
@@ -400,6 +400,8 @@
   
     
     
+      
+        
       
         
       
@@ -1039,6 +1041,68 @@
       
         
       
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../Machine%20Learning/index.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
     
     
     
@@ -1352,18 +1416,22 @@
 <li>Tabel</li>
 <li>Row and Column</li>
 <li>All datatypes (int, string, etc.)</li>
-<li>Constructor: <code>pd.DataFrame({'Col1': [1,2], 'Col2': [3,4]})</code></li>
+<li>Constructor: <code>pd.DataFrame({'Col1': [1,2], 'Col2': [3,4]})</code><ul>
 <li>Row labels: <code>0,1,...,#rows</code></li>
 <li>Clarifying row labels: <code>pd.DataFrame({'Col1': [1,2], 'Col2': [3,4]}, index=['Row1', 'Row2'])</code></li>
+</ul>
+</li>
 </ul>
 <h3 id="series">Series</h3>
 <ul>
 <li>List</li>
 <li>Fancy Dict</li>
 <li>Thinking of a single-column-dataFrame</li>
-<li>Constructor: <code>pd.Series([1,2], index=['Row1', 'Row2'], name='mSeries')</code></li>
+<li>Constructor: <code>pd.Series([1,2], index=['Row1', 'Row2'], name='mSeries')</code><ul>
 <li><code>index</code>: row labels, optional (as in DataFrame)</li>
 <li><code>name</code>: name of the Series, optional</li>
+</ul>
+</li>
 </ul>
 <h3 id="csv-comma-seperated-values">CSV ("Comma Seperated Values")</h3>
 <ul>
@@ -1371,19 +1439,21 @@
 </ul>
 <h2 id="syntax">Syntax</h2>
 <ul>
-<li>CSV: <code>pd.read_csv(path)</code></li>
+<li>CSV: <code>pd.read_csv(path)</code><ul>
 <li><code>df.to_csv(path)</code>: save DataFrame df as a csv file</li>
 <li><code>index_col</code>: which col of the csv should be index</li>
-<li>Attributes</li>
-<li><code>shape</code>: <code>(#rows,#cols)</code></li>
-<li><code>col1</code>: series of the values from col1</li>
-<li>Methods</li>
-<li><code>head</code>: first five rows</li>
-<li><code>set_index(row_name)</code>: makes the row the new index</li>
-<li><code>df.col == condition</code>: returns a bool-series with True/False for each row<ul>
-<li>You can use it in loc to get only the rows that match your condition, you can also combine conditions <code>bool1 &amp; bool2</code> or use pipe <code>|</code> for <code>or</code></li>
 </ul>
 </li>
+<li>Attributes<ul>
+<li><code>shape</code>: <code>(#rows,#cols)</code></li>
+<li><code>col1</code>: series of the values from col1</li>
+</ul>
+</li>
+<li>Methods<ul>
+<li><code>head</code>: first five rows</li>
+<li><code>set_index(row_name)</code>: makes the row the new index</li>
+<li><code>df.col == condition</code>: returns a bool-series with True/False for each row</li>
+<li>You can use it in loc to get only the rows that match your condition, you can also combine conditions <code>bool1 &amp; bool2</code> or use pipe <code>|</code> for <code>or</code></li>
 <li><code>col.isin(list_of_accepted_vals)</code>: select data whose values are in the list</li>
 <li><code>col.describe()</code>: sumarises the values, e.g. for ints mean etc.</li>
 <li><code>col.mean()</code>: mean</li>
@@ -1392,25 +1462,37 @@
 <li><a href="#map">Map and Apply</a></li>
 <li><code>row.idxmax</code>: returns the index of the maxvalue</li>
 <li><code>replace('old', 'new')</code>: replaces all matching values</li>
-<li>Accessing</li>
+</ul>
+</li>
+<li>Accessing<ul>
 <li>A Series/Col: <code>df[col1]</code> oder <code>df.col1</code></li>
 <li>A field/value: <code>df[col1][row]</code></li>
 <li><strong><code>iloc</code> and <code>loc</code></strong> both use row_first, col_second in pandas<ul>
-<li>Index-based: <code>df.iloc[row,col]</code> -&gt; possible to only use row</li>
+<li>Index-based: <code>df.iloc[row,col]</code> -&gt; possible to only use row<ul>
 <li><a href="#index_rules">Index Rules</a></li>
-<li>Label-based: `df.loc[row,col]</li>
+</ul>
+</li>
+<li>Label-based: `df.loc[row,col]<ul>
 <li><strong>both from/to are inclusiv</strong> for <code>loc</code></li>
 <li>can do both index and label</li>
 <li><code>reviews.loc[:, ['taster_name', 'taster_twitter_handle', 'points']]</code></li>
 </ul>
 </li>
-<li>Assigning</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Assigning<ul>
 <li><code>df[col] = 'hello world'</code>: constant value for all rows</li>
 <li><code>reviews['index_backwards'] = range(len(reviews), 0, -1)</code>: different value for each row</li>
-<li><code>inplace=True</code></li>
+</ul>
+</li>
+<li><code>inplace=True</code><ul>
 <li>add this if you want to change the df and not just want to get a changed copy</li>
 <li>you can only add this on dataFrames, that don't return a completely new dataFrame</li>
 <li>you can also just do: <code>df = df.head()</code></li>
+</ul>
+</li>
 </ul>
 <h2 id="index-rules"><a name='index_rules'>Index Rules</a></h2>
 <ul>
@@ -1422,24 +1504,32 @@
 </ul>
 <h2 id="map-and-apply"><a name='map'>Map and Apply</a></h2>
 <ul>
-<li><code>row.map()</code></li>
+<li><code>row.map()</code><ul>
 <li><code>reviews.points.map(lambda p: p - review_points_mean)</code></li>
 <li>Map returns a Series of transformed values, transformed by your given function (that ideally takes one value and returns one value)</li>
-<li><code>df.apply()</code></li>
+</ul>
+</li>
+<li><code>df.apply()</code><ul>
 <li><code>reviews.apply(remean_points, axis='columns')</code></li>
 <li>same but on a complete row</li>
 <li><code>axis='index'</code>would do each column</li>
-<li>You can also use operaters, which is faster and easier to read:</li>
+</ul>
+</li>
+<li>You can also use operaters, which is faster and easier to read:<ul>
 <li><code>reviews.country + " - " + reviews.region_1</code></li>
 <li><code>reviews.points - review_points_mean</code></li>
 </ul>
+</li>
+</ul>
 <h2 id="grouping">Grouping</h2>
 <ul>
-<li><code>groupby()</code></li>
+<li><code>groupby()</code><ul>
 <li>creates a group for each unique value of the col</li>
 <li>e.g.: <code>reviews.groupby('points').points.count()</code>, it does the same as <code>value_counts()</code></li>
 <li>you can use apply() on groups, it applys on every group as a df</li>
 <li><code>agg([len, min, max])</code>: returns a df with a col for each of these operations for every group</li>
+</ul>
+</li>
 </ul>
 <h2 id="multi-indexes">Multi-indexes</h2>
 <ul>
@@ -1449,9 +1539,11 @@
 </ul>
 <h2 id="sorting">Sorting</h2>
 <ul>
-<li><code>sort_values(by='len')</code>: ascending (lowest first)</li>
+<li><code>sort_values(by='len')</code>: ascending (lowest first)<ul>
 <li><code>ascending=False</code>: descending order</li>
 <li><code>by=['firstArg', 'secArg']</code> sort by more than one value</li>
+</ul>
+</li>
 <li><code>sort_index()</code>: sort by index</li>
 </ul>
 <h2 id="dtypes">Dtypes</h2>
@@ -1461,26 +1553,36 @@
 <li>Strings are <code>object</code>-type</li>
 <li><code>astype('float64')</code>: converting to float dtype</li>
 <li>index has a dtype aswell</li>
-<li><code>NaN</code>: empty fields, <code>dtype=float64</code></li>
+<li><code>NaN</code>: empty fields, <code>dtype=float64</code><ul>
 <li><code>row.isnull() | row.notnull()</code>: get all, that are (not) empty (NaN)</li>
 <li><code>fillna()</code>: replaces all NaNs with the given input</li>
 </ul>
+</li>
+</ul>
 <h2 id="renaming">Renaming</h2>
 <ul>
-<li><code>reviews.rename(columns={'points': 'score'})</code></li>
+<li><code>reviews.rename(columns={'points': 'score'})</code><ul>
 <li><code>reviews.rename(index={0: 'firstEntry', 1: 'secondEntry'})</code></li>
 <li>supports a variety of input formats, usually dict</li>
+</ul>
+</li>
 <li><code>reviews.rename_axis("wines", axis='rows').rename_axis("fields", axis='columns')</code></li>
 </ul>
 <h2 id="combining">Combining</h2>
 <ul>
-<li><code>concat([df1,df2])</code></li>
+<li><code>concat([df1,df2])</code><ul>
 <li>e.g. two dfs with same cols can be added together</li>
-<li><code>join()</code></li>
+</ul>
+</li>
+<li><code>join()</code><ul>
 <li><code>left.join(right, lsuffix='_CAN', rsuffix='_UK')</code></li>
 <li>if in right is a matching index it will be added to left, the col names get a suffix</li>
-<li><code>pd.merge(left,right, on='user_id')</code></li>
+</ul>
+</li>
+<li><code>pd.merge(left,right, on='user_id')</code><ul>
 <li>join two dfs on a declared column, that is the same in both dataFrames.</li>
+</ul>
+</li>
 </ul>
 
 

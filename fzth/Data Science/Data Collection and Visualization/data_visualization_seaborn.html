@@ -407,6 +407,8 @@
       
         
       
+        
+      
     
     
     
@@ -923,6 +925,68 @@
       
         
       
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../Machine%20Learning/index.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
     
     
     
@@ -1131,10 +1195,14 @@ print(&quot;Setup Complete&quot;)
 <li>Regression line: <code>sns.regplot(x=df.x, y=df.y)</code></li>
 <li>Regression lines for all hue options: <code>sns.lmplot(x="a", y="b", hue="c", data=df)</code></li>
 <li>categorical scatter plot: <code>sns.swarmplot(x=df.a, y=df.b)</code></li>
-<li>Histogram (amount): <code>sns.histplot(df['col'])</code></li>
+<li>Histogram (amount): <code>sns.histplot(df['col'])</code><ul>
 <li>with hue (color coded): <code>sns.histplot(data=df, x='col1', hue='col2')</code></li>
-<li>Density (kernel density estimate (KDE)): <code>sns.kdeplot(data=df['col'], shade=True)</code></li>
+</ul>
+</li>
+<li>Density (kernel density estimate (KDE)): <code>sns.kdeplot(data=df['col'], shade=True)</code><ul>
 <li>with hue (color coded): <code>sns.kdeplot(data=df, x='col1', hue='col2')</code></li>
+</ul>
+</li>
 <li>2D KDE: <code>sns.jointplot(x=df['col'], y=df['col2'], kind="kde")</code></li>
 </ul>
 <h2 id="styling">Styling</h2>
@@ -1143,25 +1211,31 @@ print(&quot;Setup Complete&quot;)
 <li>Title: <code>plt.title("Daily Global Streams of Popular Songs in 2017-2018")</code></li>
 <li>X-Label: <code>plt.xlabel('Date')</code></li>
 <li>Y-Label: <code>plt.ylabel("Arrial delay (in minutes)")</code></li>
-<li>Seaborn styling:</li>
+<li>Seaborn styling:<ul>
 <li>Themes: <code>sns.set_style('dark')</code><ul>
 <li>"darkgrid", "whitegrid", "dark", "white" (default), "ticks"</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 <h2 id="which-plot-to-use">Which plot to use</h2>
 <ul>
 <li><strong>Trends:</strong> Lineplot</li>
-<li><strong>Relationship:</strong></li>
+<li><strong>Relationship:</strong><ul>
 <li>Comparing Quantities: Barplot</li>
 <li>Find paatterns in numbers: Heatmap</li>
 <li>Relation between two continuous variables: Scatterplot</li>
 <li>See linear relationship: Regression line (regplot or lmplot (for two colors))</li>
 <li>Relationship between continuous and categorical variable: Categorical scatter</li>
-<li><strong>Distribution:</strong></li>
+</ul>
+</li>
+<li><strong>Distribution:</strong><ul>
 <li>Single numerical: Histogram</li>
 <li>single numerical estimated smooth distribution: KDE</li>
 <li>corresponding KDE plots for each individual variable: 2D KDE</li>
+</ul>
+</li>
 </ul>
 
 

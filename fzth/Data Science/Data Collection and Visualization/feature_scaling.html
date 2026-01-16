@@ -407,6 +407,8 @@
       
         
       
+        
+      
     
     
     
@@ -945,6 +947,68 @@
       
         
       
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../Machine%20Learning/index.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
     
     
     
@@ -1179,14 +1243,12 @@ df[['col_scaled']] = scaler.fit_transform(df[['col']])
 <hr />
 <h2 id="standardization-z-score-scaling">Standardization (Z-Score Scaling)</h2>
 <ul>
-<li>
-<p>Transforms data to:</p>
-</li>
-<li>
-<p>Mean = 0</p>
-</li>
+<li>Transforms data to:<ul>
+<li>Mean = 0</li>
 <li>Standard deviation = 1</li>
 <li>How far the value is from the mean</li>
+</ul>
+</li>
 </ul>
 <pre><code class="language-python">from sklearn.preprocessing import StandardScaler
 
@@ -1194,14 +1256,12 @@ scaler = StandardScaler()
 df[['col_scaled']] = scaler.fit_transform(df[['col']])
 </code></pre>
 <ul>
-<li>
-<p>Works well for:</p>
-</li>
-<li>
-<p>Linear models</p>
-</li>
+<li>Works well for:<ul>
+<li>Linear models</li>
 <li>PCA</li>
 <li>SVMs</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h2 id="robust-scaling">Robust Scaling</h2>
@@ -1218,7 +1278,8 @@ df[['col_scaled']] = scaler.fit_transform(df[['col']])
 <h2 id="scaling-vs-normalization">Scaling vs Normalization</h2>
 <ul>
 <li><strong>Scaling:</strong> changes value range</li>
-<li><strong>Normalization:</strong> changes distribution shape (e.g. Box-Cox)</li>
+<li><strong>Normalization:</strong> changes distribution shape (e.g. Box-Cox)
+<a href="data_cleaning.html#scaling-and-normalization">details</a></li>
 </ul>
 <hr />
 <h2 id="typical-workflow">Typical Workflow</h2>
