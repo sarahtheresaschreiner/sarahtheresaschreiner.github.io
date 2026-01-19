@@ -754,6 +754,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How models work
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="basics.html" class="md-nav__link md-nav__link--active">
         
   
@@ -770,6 +788,91 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#decision-trees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decision Trees
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpret-your-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpret your data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prepare-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prepare data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choose-target-and-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choose Target and features
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-the-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building the Model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model Validation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1019,6 +1122,80 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#decision-trees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decision Trees
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpret-your-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpret your data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prepare-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prepare data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choose-target-and-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choose Target and features
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-the-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building the Model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model Validation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1035,8 +1212,76 @@
 
 
 <h1 id="how-models-work">How models work</h1>
+<p>Source: <a href="https://www.kaggle.com/learn/intro-to-machine-learning">Kaggle</a></p>
+<h2 id="decision-trees">Decision Trees</h2>
+<p><img alt="Sample" src="https://storage.googleapis.com/kaggle-media/learn/images/7tsb5b1.png" /></p>
 <ul>
-<li></li>
+<li>The leaf is where the prediction is made</li>
+</ul>
+<h2 id="interpret-your-data">Interpret your data</h2>
+<p>With <code>df.describe()</code> you get a DataFrame with a column for each of your columns. The rows:</p>
+<ul>
+<li><code>count</code>: how many not NaN values in that col</li>
+<li><code>mean</code>: average value</li>
+<li><code>std</code>: Standard deviation</li>
+<li><code>min</code>: min value</li>
+<li><code>max</code>: max value</li>
+<li><code>25%</code>: a quarter of the values is smaller/equal (first quartile)</li>
+<li><code>50%</code>: the median</li>
+<li><code>75%</code>: 3 quarters are smaller/equal (third quartile)</li>
+</ul>
+<h2 id="prepare-data">Prepare data</h2>
+<ul>
+<li>Handle missing values and clean data</li>
+<li>Prioritize variables if there are too many</li>
+</ul>
+<h2 id="choose-target-and-features">Choose Target and features</h2>
+<ul>
+<li>Selecting the prediciton target <code>y</code><ul>
+<li><code>y = melbourne_data.Price</code></li>
+</ul>
+</li>
+<li>Features are the values that are the input for your model, based on which the prediction is made. They are called <code>X</code><ul>
+<li><code>melbourne_features = ['Rooms', 'Bathroom', 'Landsize', 'Lattitude', 'Longtitude']</code></li>
+<li><code>X = melbourne_data[melbourne_features]</code></li>
+</ul>
+</li>
+<li>Now you've got the DataFrame X and the Series y</li>
+</ul>
+<h2 id="building-the-model">Building the Model</h2>
+<p><code>from sklearn.tree import DecisionTreeRegressor</code></p>
+<p>The steps to building and using a model are:</p>
+<ol>
+<li>Define: What type of model will it be? A decision tree? Some other type of model? Some other parameters of the model type are specified too. Specify a number for random_state to get the same results each run.
+    &gt; <code>melbourne_model = DecisionTreeRegressor(random_state=1)</code></li>
+<li>Fit: Capture patterns from provided data. This is the heart of modeling.
+    &gt; <code>melbourne_model.fit(X, y)</code></li>
+<li>Predict: Just what it sounds like
+    &gt; <code>melbourne_model.predict(X.head())</code></li>
+<li>Evaluate: Determine how accurate the model's predictions are.</li>
+</ol>
+<h2 id="model-validation">Model Validation</h2>
+<ul>
+<li>Summaries the results into a metric:<ul>
+<li><strong>Mean Absolute Error (MAE)</strong></li>
+<li><strong>Error:</strong> <code>error=actual-predicted</code></li>
+<li><strong>Absolut:</strong> all positiv values</li>
+<li><strong>Mean:</strong> average</li>
+<li>On average our predictions are off by about X</li>
+<li><code>from sklearn.metrics import mean_absolute_error</code></li>
+<li><code>mean_absolute_error(y, predicted_home_prices)</code></li>
+</ul>
+</li>
+<li>"In-Sample" : Using the same data for training and testing<ul>
+<li>don't use all the data for fitting but save some for validating the prediction</li>
+</ul>
+</li>
+<li>Split train and test data (Out-of-sample)<ul>
+<li><code>from sklearn.model_selection import train_test_split</code></li>
+<li><code>train_X, val_X, train_y, val_y = train_test_split(X, y, random_state = 0)</code></li>
+<li><code>mean_absolute_error(val_y, val_predictions)</code></li>
+</ul>
+</li>
 </ul>
 
 
