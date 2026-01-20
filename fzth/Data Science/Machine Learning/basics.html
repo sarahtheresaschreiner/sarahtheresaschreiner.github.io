@@ -870,6 +870,34 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#overfitting-and-underfitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overfitting and Underfitting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overfitting and Underfitting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1194,6 +1222,34 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#overfitting-and-underfitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overfitting and Underfitting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overfitting and Underfitting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1283,6 +1339,30 @@
 </ul>
 </li>
 </ul>
+<h2 id="overfitting-and-underfitting">Overfitting and Underfitting</h2>
+<ul>
+<li>When your model is to fitted to your training-data, it wouldn't work with other test data</li>
+<li>This happens e.g. if a decision tree has a too high depth</li>
+<li>Underfitting is the opposite, here the tree has two less decisions and will work poorly on training and test data</li>
+<li>To detect the exact moment between under and overfitting, you can look at a plot: <img alt="overfitting" src="https://storage.googleapis.com/kaggle-media/learn/images/AXSEOfI.png" /></li>
+</ul>
+<h3 id="implementing">Implementing</h3>
+<pre><code class="language-python">from sklearn.metrics import mean_absolute_error
+from sklearn.tree import DecisionTreeRegressor
+
+def get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y):
+    model = DecisionTreeRegressor(max_leaf_nodes=max_leaf_nodes, random_state=0)
+    model.fit(train_X, train_y)
+    preds_val = model.predict(val_X)
+    mae = mean_absolute_error(val_y, preds_val)
+    return(mae)
+
+# compare MAE with differing values of max_leaf_nodes
+for max_leaf_nodes in [5, 50, 500, 5000]:
+    my_mae = get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y)
+    print(&quot;Max leaf nodes: %d  \t\t Mean Absolute Error:  %d&quot; %(max_leaf_nodes, my_mae))
+</code></pre>
+<p>Comparing the MAE for different amounts of max_leaf_notes. In this example 500 is best!</p>
 
 
 

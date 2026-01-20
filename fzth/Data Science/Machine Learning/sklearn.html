@@ -782,6 +782,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scikit-learn
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="sklearn.html" class="md-nav__link md-nav__link--active">
         
   
@@ -798,6 +816,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metrics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model selection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tree
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1019,6 +1089,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metrics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model selection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tree
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1035,6 +1146,36 @@
 
 
 <h1 id="scikit-learn">scikit-learn</h1>
+<p>With <strong>y</strong> being the target values (as a Series) and <strong>X</strong> being the input values (as a DataFrame)</p>
+<h2 id="metrics">Metrics</h2>
+<ul>
+<li><code>from sklearn.metrics import ___</code></li>
+<li><strong>Mean Absolute Error (MAE):</strong><ul>
+<li><code>mean_absolute_error(y, prediction_results)</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="model-selection">Model selection</h2>
+<ul>
+<li><code>from sklearn.model_selection import ___</code></li>
+<li>Spliting <strong>training and test data</strong>:<ul>
+<li><code>train_X, val_X, train_y, val_y = train_test_split(X, y, random_state = 0)</code></li>
+<li><code>val</code> is the validation/test data</li>
+</ul>
+</li>
+</ul>
+<h2 id="tree">Tree</h2>
+<ul>
+<li><code>from sklearn.tree import ___</code></li>
+<li>Decision Tree (<code>DecisionTreeRegressor</code>)<ul>
+<li><code>my_model = DecisionTreeRegressor(max_leaf_notes=100, random_state=1)</code></li>
+<li><code>random_state</code>: to ensure same results, the value itself isn't important</li>
+<li><code>max_leaf_notes</code>: optional, amount of leaf notes</li>
+<li>Fitting: <code>my_model.fit(X,y)</code></li>
+<li>Prediction: <code>preds = my_model.predict(X)</code></li>
+</ul>
+</li>
+</ul>
 
 
 
