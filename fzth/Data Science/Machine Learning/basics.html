@@ -14,7 +14,7 @@
         <link rel="prev" href="index.html">
       
       
-        <link rel="next" href="sklearn.html">
+        <link rel="next" href="random_forest.html">
       
       
         
@@ -684,6 +684,8 @@
       
         
       
+        
+      
     
     
     
@@ -902,6 +904,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="random_forest.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Random Forests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1345,6 +1375,7 @@
 <li>This happens e.g. if a decision tree has a too high depth</li>
 <li>Underfitting is the opposite, here the tree has two less decisions and will work poorly on training and test data</li>
 <li>To detect the exact moment between under and overfitting, you can look at a plot: <img alt="overfitting" src="https://storage.googleapis.com/kaggle-media/learn/images/AXSEOfI.png" /></li>
+<li>Practically: You can test at which amount of <code>max_leaf_notes</code> for a model fitted with your training data is most excact (tested with test data). With this amount you now can fit your model with all data (no splitting in training and test data).</li>
 </ul>
 <h3 id="implementing">Implementing</h3>
 <pre><code class="language-python">from sklearn.metrics import mean_absolute_error
