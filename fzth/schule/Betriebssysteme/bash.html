@@ -1076,6 +1076,7 @@
 <li><code>df</code> : freien Speicherplatz auf unseren Festplatten</li>
 <li><code>free</code> : freier Arbeitsspeicher</li>
 <li><code>exit</code> oder <code>strg + d</code> : Sitzung beenden</li>
+<li>reset</li>
 </ul>
 </li>
 <li>Navigation<ul>
@@ -1101,10 +1102,35 @@
 <li><code>cd -</code> -  Zum vorherigen</li>
 </ul>
 </li>
-<li><code>ls</code> - Verzeichnisinhalt auflisten</li>
+<li><code>ls</code> - Verzeichnisinhalt auflisten<ul>
+<li><code>ls /usr</code> : bestimmten Ordnercd -</li>
+<li><code>ls -l</code> : als liste untereinander, mehr Details</li>
+<li><code>ls -a</code> : auch hidden</li>
+<li><code>ls -A</code> : </li>
+<li><code>ls -l -d</code> : Details über das Verzeichnis nicht die Dateien</li>
+<li><code>ls -F</code> : zeigt Kennzeichen an (z.B. '/' bei Verzeichnis)</li>
+<li><code>ls -h</code> : human-readable</li>
+<li><code>ls -r</code> : reverse</li>
+<li><code>ls -S</code> : sortiert nach Dateigröße</li>
+<li><code>ls -t</code> : sortiert nach Änderungszeit</li>
+</ul>
+</li>
+<li><code>file dateiname</code> : Dateityp</li>
+<li><code>less dateiname</code> : Dateitext lesen<ul>
+<li><code>b</code> : back</li>
+<li><code>leertaste</code> : vor</li>
+<li>Pfeil oben/unten: zeilenweise</li>
+<li><code>G</code> : Anfang</li>
+<li><code>1G oder g</code> : Ende</li>
+<li><code>/zeichenkette</code> : suchen, <code>n</code> für nächstes Match</li>
+<li>h : Hilfe</li>
+<li>q : quit</li>
 </ul>
 </li>
 </ul>
+</li>
+</ul>
+<p>https://combinator.de/static/markdownapp/q2/betriebssysteme/TheLinuxCommandLineDE/003_das_system_erkunden.md</p>
 <h2 id="ausgaben">#Ausgaben</h2>
 <ul>
 <li><code>bash: command not found</code><ul>

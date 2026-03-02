@@ -1028,6 +1028,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SCOPE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CREATE Table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CREATE VIEW
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1383,6 +1416,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SCOPE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CREATE Table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CREATE VIEW
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1563,6 +1629,22 @@ WHERE Nachname = 'Schmidt';
 <ul>
 <li><code>DELETE FROM</code> :  aus welcher Tabelle soll gelöscht werden</li>
 <li><code>WHERE</code> : bei welcher Bedingung soll gelöscht werden</li>
+</ul>
+<h2 id="scope">SCOPE</h2>
+<ul>
+<li>Wo eine Variable access-bar ist</li>
+<li>In einer subquery kann man auch auf Sachen aus dem Outerscope zugreifen</li>
+</ul>
+<pre><code class="language-sql">      SELECT player.*, (SELECT count(*) WHERE player.id=1)
+      FROM player;
+</code></pre>
+<h2 id="create-table">CREATE Table</h2>
+<h2 id="create-view">CREATE VIEW</h2>
+<ul>
+<li>ist wie eine Tabelle aber updated live</li>
+<li>es ist einfach um bestimmte daten dazustellen</li>
+<li>`CREATE VIEW stats AS SELECT [...]</li>
+<li>man kann es wie eine Tabelle verwenden</li>
 </ul>
 
 
