@@ -559,6 +559,8 @@
       
         
       
+        
+      
     
     
     
@@ -917,6 +919,66 @@
   
   
   
+    <a href="../Latex/index.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Latex
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
     <a href="../Objekt-Orientierte%20Programmierung/index.html" class="md-nav__link">
       
   
@@ -1132,6 +1194,76 @@
 </ul>
 </li>
 </ul>
+<h2 id="rechteverwaltung-und-sicherheit-benutzerverwaltung-linux-server">Rechteverwaltung und Sicherheit // Benutzerverwaltung Linux-Server</h2>
+<ul>
+<li>Benutzer anlegen: <code>adduser timo</code></li>
+<li>zum Admin/root machen: <code>sudo usermod -aG sudo timo</code></li>
+<li>Hauptakteure<ol>
+<li><strong>Benutzer (User):</strong> Jede Person, die ein Konto auf dem Computer hat.</li>
+<li><strong>Gruppe (Group):</strong> gruppe von benutzern</li>
+<li><strong>Andere (Others):</strong> alle anderen</li>
+</ol>
+</li>
+<li>Rechte:<ul>
+<li>Read (<code>r</code>): datei inhalt sehen, ordner-inhalt sehen</li>
+<li>Write (<code>w</code>): datei ändern und löschen, ordner: dateien/ordner löschen/erstellen</li>
+<li>Execute (<code>x</code>): Datei kann, wenn Programm, ausgeführt werden, Ordner betreten</li>
+</ul>
+</li>
+<li>Rechte ablesen: <code>-rw-r--r-- datei.txt</code> <code>drwxr-xr-x ordner</code><ul>
+<li>mit <code>ls -l</code> anzeigen</li>
+<li>Zeichen: '-' datei, 'd' ordner</li>
+<li>3 x 3 Zeichen:<ul>
+<li>'rw-': Rechte vom Besitzer des Ordners/Datei</li>
+<li>'r--': Rechte von der Gruppe, bei datei festgelegt</li>
+<li>'r--': Rechte von allen anderen</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Rechte ändern:<ul>
+<li><code>chmod 755 meine_datei.txt</code></li>
+<li>r-4, w-2, x-1, keine-0</li>
+<li>Benutzer: 4+2+1=7</li>
+<li>Gruppe: 4+1=5</li>
+<li>Andere: 4+1=5</li>
+</ul>
+</li>
+<li>Sonderbits:<ul>
+<li>SGID-Bit (Set Group ID) <ul>
+<li>Datei mit <strong>Gruppe der Datei</strong> ausgeführt</li>
+<li>Ordner: Unterordner erben die Gruppe</li>
+<li><code>chmod g+s ordner</code> oder <code>chmod 2775 ordner</code> (führende 2)</li>
+<li>anstelle <code>x</code>, <code>s</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Gruppe verwenden<ul>
+<li>gruppe erstellen/ändern<ul>
+<li><code>sudo groupadd gruppenname</code></li>
+<li>zu einer Gruppe hinzu:<code>sudo usermod -aG gruppe benutzer</code></li>
+<li>gruppe als Hauptgruppe: <code>sudo usermod -g neuegruppe benutzername</code></li>
+</ul>
+</li>
+<li>Datei/Ordner zugehörige Gruppe ändern: <code>chgrp gruppe datei/ordner</code></li>
+<li>Besitzer und Gruppe gleichzeitig ändern (optional): <code>chown benutzer:gruppe datei/ordner</code><ul>
+<li><code>chown -R</code> um auch alle Unterordner und Dateien zu meinen</li>
+</ul>
+</li>
+<li>Hauptgruppe (Primary Group)<ul>
+<li>standardmäßig gleich dem Benutzernamen</li>
+<li>neue Dateien übernehmen per Default die Hauptgruppe</li>
+<li><code>id benutzername</code> -&gt; Ausgabe: <code>gid=1001(ponti)</code> -&gt; ponti ist die Hauptgruppe</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="else">ELSE</h2>
+<p>anmelden: ssh hans@ip
+root kann alles
+sudo</p>
 
 
 
