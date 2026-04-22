@@ -1052,6 +1052,34 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NginX
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NginX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#6-funktion-testen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Funktion testen:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1082,8 +1110,19 @@
 </ul>
 <pre><code>sudo apt update
 </code></pre>
-<p>ssh, ls - 
+<h2 id="nginx">NginX</h2>
+<ul>
+<li>Dateien in <code>var/www/html/</code></li>
+<li><code>sudo systemctl start nginx</code> </li>
+<li></li>
+</ul>
+<p>root werden:  <code>sudo -i</code>
+ssh, ls - 
 weiter bei dateinamen bis 3</p>
+<h4 id="6-funktion-testen">6. Funktion testen:</h4>
+<p>Um zu überprüfen, ob alles funktioniert, kann man versuchen, sich von einem anderen Gerät aus per SFTP mit dem neuen Benutzer anzumelden.</p>
+<p><code>sftp [BENUTZERNAME]@[IP-ADRESSE_DES_SERVERS]</code></p>
+<p>Nach der Anmeldung sollte man sich in einem Verzeichnis befinden, das wie das Hauptverzeichnis aussieht. Man sollte in den Ordner <code>webseite</code> wechseln und dort Dateien hochladen können. Der Versuch, in übergeordnete Verzeichnisse zu wechseln (z.B. mit <code>cd ..</code>), sollte nicht möglich sein. Ein direkter SSH-Zugriff (ohne <code>sftp</code>) sollte ebenfalls verweigert werden.</p>
 
 
 
