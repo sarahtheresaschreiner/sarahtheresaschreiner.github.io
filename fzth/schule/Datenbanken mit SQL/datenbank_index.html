@@ -880,6 +880,73 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#restriktive-integritat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restriktive Integrität
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anomalie-und-redundanz-normalisierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anomalie und Redundanz (Normalisierung)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anomalie und Redundanz (Normalisierung)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anomalien-datenbankprobleme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anomalien (Datenbankprobleme)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redundanz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Redundanz
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Redundanz">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#probleme-durch-redundanz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Probleme durch Redundanz
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1201,6 +1268,73 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#restriktive-integritat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restriktive Integrität
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anomalie-und-redundanz-normalisierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anomalie und Redundanz (Normalisierung)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anomalie und Redundanz (Normalisierung)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anomalien-datenbankprobleme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anomalien (Datenbankprobleme)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redundanz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Redundanz
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Redundanz">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#probleme-durch-redundanz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Probleme durch Redundanz
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1266,6 +1400,50 @@ Tabelle2(Spalte1, Spalte2)
 </li>
 <li>Primärschlüssel (ID)</li>
 <li>Fremdschlüssel (eine ID aus einer anderen Tabelle)</li>
+</ul>
+<h2 id="restriktive-integritat">Restriktive Integrität</h2>
+<p>Problem: Was passiert wenn der gelöschte Schlüssel irgendwo der Fremdschlüssel ist? Löschen oder Behalten
+<code>Restrict</code>: Kann erst gelöscht werden, wenn es nirgendwo genutzt wird
+<code>Cascade</code>: Remove alle mit Fremdschlüssel
+<code>Set null</code>: Fremdschlüssel werden null</p>
+<pre><code class="language-sql">CREATE TABLE orders (  
+id BIGINT PRIMARY KEY,  
+user_id BIGINT NOT NULL REFERENCES users(id) ON DELETE RESTRICT
+);
+</code></pre>
+<p>Das steht beim <code>CHILD</code> nicht beim <code>Parent</code>. Also beim Fremdschlüssel.</p>
+<h2 id="anomalie-und-redundanz-normalisierung">Anomalie und Redundanz (Normalisierung)</h2>
+<p>Redundanz → verursacht Anomalien</p>
+<h3 id="anomalien-datenbankprobleme">Anomalien (Datenbankprobleme)</h3>
+<ul>
+<li><strong>Definition:</strong>  Fehler oder Inkonsistenzen, die durch schlecht strukturierte Tabellen entstehen.</li>
+<li>Einfügeanomalie (Insert Anomaly)<ul>
+<li>Neue Daten können nicht gespeichert werden, ohne andere Infos zu erzwingen</li>
+<li>Beispiel: Neuer Kurs kann nicht angelegt werden, ohne einen Studenten einzutragen</li>
+</ul>
+</li>
+<li>Änderungsanomalie (Update Anomaly)<ul>
+<li>Gleiche Information steht mehrfach → muss mehrfach geändert werden</li>
+<li>Gefahr: Inkonsistente Daten</li>
+<li>Beispiel: Dozentenname in mehreren Zeilen → nicht überall aktualisiert</li>
+</ul>
+</li>
+<li>Löschanomalie (Delete Anomaly)<ul>
+<li>Löschen eines Datensatzes entfernt unbeabsichtigt andere Infos</li>
+<li>Beispiel: Letzter Student löscht → Kursinfo geht verloren</li>
+</ul>
+</li>
+</ul>
+<h3 id="redundanz">Redundanz</h3>
+<p><strong>Definition:</strong>  Mehrfaches Speichern derselben Information in einer Datenbank
+- Gleiche Daten erscheinen in mehreren Zeilen
+- Führt oft zu Anomalien
+- Verschwendet Speicher</p>
+<h4 id="probleme-durch-redundanz">Probleme durch Redundanz</h4>
+<ul>
+<li>Inkonsistenzen (unterschiedliche Werte für gleiche Info)</li>
+<li>Höherer Speicherverbrauch</li>
+<li>Wartungsaufwand steigt</li>
 </ul>
 
 
