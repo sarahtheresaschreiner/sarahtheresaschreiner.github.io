@@ -799,6 +799,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normalisierung
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="normalisierung.html" class="md-nav__link md-nav__link--active">
         
   
@@ -815,6 +833,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-normalform-1nf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Normalform (1NF)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-normalform-2nf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Normalform (2NF)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-normalform-3nf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Normalform (3NF)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1066,6 +1136,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-normalform-1nf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Normalform (1NF)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-normalform-2nf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Normalform (2NF)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-normalform-3nf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Normalform (3NF)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1082,19 +1193,45 @@
 
 
 <h1 id="normalisierung">Normalisierung</h1>
-<p>"Wir bekommen chaotische Tabellen und schaffen Ordnung"1. Normalform
-1. Normalform
-    - Wiederholungsgruppe (mehrere gleiche infos in einem Feld)
-        - neue Zeilen
-    - Nicht atomar (verschiedene Infos in einer Spalte)
-        - In Spalten aufteilen
-2. Normalform
-    - "voll funktional vom Primärschlüssel gehörende Attribut"
-    - Alles was nur von einem Teil eines zusammen gesetzten Schlüssels abhängig ist wird in einer neuen Tabelle untergebracht
-3. Normalform
-    - Doppelte Daten (der Name eines Authors steht öfter in der Tabelle)
-    - Stichwort Anomalie
-    - Keine transitive Abhängigkeit -&gt; ich muss den umweg über das album gehen zum Künstler</p>
+<blockquote>
+<p>„Wir bekommen chaotische Tabellen und schaffen Ordnung“</p>
+</blockquote>
+<h2 id="1-normalform-1nf">1. Normalform (1NF)</h2>
+<ul>
+<li>Wiederholungsgruppen vermeiden  </li>
+<li>mehrere gleiche Infos in einem Feld  </li>
+<li>
+<p>Lösung: neue Zeilen</p>
+</li>
+<li>
+<p>Nicht-atomare Werte vermeiden  </p>
+</li>
+<li>verschiedene Infos in einer Spalte  </li>
+<li>Lösung: in mehrere Spalten aufteilen</li>
+</ul>
+<h2 id="2-normalform-2nf">2. Normalform (2NF)</h2>
+<ul>
+<li>
+<p>Jedes Attribut muss <strong>voll funktional vom gesamten Primärschlüssel abhängen</strong></p>
+</li>
+<li>
+<p>Alles, was nur von einem Teil eines zusammengesetzten Schlüssels abhängig ist, wird in einer neuen Tabelle untergebracht</p>
+</li>
+</ul>
+<h2 id="3-normalform-3nf">3. Normalform (3NF)</h2>
+<ul>
+<li>Doppelte Daten vermeiden  </li>
+<li>
+<p>z. B. der Name eines Autors steht mehrfach in der Tabelle</p>
+</li>
+<li>
+<p>Stichwort: Anomalien</p>
+</li>
+<li>
+<p>Keine transitiven Abhängigkeiten  </p>
+</li>
+<li>Beispiel: Ich muss nicht den Umweg über das Album gehen, um den Künstler zu bestimmen</li>
+</ul>
 
 
 
