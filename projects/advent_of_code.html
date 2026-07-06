@@ -41,13 +41,16 @@
 
   <footer class="bg-neutral-950 text-gray-400 px-6 py-8 mt-12">
     <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-      <p>&copy; 2025 Sarah Theresa Schreiner</p>
+      <p>&copy; <span id="year"></span> Sarah Theresa Schreiner</p>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
       <div class="flex gap-6">
         <a href="https://github.com/sarahtheresaschreiner/" target="_blank" class="hover:text-emerald-400 transition">
-          <img src="bilder/logos/github_logo.png" alt="GitHub" class="w-6 h-6">
+          <img src="../bilder/logos/github_logo.png" alt="GitHub" class="w-6 h-6">
         </a>
         <a href="https://www.linkedin.com/in/sarah-theresa-schreiner-a43111381/" target="_blank" class="hover:text-emerald-400 transition">
-          <img src="bilder/logos/linkedin_logo.png" alt="LinkedIn" class="w-6 h-6">
+          <img src="../bilder/logos/linkedin_logo.png" alt="LinkedIn" class="w-6 h-6">
         </a>
       </div>
     </div>

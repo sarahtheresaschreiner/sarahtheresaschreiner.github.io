@@ -88,7 +88,10 @@
   <!-- Footer -->
   <footer class="backdrop-blur bg-neutral-900/20 text-gray-400 px-6 py-8 mt-12">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-      <p>&copy; 2025 Sarah Theresa Schreiner</p>
+      <p>&copy; <span id="year"></span> Sarah Theresa Schreiner</p>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
       <div class="flex gap-6">
         <a href="https://github.com/sarahtheresaschreiner/" target="_blank" class="hover:text-emerald-400 transition">
           <img src="bilder/logos/github_logo.png" alt="GitHub" class="w-6 h-6">
