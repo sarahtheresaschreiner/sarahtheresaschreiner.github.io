@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F1 2026 WDC Prediction</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-neutral-950 text-white font-sans">
+  <header class="sticky top-0 bg-neutral-950/80 backdrop-blur border-b border-neutral-800 z-50">
+    <div class="max-w-4xl mx-auto flex justify-between items-center px-6 py-4">
+      <a href="../projects.html" class="text-emerald-400 font-bold text-lg sm:text-xl">&larr; Back</a>
+      <h1 class="text-emerald-400 font-bold text-lg sm:text-xl">Project Details</h1>
+    </div>
+  </header>
+
+  <main class="max-w-xl mx-auto py-12 px-4 sm:px-6">
+    <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-emerald-400 text-center">F1 2026 WDC Prediction</h2>
+    <p class="text-gray-400 italic mb-4 text-center">Completed: 06/07/2026</p>
+    <p class="text-gray-300 mb-6 text-center">
+      In this project, I tried to predict the 2026 Formula 1 World Drivers' Championship (WDC), building a machine learning models. It predictes a rank for every driver based on their previous performance. At the end a final ranking is calculated based on the predicted ranks of all drivers. The features are: Average result, delta of first to most recent result, delta of the two most recent results and the year. <br>
+      In the project I created the dataset, cleaned and prepared it for the model, tuned hyperparameters, trained the model and evaluated it. Finally I used the model to predict the 2026 WDC and contextualized the results.
+    </p>
+
+    <img src="../bilder/f1_2026_wdc_prediction.png" alt="F1 2026 WDC Prediction" class="w-full h-auto rounded-xl shadow-lg mb-6">
+
+    <h3 class="text-2xl font-semibold mb-3">Technologies Used</h3>
+    <ul class="flex flex-wrap gap-2 mb-6 justify-center">
+      <li class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded">Python</li>
+      <li class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded">Pandas</li>
+      <li class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded">Scikit-learn</li>
+      <li class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded">Seaborn</li>
+      <li class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded">FastF1</li>
+      <li class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded">Jupyter Notebook</li>
+    </ul>
+
+    <h3 class="text-2xl font-semibold mb-3">Key Features</h3>
+    <ul class="list-disc pl-6 text-gray-300 space-y-2">
+      <li>Data cleaning and preparing</li>
+      <li>Feature engineering for predictive modeling</li>
+      <li>Hyperparameter tuning of ML-Model</li>
+      <li>Evaluation, interpretation and analysis of model results</li>
+    </ul>
+
+    <h3 class="text-2xl font-semibold mb-3 text-center sm:text-left">Learnings</h3>
+    <p class="text-gray-300 mb-6 text-center sm:text-left">
+      I did this project to get more familiar with machine learning and predictive modeling. I learned how to clean and prepare data for modeling, how to engineer features that improve model performance, and how to tune hyperparameters for optimal results. Additionally, I gained experience in evaluating and interpreting model results, which helped me understand what kind of features have which impact on the model and how to improve it. Overall, I feel way more confident for future projects with machine learning, because I now know betterhow to approach a project like this and how to find good features for your goal.
+    </p>
+
+    <div class="mt-10 flex justify-center">
+      <a href="https://github.com/sarahtheresaschreiner/f1_2026_wdc_prediction" target="_blank" class="px-6 py-3 bg-emerald-400 text-black rounded-xl font-semibold hover:bg-emerald-300 transition">View on GitHub</a>
+    </div>
+  </main>
+
+  <footer class="bg-neutral-950 text-gray-400 px-6 py-8 mt-12">
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <p>&copy; 2025 Sarah Theresa Schreiner</p>
+      <div class="flex gap-6">
+        <a href="https://github.com/sarahtheresaschreiner/" target="_blank" class="hover:text-emerald-400 transition">
+          <img src="bilder/logos/github_logo.png" alt="GitHub" class="w-6 h-6">
+        </a>
+        <a href="https://www.linkedin.com/in/sarah-theresa-schreiner-a43111381/" target="_blank" class="hover:text-emerald-400 transition">
+          <img src="bilder/logos/linkedin_logo.png" alt="LinkedIn" class="w-6 h-6">
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
