@@ -1,0 +1,76 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thesis Formula Student</title>
+  <link rel="icon" type="image/x-icon" href="/bilder/logo_emerald.png">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+  </script>
+  </head>
+  <body class="min-h-screen flex flex-col bg-neutral-950 text-gray-400">
+  <!-- Header -->
+  <header class="sticky top-0 bg-neutral-950/80 backdrop-blur border-b border-neutral-800 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+      <a href="https://github.com/sarahtheresaschreiner/" class="flex items-center gap-3" aria-label="Home">
+        <img src="bilder/logo_emerald.png" alt="Logo" class="w-10 h-10">
+        <span class="text-lg sm:text-xl font-bold text-emerald-400">Sarah Theresa Schreiner</span>
+      </a>
+      
+      <!-- Desktop Nav -->
+      <nav class="hidden md:block">
+        <ul class="flex gap-6 text-gray-300">
+          <li><a href="index.html" class="hover:text-emerald-400 transition">Home</a></li>
+          <li><a href="about.html" class="text-emerald-400 font-semibold">About</a></li>
+          <li><a href="skills.html" class="hover:text-emerald-400 transition">Skills</a></li>
+          <li><a href="projects.html" class="hover:text-emerald-400 transition">Projects</a></li>
+          <li><a href="contact.html" class="hover:text-emerald-400 transition">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Button -->
+      <button onclick="toggleMenu()" class="md:hidden text-gray-300 hover:text-emerald-400 focus:outline-none">
+        ☰
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="hidden md:hidden bg-neutral-900 border-t border-neutral-800">
+      <ul class="flex flex-col items-center gap-4 py-4 text-gray-300">
+        <li><a href="index.html" class="hover:text-emerald-400 transition">Home</a></li>
+        <li><a href="about.html" class="text-emerald-400 font-semibold">About</a></li>
+        <li><a href="skills.html" class="hover:text-emerald-400 transition">Skills</a></li>
+        <li><a href="projects.html" class="hover:text-emerald-400 transition">Projects</a></li>
+        <li><a href="contact.html" class="hover:text-emerald-400 transition">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <p>
+    Hallo, ich schreibe eine empirische Arbeit. yay
+  </p>
+
+  <!-- Footer -->
+  <footer class="bg-neutral-950 text-gray-400 px-6 py-8 mt-12">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+      <p>&copy; <span id="year"></span> Sarah Theresa Schreiner</p>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+      <div class="flex gap-6">
+        <a href="https://github.com/sarahtheresaschreiner/" target="_blank" class="hover:text-emerald-400 transition">
+          <img src="bilder/logos/github_logo.png" alt="GitHub" class="w-6 h-6">
+        </a>
+        <a href="https://www.linkedin.com/in/sarah-theresa-schreiner-a43111381/" target="_blank" class="hover:text-emerald-400 transition">
+          <img src="bilder/logos/linkedin_logo.png" alt="LinkedIn" class="w-6 h-6">
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
