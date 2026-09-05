@@ -1036,6 +1036,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code für Arduino
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="coding.html" class="md-nav__link md-nav__link--active">
         
   
@@ -1052,6 +1070,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup-methoden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        setup() Methoden
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loop-methoden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        loop() Methoden
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1303,6 +1362,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup-methoden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        setup() Methoden
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loop-methoden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        loop() Methoden
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1320,8 +1409,48 @@
 
 <h1 id="code-fur-arduino">Code für Arduino</h1>
 <ul>
+<li>Header -&gt; über den Methoden, zum deklarieren von globalen Variablen</li>
 <li><code>setup()</code> -&gt; wird einmal ausgeführt</li>
 <li><code>loop()</code> -&gt; wird repeatedly ausgeführt</li>
+</ul>
+<pre><code class="language-c++">// header
+
+setup(){
+}
+
+loop(){
+}
+</code></pre>
+<h2 id="setup-methoden"><code>setup()</code> Methoden</h2>
+<ul>
+<li>Pins deklarieren: <code>pinMode(pinNr:pin, parameter:mode)</code><ul>
+<li><code>pinMode(12, OUTPUT)</code></li>
+<li><code>INPUT</code> für einen Pin der den Spannungswert "abliest"</li>
+<li><code>OUTPUT</code> für einen Pin der einen Spannungswert "ausgibt"</li>
+</ul>
+</li>
+<li>Serielle Kommunikation starten: <code>Serial.begin</code></li>
+<li>Bibliotheken und Module/Sensoren aktivieren</li>
+</ul>
+<h2 id="loop-methoden"><code>loop()</code> Methoden</h2>
+<ul>
+<li>Ausgabe auf einen Pin: <code>digitalWrite(pinNr:pin, wert:val)</code><ul>
+<li>Pin muss <code>OUTPUT</code> sein</li>
+<li><code>digitalWrite(12, HIGH)</code></li>
+<li><code>HIGH</code> -&gt; 5V (oder 3.3V auf 3.3V-Boards)</li>
+<li><code>LOW</code> -&gt; 0V (Ground)</li>
+</ul>
+</li>
+<li>Wert eines Pins auslesen: <code>digitalRead()</code><ul>
+<li>Pin muss <code>INPUT</code> sein</li>
+<li>?</li>
+<li></li>
+</ul>
+</li>
+<li>Warten/Verzögern: <code>delay(zeitInMillisekunden)</code><ul>
+<li><code>delay(3000)</code></li>
+</ul>
+</li>
 </ul>
 
 
