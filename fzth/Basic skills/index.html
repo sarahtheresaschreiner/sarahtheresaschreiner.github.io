@@ -14,7 +14,7 @@
         <link rel="prev" href="../markdown-cheat-sheet.html">
       
       
-        <link rel="next" href="../Data%20Science/DSA/index.html">
+        <link rel="next" href="git_intro.html">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Git - FZTH</title>
+        <title>Index - FZTH</title>
       
     
     
@@ -77,11 +77,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#git" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -113,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Git
+              Index
             
           </span>
         </div>
@@ -447,6 +442,8 @@
           
         
       
+        
+      
     
     
     
@@ -484,6 +481,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
@@ -497,6 +499,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="git_intro.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -659,8 +689,6 @@
       
         
       
-        
-      
     
     
     
@@ -722,49 +750,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#intro" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Intro
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#files" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Files
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#branching" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Branching
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -781,37 +766,12 @@
 
 
 
-<h1 id="git">Git</h1>
-<p>Learned with <a href="https://ohmygit.org/">Oh my git!</a></p>
+  <h1>Index</h1>
+
+<p>Basic Skills</p>
 <ol>
-<li><a href="git_intro.md">Git intro</a></li>
+<li><a href="git_intro.html">Git intro</a></li>
 </ol>
-<h2 id="intro">Intro</h2>
-<ul>
-<li><code>git init</code>: initialise an empty git repository</li>
-<li><code>git add .; git commit</code>: to make a commit (only to the local version)</li>
-<li><code>git pull</code>: pull a repo from someone else</li>
-<li><code>git push</code>: save your changes to the repo somewhere else</li>
-</ul>
-<h2 id="files">Files</h2>
-<ul>
-<li><code>rm *web</code>: remove everything ending with 'web'</li>
-<li><code>touch my_file</code>: creates the file 'my_file'</li>
-</ul>
-<h2 id="branching">Branching</h2>
-<ul>
-<li>branches are like separate timelines</li>
-<li><code>git checkout</code>:  to go to a branch or commit<ul>
-<li><code>git checkout HEAD^</code> to go 1 commit back</li>
-<li><code>git checkout HEAD~2</code> to go two commits back</li>
-</ul>
-</li>
-<li><code>git branch 'branch_name'</code>:  create a new branch</li>
-<li><code>git branch -D 'branch_name'</code>: delete a branch, you can't delete a branch your currently on</li>
-</ul>
-<p>If you commit while your head is at the commit, the branch pointer will still point at that commit, eventhough there is a later commit (upper). However when the head is at the branch and you commit, the branch points at that last commit (lower).</p>
-<p><img alt="git commits" src="images/git_branching.jpg" /></p>
-<p>hi</p>
 
 
 
