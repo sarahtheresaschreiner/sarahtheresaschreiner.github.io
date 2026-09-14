@@ -1108,6 +1108,34 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#lc-display-i2c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LC-Display (I2C)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LC-Display (I2C)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#befehle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Befehle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1390,6 +1418,34 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#lc-display-i2c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LC-Display (I2C)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LC-Display (I2C)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#befehle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Befehle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1451,6 +1507,21 @@ loop(){
 <li><code>delay(3000)</code></li>
 </ul>
 </li>
+</ul>
+<h2 id="lc-display-i2c">LC-Display (I2C)</h2>
+<p>Das Display ist nur mit 2 Datenpins mit dem Mikrokontroller verbunden: SDA (Serial Data) und SCL (Serial Clock). Die Daten werden in Datenbits getaktet übertragen. Über den blauen Potentiometer kann der Kotrast, also die Helligkeit, eingestellt werden. Es gibt außerdem die Lötbrücken A0, A1 und A2. Sie sind dafür da, dass man die Adresse ändern kann. Das ist nötig, wenn man mehrere Sachen im Bussystem getrennt ansteuern will.</p>
+<h3 id="befehle">Befehle</h3>
+<ul>
+<li>Importieren:<ul>
+<li><code>#include &lt;Wire.h&gt;</code></li>
+<li><code>#include &lt;LiquidCrystal_I2C.h&gt;</code></li>
+</ul>
+</li>
+<li><code>LiquidCrystal_I2C lcd(0x27,20,4);</code>  // set the LCD address to 0x27 for a 16 chars and 2 line display</li>
+<li><code>lcd.init();</code> initialisieren</li>
+<li><code>lcd.backlight();</code> Hintergrundbeleuchtung, damit der Text besser sichtbar ist.</li>
+<li><code>lcd.setcursor(Spalte, Zeile);</code> Wo geschrieben wird</li>
+<li><code>lcd.print(String);</code> An die Stelle schreiben</li>
 </ul>
 
 
