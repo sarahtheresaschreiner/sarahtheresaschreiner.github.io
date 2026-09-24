@@ -14,7 +14,7 @@
         <link rel="prev" href="diagramme.html">
       
       
-        <link rel="next" href="../Web%20App%20mit%20Javalin/index.html">
+        <link rel="next" href="threads.html">
       
       
         
@@ -970,6 +970,8 @@
       
         
       
+        
+      
     
     
     
@@ -1155,6 +1157,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="threads.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Threads
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1439,6 +1469,15 @@ s.close()
     handleclient(socket);
  }
  ```</p>
+<p>Alternative mit <a href="threads.html">Thread</a>:  mehrere Clients können gleichzeitig mit dem Server reden  und man nicht warten muss, bis einer abgearbeitet ist:</p>
+<pre><code class="language-java"> ServerSocket serverSocket = new ServerSocket(port)    // int port
+
+ while(true){
+    Socket socket = new serverSocket.accept()    // Verbindung annehmen
+    Thread t = new Thread(()-&gt;handleclient(socket));
+    t.start;
+ }
+</code></pre>
 <pre><code class="language-java">public void handleClient(Socket socket){       // Das protokoll
 
     try{
@@ -1466,6 +1505,27 @@ s.close()
     }
 
     }   
+}
+</code></pre>
+<h3 id="alternative-mit-altem-thread-handleclientthread">Alternative mit altem <a href="threads.html">Thread</a> (HandleClientThread)</h3>
+<pre><code class="language-java"> ServerSocket serverSocket = new ServerSocket(port)    // int port
+
+ while(true){
+    Socket socket = new serverSocket.accept()    // Verbindung annehmen
+    HandleClientThread t = new HandleClientThread(socket);
+    t.start;
+ }
+</code></pre>
+<pre><code class="language-java">public class HandleClientThread extends Thread{
+    private Socket socket;
+
+    public HandleClientThread(Socket socket){
+        this.socket = socket;
+    }
+
+    public void run(){
+        // hier wird dann die HandleClient-Sachen ausgeführt
+    }
 }
 </code></pre>
 <ul>
