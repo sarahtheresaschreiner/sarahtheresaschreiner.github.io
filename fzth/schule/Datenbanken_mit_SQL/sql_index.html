@@ -245,6 +245,25 @@
   
   
   
+    <li class="md-tabs__item">
+      <a href="../../wifi_mit_esp-32.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Wifi mit esp 32
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
     
     
       <li class="md-tabs__item">
@@ -420,6 +439,33 @@
     
   
     Welcome to MkDocs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wifi_mit_esp-32.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wifi mit esp 32
   
 
     
@@ -662,7 +708,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -684,14 +730,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -799,7 +845,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -821,14 +867,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_6_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1189,6 +1235,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#rechnen-mit-datumswerten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rechnen mit Datumswerten.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weitere-operatoren-und-funktionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weitere Operatoren und Funktionen.
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1339,6 +1407,8 @@
       
         
           
+        
+      
         
       
         
@@ -1772,6 +1842,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#rechnen-mit-datumswerten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rechnen mit Datumswerten.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weitere-operatoren-und-funktionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weitere Operatoren und Funktionen.
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1964,14 +2056,39 @@ WHERE Nachname = 'Schmidt';
 <h2 id="create-table">CREATE Table</h2>
 <h2 id="create-view">CREATE VIEW</h2>
 <ul>
-<li>ist wie eine Tabelle aber updated live</li>
+<li>ist wie eine Tabelle aber updated live seine Daten</li>
 <li>es ist einfach um bestimmte daten dazustellen</li>
+<li>Vor allem für Daten die aus Tabellen-Einträgen berechnet werden</li>
 <li>`CREATE VIEW stats AS SELECT [...]</li>
 <li>man kann es wie eine Tabelle verwenden</li>
 </ul>
 <h2 id="datenbank-erstellen">Datenbank erstellen</h2>
 <ul>
 <li>Create Table</li>
+</ul>
+<h2 id="rechnen-mit-datumswerten">Rechnen mit Datumswerten.</h2>
+<p>Datumsangaben sind in der Datenbank als Text im Format JJJJ-MM-TT gespeichert 
+(z. B. '2018-05-20'). Mit Text kann man nicht direkt rechnen – dafür gibt es Datumsfunktionen. Stichtag für alle 
+Altersberechnungen ist der 02.11.2026.
+- <code>julianday(datum)</code> wandelt ein Datum in eine fortlaufende Tageszahl um (Anzahl der Tage seit einem festen 
+Startpunkt im Jahr 4713 v. Chr.), z. B. julianday('2026-11-02') → 2461346.5. Die Zahl selbst ist uninteressant – wichtig ist die <strong>Differenz</strong> zweier solcher Werte: Sie gibt den Abstand in Tagen an.
+- <code>julianday('2026-11-02') - julianday(geburtsdatum) → Alter des Tieres in Tagen (bei '2018-05-20': 3088.0).</code>
+    - Teilt man durch <code>365.25</code>, erhält man das Alter in Jahren.
+    - <code>date(datum, 'verschiebung')</code> verschiebt ein Datum, 
+    - <code>z. B. date('2026-11-02', '-2 years') → '2024-11-02'.</code>
+- <code>strftime('format', datum)</code> liest einen Teil des Datums aus: 
+    - '%Y' Jahr, '%m' Monat, '%d' Tag, z. B. 
+    - <code>strftime('%m', '2026-11-02') → '11'.</code></p>
+<h2 id="weitere-operatoren-und-funktionen">Weitere Operatoren und Funktionen.</h2>
+<ul>
+<li><code>text1 || text2</code> hängt Texte aneinander, <ul>
+<li>z. B. <code>'Ida' || ' ' || 'Sonnenberg' → 'Ida Sonnenberg'.</code></li>
+</ul>
+</li>
+<li><code>CAST(wert AS INT)</code> wandelt einen Wert in eine ganze Zahl um; Nachkommastellen werden abgeschnitten,<ul>
+<li>z. B. <code>CAST(34.0 AS INT) → 34.</code></li>
+</ul>
+</li>
 </ul>
 
 
